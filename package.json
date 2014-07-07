@@ -1,0 +1,17 @@
+{
+  "name": "luca-marchesini.com",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "jshint": "~2.5.2",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-requirejs": "~0.4.4",
+    "rjs-build-analysis": "0.0.3",
+    "grunt-bower-task": "~0.3.4",
+    "grunt-contrib-imagemin": "~0.7.1",
+    "grunt-newer": "~0.7.0"
+  },
+  "dependencies": {
+    "handlebars-helpers": "^0.5.2"
+  }
+}
