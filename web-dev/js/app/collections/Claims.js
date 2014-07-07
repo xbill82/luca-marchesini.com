@@ -1,5 +1,7 @@
-define(["jquery","backbone","models/Claim"],
-  function($, Backbone, Claim) {
+define(['jquery', 'underscore', 'backbone','models/Claim'],
+  function($, _, Backbone, Claim) {
+    'use strict';
+
     var Collection = Backbone.Collection.extend({
       model: Claim,
       claimFilter: false,

@@ -1,5 +1,7 @@
-define(["jquery", "underscore","backbone","models/Gig"],
+define(['jquery', 'underscore','backbone','models/Gig'],
   function($, _, Backbone, Gig) {
+    'use strict';
+
     var Collection = Backbone.Collection.extend({
       model: Gig,
       options: {},
