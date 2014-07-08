@@ -9,13 +9,7 @@ class Db
 	private $port = '8889';
 	private $db = 'narrav2';
 	private $user = 'storyteller';
-	private $pass = 'cdrew1974';
-
-	// private $host = 'mysql5-9';
-	// private $port = '3306';
-	// private $db = 'lucamarcbrain';
-	// private $user = 'lucamarcbrain';
-	// private $pass = 'bl0w1974';
+	private $pass = '';
 
 	private $pdo;
 	
