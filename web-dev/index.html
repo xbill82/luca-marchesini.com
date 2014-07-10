@@ -15,15 +15,6 @@
 					/*padding-bottom: 20px;*/
 				}
 			</style>
-			<link rel="stylesheet" href="css/main.css">
-			<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-			<script type="text/javascript" src="lib/js/requirejs/require.js"></script> 
-			<!-- <script type="text/javascript" src="js/vendor/js/almond/almond.js"></script> -->
-			<script>
-	            require(['./js/app/config/Init'], function (common) {
-	                require(['config/Main']);
-	            });
-	        </script>
     </script>
 	</head>
 	<body>
@@ -37,6 +28,16 @@
 		<div id="the-content"></div>
 
 		<footer></footer>
+
+		<link rel="stylesheet" href="css/main.css">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<script type="text/javascript" src="lib/js/requirejs/require.js"></script> 
+		<!-- <script type="text/javascript" src="js/vendor/js/almond/almond.js"></script> -->
+		<script>
+            require(['./js/app/config/Init'], function (common) {
+                require(['config/Main']);
+            });
+        </script>
 
 		<!-- Modals -->
 		<div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contactModal" aria-hidden="true"></div>
