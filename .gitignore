@@ -41,6 +41,7 @@ publish
 node_modules
 bower_components
 web
+web-dev/lib
  
 # build script local files
 build/buildinfo.properties
