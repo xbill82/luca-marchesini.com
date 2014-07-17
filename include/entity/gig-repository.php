@@ -10,15 +10,15 @@ class GigRepository
 	protected $db;
 
 	function __construct() {
-		// try {
+		try {
 			$this->db = new Db();
-		// } catch (Exception $e) {
-		// 	throw new Exception("Error initializing database", 500);
-		// }
+		} catch (Exception $e) {
+			throw new Exception("Error initializing database", 500);
+		}
 	}
 
 	public function getUpcomingGigs($limit = 0, $showName = null) {
-		$qry = "SELECT * FROM gigs WHERE date >= NOW()";
+		$qry = "SELECT * FROM gigs WHERE date >= DATE(NOW())";
 		if ($showName) $qry .= " AND show_name = '$showName' ";
 		$qry .= " AND published = 1  ORDER BY DATE(date) ASC";
 		if ($limit) $qry .= " LIMIT $limit";
@@ -29,7 +29,7 @@ class GigRepository
 	}
 
 	public function getOldGigs($limit = 0) {
-		$qry = "SELECT * FROM gigs WHERE date < NOW()";
+		$qry = "SELECT * FROM gigs WHERE date < DATE(NOW())";
 		$qry .= " AND published = 1 ORDER BY DATE(date) DESC";
 		if ($limit) $qry .= " LIMIT $limit";
 

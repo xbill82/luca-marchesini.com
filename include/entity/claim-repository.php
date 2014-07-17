@@ -10,11 +10,11 @@ class ClaimRepository
 	protected $db;
 
 	function __construct() {
-		// try {
+		try {
 			$this->db = new Db();
-		// } catch (Exception $e) {
-		// 	throw new Exception("Error initializing database", 500);
-		// }
+		} catch (Exception $e) {
+			throw new Exception("Error initializing database", 500);
+		}
 	}
 
 	public function getOneFeaturedClaim() {
