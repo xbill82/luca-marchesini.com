@@ -13,6 +13,12 @@ require.config({
 
         // Plugins
         "bootstrap":"../../lib/js/bootstrap/bootstrap.min",
+        "bs-button":"../../lib/js/bootstrap/button",
+        "bs-collapse":"../../lib/js/bootstrap/collapse",
+        "bs-dropdown":"../../lib/js/bootstrap/dropdown",
+        "bs-modal":"../../lib/js/bootstrap/modal",
+        "bs-transition":"../../lib/js/bootstrap/transition",
+
         "text":"../../lib/js/text/text",
         "async": '../../lib/js/requirejs-plugins/async',
         "font": '../../lib/js/requirejs-plugins/font',

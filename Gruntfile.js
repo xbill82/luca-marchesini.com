@@ -6,6 +6,7 @@ module.exports = function(grunt) {
     jshint: {
       all: ['web-dev/js/app/**/*.js']
     },
+    clean: ["web"],
     requirejs: {
       build: {
         options: {
@@ -13,7 +14,7 @@ module.exports = function(grunt) {
           mainConfigFile: "web-dev/js/app/config/Init.js",
           dir: "web",
           optimize: "uglify",
-          optimizeCss: "standard",
+          optimizeCss: "none",
           done: function(done, output) {
             var duplicates = require('rjs-build-analysis').duplicates(output);
 
@@ -34,7 +35,11 @@ module.exports = function(grunt) {
                 'marionette', 
                 'underscore', 
                 'handlebars', 
-                "bootstrap", 
+                "bs-button",
+                "bs-collapse",
+                "bs-dropdown",
+                "bs-modal",
+                "bs-transition",
                 "App", 
                 "routers/AppRouter", 
                 "controllers/Controller", 
@@ -82,6 +87,27 @@ module.exports = function(grunt) {
         }
       }
     },
+    less: {
+      install: {
+        options: {
+          compress: false,
+          paths: ['bower_components/bootstrap/less/']
+        },
+        files: {
+          "web-dev/styles/main.css": "web-dev/styles/less/main.less",
+        }
+      },
+      build: {
+        options: {
+          compress: true,
+          cleancss: true,
+          paths: ['bower_components/bootstrap/less/']
+        },
+        files: {
+          "web/styles/main.css": "web-dev/styles/less/main.less",
+        }
+      },
+    },
     bower: {
       install: {
         options: {
@@ -105,15 +131,78 @@ module.exports = function(grunt) {
         }]
       }
     },
+    uncss: {
+      build: {
+        options: {
+          stylesheets: [
+            'lib/css/bootstrap/bootstrap.min.css',
+            'lib/css/bootstrap/bootstrap-theme.min.css',
+            'css/main.css'
+          ],
+          urls: [
+            'http://localhost:8888/luca-marchesini.com/web-dev/',
+            'http://localhost:8888/luca-marchesini.com/web-dev/#calendar',
+            'http://localhost:8888/luca-marchesini.com/web-dev/#guestbook',
+            'http://localhost:8888/luca-marchesini.com/web-dev/#show/sorcieres',
+            'http://localhost:8888/luca-marchesini.com/web-dev/#show/lucavidesonsac',
+            'http://localhost:8888/luca-marchesini.com/web-dev/#show/europe',
+            'http://localhost:8888/luca-marchesini.com/web-dev/#show/abrazos',
+            'http://localhost:8888/luca-marchesini.com/web-dev/#show/talaya',
+            'http://localhost:8888/luca-marchesini.com/web-dev/#show/marsala',
+
+          ],
+          // media: ['(min-width: 700px) handheld and (orientation: landscape)'],
+          timeout: 1000,
+          ignore: [
+            // Collapse and dropdown menu
+            '.open>.dropdown-menu',
+            '.collapsing',
+            '.navbar-collapse.in',
+            '.collapse.in',
+            '.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus',
+            '.nav .open>a, .nav .open>a:hover, .nav .open>a:focus',
+            '.navbar-nav .open .dropdown-menu',
+            '.navbar-default .navbar-nav .open .dropdown-menu>li>a',
+
+            // Modals
+            '.modal-open',
+            '.modal-open .modal',
+            '.fade.in',
+
+            // Customs
+            '#gig-modal .modal-body',
+            '#gig-modal .hidden-address',
+            '#gig-modal .hidden-address-message',
+            '#gig-modal dt',
+            '#gig-modal .gig-map',
+            '#gig-modal .fa',
+          ]
+        },
+        src: ['web-dev/index.html',
+          // 'web-dev/js/app/templates/templates/404.html',
+          // 'web-dev/js/app/templates/templates/calendar.html',
+          // 'web-dev/js/app/templates/templates/footer.html',
+          // 'web-dev/js/app/templates/templates/guestbook.html',
+          // 'web-dev/js/app/templates/templates/header.html',
+          // 'web-dev/js/app/templates/templates/home.html',
+          // 'web-dev/js/app/templates/templates/nav.html',
+          // 'web-dev/js/app/templates/templates/show.html',
+        ],
+        dest: 'web-dev/css/main.min.css',
+      }
+    }
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-bower-task');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-less');
+  // grunt.loadNpmTasks('grunt-uncss');
 
-  grunt.registerTask('install', ['bower']);
+  grunt.registerTask('install', ['bower', 'less']);
   grunt.registerTask('default', ['jshint']);
-  grunt.registerTask('build', ['jshint', 'requirejs', 'imagemin']);
+  grunt.registerTask('build', ['clean', 'jshint', 'requirejs', 'less', 'imagemin']);
 };

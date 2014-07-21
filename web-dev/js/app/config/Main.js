@@ -1,5 +1,6 @@
-require(["jquery", "bootstrap", "App", "routers/AppRouter", "controllers/Controller"],
-function ($, bootstrap, App, AppRouter, Controller) {
+require(["jquery", "App", "routers/AppRouter", "controllers/Controller",
+	"bs-button", "bs-collapse", "bs-dropdown", "bs-modal", "bs-transition"],
+function ($, App, AppRouter, Controller) {
     App.appRouter = new AppRouter({
         controller:new Controller()
     });

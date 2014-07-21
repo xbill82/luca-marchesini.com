@@ -58,7 +58,14 @@
       "js": "lib/core/backbone.marionette.js"
     },
     "bootstrap": {
-      "js": "dist/js/bootstrap.min.js",
+      "js": [
+        "dist/js/bootstrap.min.js",
+        "js/button.js",
+        "js/dropdown.js",
+        "js/collapse.js",
+        "js/modal.js",
+        "js/transition.js"
+      ],
       "css": [
         "dist/css/bootstrap.min.css",
         "dist/css/bootstrap-theme.min.css"
