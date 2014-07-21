@@ -11,7 +11,7 @@ define([ 'marionette', 'handlebars', 'text!templates/guestbook.html'],
             },
 
             onShow: function(e) {
-            	this.ui.txt.limiter(160, this.ui.charCount);
+            	// this.ui.txt.limiter(160, this.ui.charCount);
             }
         });
     });
