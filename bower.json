@@ -65,10 +65,6 @@
         "js/collapse.js",
         "js/modal.js",
         "js/transition.js"
-      ],
-      "css": [
-        "dist/css/bootstrap.min.css",
-        "dist/css/bootstrap-theme.min.css"
       ]
     },
     "handlebars": {

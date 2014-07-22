@@ -38,6 +38,11 @@ require.config({
 
     shim:{
         "bootstrap":["jquery"],
+        "bs-button":["jquery"],
+        "bs-collapse":["jquery"],
+        "bs-dropdown":["jquery"],
+        "bs-modal":["jquery"],
+        "bs-transition":["jquery"],
         "handlebars":{
             "exports":"Handlebars"
         },
