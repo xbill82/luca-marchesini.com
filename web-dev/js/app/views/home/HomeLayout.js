@@ -1,6 +1,6 @@
 define( [ 'App', 'marionette', 'handlebars', './HomeCalendarView', 
     './HomeShowsView', "./HomeClaimsView", 'text!templates/home.html',
-    "handlebars-helpers-my", 'lazyloader'],
+    "handlebars-helpers-my"], //, 'lazyloader'
     function( App, Marionette, Handlebars, HomeCalendarView,
         HomeShowsView, HomeClaimsView, template) {
         return Marionette.LayoutView.extend( {
@@ -23,9 +23,9 @@ define( [ 'App', 'marionette', 'handlebars', './HomeCalendarView',
                 this.renderShows();
                 this.renderGuestbookClaims();
 
-                this.$el.find('img.lazy').lazyload({
-                    effect : "fadeIn"
-                });
+                // this.$el.find('img.lazy').lazyload({
+                //     effect : "fadeIn"
+                // });
             },
             
             renderCalendar: function() {
