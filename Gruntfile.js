@@ -44,7 +44,7 @@ module.exports = function(grunt) {
                 "routers/AppRouter", 
                 "controllers/Controller", 
                 "handlebars-helpers-my",
-                'lazyloader'
+                // 'lazyloader'
               ]
             },
             {
