@@ -40,15 +40,20 @@ In my website, I use typography as one of the main vehicles of *meaning*, so thi
 If I look at the way I work as an artist, I can say I am **sunny and passionate, loud and rough**, and I wanted typography to reflect these adjectives.
 
 I've decided to write my name (which is some sort of logo, in the end) using **[TODO here]**, available on dafont.
+
 [image here]
+
 because it is sunny, passionate and loud.
 For the "rough" part, I've chosen to write the headings in **Belta Regular**, 
-![Belta Regular](http://www.dafont.com/img/preview/b/e/belta4.png)
-also available on [Dafont](http://www.dafont.com/fr/belta.font).
 
+![Belta Regular](http://www.dafont.com/img/preview/b/e/belta4.png)
+
+also available on [Dafont](http://www.dafont.com/fr/belta.font).
 
 ### Marionette.js and the MVC pattern
 
 ### Twitter Bootstrap and the Responsive Design
 
 ### The Workflow
+
+### The Page Speed Index
