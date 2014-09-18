@@ -31,8 +31,12 @@ I wanted to provide a reasonably beautiful, smooth and light experience to the u
 So, my conclusion was that I wanted a **beautiful, responsive, fast and simple**, but yet, I wanted to be **visual** (*pictures and typography are part of the content*, since they define the coroporate image).
 
 ##### The Layout
+Since I don't want the experience to be too different among different devices, the layout is "mobile-inspired" (ok, let's say "mobile-first", since it's so hype to say that). You basically scroll down to access information. This is useful for me because it forces me to organize the information in a hierarchical way, putting the most important thing on top of the fold.
+If the screen shrinks, the layout adapts itself to it, without changing its the way the content is organized.
+The role of the home-page is to welcome the user and to "headline" the different sections of the site, while on top of the screen, I fixed a navbar that allow quick access to the pages of these sections.
 
 ##### The Typography
+
 
 ### Marionette.js and the MVC pattern
 
