@@ -54,7 +54,7 @@ For the "rough" part, I've chosen to write the headings in **Belta Regular**,
 also available on [Dafont](http://www.dafont.com/fr/belta.font).
 
 ### Marionette.js and the client-side MVC pattern
-There's no real point in using an MVC js library in a non-data-driven website like this one. Content is very simple the user doesn't really interact with data. The separation of concerns proper to MVC patterns can be implemented server-side (in the way J2EE, Symfony and many other frameworks do) so, why bothering the client with a library like Marionette.js?
+There's no real point in using an MVC js library in a non-data-driven website like this one. Content is very simple and the user doesn't really interact with data. The separation of concerns proper to MVC patterns can be implemented server-side (in the way J2EE, Symfony and many other frameworks do) so, why bothering the client with a library like Marionette.js?
 
 Well, because it's **hype** and I wanted to practice with it. No other point. 
 
@@ -63,7 +63,10 @@ Oh, well, maybe yes, the **transitions** between pages (which are not implemente
 Instead, I've been studying the optimization strategies and the [critial rendering path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/) and we'll see below that using an MVC framework is a blocking point for page speed ranking and content delivery performance.
 
 ### Twitter Bootstrap and the Responsive Design
-
+On the other hand, for this website I wanted neat colors, whitespace, clear buttons with clear states, responsive classes, rock-solid UI elements, and all this with as less effort as possible.
+I think interface design should be "invisible", which means that I don't need custom UI items to define my corporate identity. Custom UI items are expensive and difficult to mantain.
+IMHO, UI should just *work*. On desktop, tablet and mobile.
+The choice was between Foundation and Bootstrap, and the latter seemed fine to me, because of the big community built aroind it. A lot of people are discussing Bootstrap on StackOverflow and this is reassuring me, mostly because I knew I had to tweak things to get everything properly optimized and squeezed, as we will see below.
 
 ### The Workflow
 
