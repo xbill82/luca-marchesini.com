@@ -8,6 +8,9 @@ The Server-Side
 The server-side is ridiculosly simple: some very basic PHP scripts provide the data required to fill the lists of gigs and claims (the "guestbook" area, basically "they say about me" stuff).
 The scripts behave like a **REST**-ful service, even if the URLs are not formed in the pretty style that REST services use to feature (they use the old-fashioned HTTP GET variables).
 
+The way the code is organized in these scripts respects the MVC pattern.
+
+
 The Client-Side
 ---------------
 The Client-side is built on the [Marionette.js MVC library](marionettejs.com) and the Twitter [Bootstrap Responsive Mobile-first framework](getbootstrap.com). The Development version of the code is versioned in this repository, but the Production version is deployed on the server. The Production version is the result of some **build tasks** ran by [Grunt.js](http://gruntjs.com/).
@@ -50,10 +53,17 @@ For the "rough" part, I've chosen to write the headings in **Belta Regular**,
 
 also available on [Dafont](http://www.dafont.com/fr/belta.font).
 
-### Marionette.js and the MVC pattern
+### Marionette.js and the client-side MVC pattern
+There's no real point in using an MVC js library in a non-data-driven website like this one. Content is very simple the user doesn't really interact with data. The separation of concerns proper to MVC patterns can be implemented server-side (in the way J2EE, Symfony and many other frameworks do) so, why bothering the client with a library like Marionette.js?
 
+Well, because it's **hype** and I wanted to practice with it. No other point. 
+
+Oh, well, maybe yes, the **transitions** between pages (which are not implemented yet). Ok, let's put it this way: such a framework allows the developer to *really* polish the way pages are rendered, it's reasonably easy to put loaders almost everywhere, and (if the developer makes the effort) the user is never kept waiting without a visual feedback. But I didn't implement transitions yet.
+
+Instead, I've been studying the optimization strategies and the [critial rendering path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/) and we'll see below that using an MVC framework is a blocking point for page speed ranking and content delivery performance.
 
 ### Twitter Bootstrap and the Responsive Design
+
 
 ### The Workflow
 
