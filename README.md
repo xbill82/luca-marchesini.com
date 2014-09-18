@@ -20,7 +20,7 @@ The users I build my site for are the **storytelling audience** (people that go 
 
 #### The "what"
 As a storyteller, I expect my site to help me providing
-  * a visual image (something like a **corporate image**),
+  * a visual image impression (something like a **corporate image**) that tells something really essential about me as an artist,
   * **demo-videos** and textual pitch for my shows,
   * a **calendar** of the gigs to come (with all the useful details to reach the place and attend the show)
   * and, obviously, all my **contact details**.
@@ -36,6 +36,15 @@ If the screen shrinks, the layout adapts itself to it, without changing its the 
 The role of the home-page is to welcome the user and to "headline" the different sections of the site, while on top of the screen, I fixed a navbar that allow quick access to the pages of these sections.
 
 ##### The Typography
+In my website, I use typography as one of the main vehicles of *meaning*, so this choice is definitely a crucial part of the design process. Photos tell the user *the way I look like*, but typography gives the user the tone-of-voice and many other things. In some way, I could say that typography tells the user *the way I am*.
+If I look at the way I work as an artist, I can say I am **sunny and passionate, loud and rough**, and I wanted typography to reflect these adjectives.
+
+I've decided to write my name (which is some sort of logo, in the end) using **[TODO here]**, available on dafont.
+[image here]
+because it is sunny, passionate and loud.
+For the "rough" part, I've chosen to write the headings in **Belta Regular**, 
+![Belta Regular](http://www.dafont.com/img/preview/b/e/belta4.png)
+also available on [Dafont](http://www.dafont.com/fr/belta.font).
 
 
 ### Marionette.js and the MVC pattern
