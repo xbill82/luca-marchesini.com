@@ -52,6 +52,7 @@ also available on [Dafont](http://www.dafont.com/fr/belta.font).
 
 ### Marionette.js and the MVC pattern
 
+
 ### Twitter Bootstrap and the Responsive Design
 
 ### The Workflow
