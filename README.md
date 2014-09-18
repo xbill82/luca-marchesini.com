@@ -63,7 +63,8 @@ Oh, well, maybe yes, the **transitions** between pages (which are not implemente
 Instead, I've been studying the optimization strategies and the [critial rendering path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/) and we'll see below that using an MVC framework is a blocking point for page speed ranking and content delivery performance.
 
 ### Twitter Bootstrap and the Responsive Design
-On the other hand, for this website I wanted neat colors, whitespace, clear buttons with clear states, responsive classes, rock-solid UI elements, and all this with as less effort as possible.
+On the other hand, for this website I wanted neat colors, whitespace, clear buttons with clear states, responsive classes, rock-solid UI elements, and all this with **as less effort as possible**.
+
 I think interface design should be "invisible", which means that I don't need custom UI items to define my corporate identity, which is a bless, because custom UI items are expensive and difficult to mantain.
 
 In my opinion, **UI should just _work_**. On desktop, tablet and mobile.
