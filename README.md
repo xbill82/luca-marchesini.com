@@ -11,3 +11,9 @@ The scripts behave like a **REST**-ful service, even if the URLs are not formed 
 The Client-Side
 ---------------
 The Client-side is built on the [Marionette.js MVC library](marionettejs.com) and the Twitter [Bootstrap Responsive Mobile-first framework](getbootstrap.com). The Development version of the code is versioned in this repository, but the Production version is deployed on the server. The Production version is the result of some **build tasks** ran by [Grunt.js](http://gruntjs.com/).
+
+### Marionette.js and the MVC pattern
+
+### Twitter Bootstrap and the Responsive Design
+
+### The Workflow
