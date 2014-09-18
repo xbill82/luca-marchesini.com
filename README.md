@@ -64,9 +64,11 @@ Instead, I've been studying the optimization strategies and the [critial renderi
 
 ### Twitter Bootstrap and the Responsive Design
 On the other hand, for this website I wanted neat colors, whitespace, clear buttons with clear states, responsive classes, rock-solid UI elements, and all this with as less effort as possible.
-I think interface design should be "invisible", which means that I don't need custom UI items to define my corporate identity. Custom UI items are expensive and difficult to mantain.
-IMHO, UI should just *work*. On desktop, tablet and mobile.
-The choice was between Foundation and Bootstrap, and the latter seemed fine to me, because of the big community built aroind it. A lot of people are discussing Bootstrap on StackOverflow and this is reassuring me, mostly because I knew I had to tweak things to get everything properly optimized and squeezed, as we will see below.
+I think interface design should be "invisible", which means that I don't need custom UI items to define my corporate identity, which is a bless, because custom UI items are expensive and difficult to mantain.
+
+In my opinion, **UI should just _work_**. On desktop, tablet and mobile.
+
+My intention was to use one of the existing responsive frameworks *as it is*, so the choice was between Foundation and Bootstrap, and the latter seemed fine to me, because of the **big community** built aroind it. A lot of people are discussing Bootstrap on StackOverflow and this is reassuring me, mostly because I knew I had to tweak things to get everything properly **optimized and squeezed**, as we will see below.
 
 ### The Workflow
 
