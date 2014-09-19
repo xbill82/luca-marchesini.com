@@ -83,10 +83,10 @@ One of the main needs I had was optimization, both for Js, CSS and images. When 
 ##### r.js and the useless files
 Unfortunately I had to find a workaround for a quite annoying issue. When checking out packages with a manager like Npm or Bower.js, the whole git repository is downloaded, then r.js scans the whole project tree for js and css files to optimize *everything* (I didn't manage to change this behavior), daramatically slowing down the optimization task with useless computing (most of the time you only need one or two files from the library repo to be included in your build, since they are already the result of the build of all the source files of the repo). Fortunately [`grunt-bower-task`](https://github.com/yatskevich/grunt-bower-task) allows the developer to specify which files are needed from every library repository. That's what my Grunt `install` task is for, basically. Check-out the libs, extract the necessary files (paths are explicit, but remember that I specfied version names in the package manager's config files, so that path's wont break up), and put them in a separate tree, which is used for development and optimization.
 
-#### LESS and Bootstrap
+##### LESS and Bootstrap
 Another issue I had is that Bootstrap's out-of-the-box built stylesheet is just huge, since it contains the styling for all the components. I didn't need all that, so I definitely had to optimize things. To do that, I centralized the building of my stylesheets in the `main.less` file, which linked together my own stylesheets with the ones that I needed from Bootstrap. Css are compiled and compressed by the [`grunt-contrib-less`](https://github.com/gruntjs/grunt-contrib-less), which is executed in my `install` (without compression) and `build` tasks.
 
-#### The images
+##### The images
 
 #### Deployment
 
