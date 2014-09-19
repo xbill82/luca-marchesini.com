@@ -96,3 +96,11 @@ Since my web-hosting provider doesn't allow me to make a pull from GitHub (mutua
 Unfortunately, **none of the available tools worked for me**, so this is the only step I still do by hand.
 
 ### The Page Speed Index
+Google recently released some great tools to let us improve the quality of our web applications. These tools are either tutorials and how-tos, technical guidelines, and proper apps that test your site from different perspectives. One of them is the [Page Speed Insights](https://developers.google.com/speed/pagespeed/insights/).
+
+The great thing about this tool is not only that it gives you a score based on the speed that your site loads, but it also gives you some great advices on how to improve your score.
+Here's some tricks that I introduced to improve my score:
+  * [the Gzip Compression](https://developers.google.com/speed/docs/insights/EnableCompression),
+  * [leveraging the browser cache](https://developers.google.com/speed/docs/insights/LeverageBrowserCaching)
+My score is currently still sucking (specially on mobile) so I still have a lot of work to do.
+One big bottleneck that I found is that, since I'm using an MVC library, I can't deliver any content before the library (and its dependencies) are loaded. This means that, before the first bit of content received, the use has already downloaded, like, 350Kb of data, which is huge specially on mobile.
