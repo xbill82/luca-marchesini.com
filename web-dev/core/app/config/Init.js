@@ -1,5 +1,5 @@
 require.config({
-    baseUrl:"./js/app",
+    baseUrl:"./core/app",
     paths:{
         // Core Libraries
         "jquery":"../../lib/js/jquery/jquery",
