@@ -11,7 +11,7 @@ module.exports = function(grunt) {
       build: {
         options: {
           appDir: "web-dev",
-          mainConfigFile: "web-dev/js/app/config/Init.js",
+          mainConfigFile: "web-dev/core/app/config/Init.js",
           dir: "web",
           optimize: "uglify",
           optimizeCss: "none",
