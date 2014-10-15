@@ -18,8 +18,7 @@ class ClaimRepository
 	}
 
 	public function getOneFeaturedClaim() {
-		$qry = "SELECT * FROM claims WHERE published = 1 AND featured = 1";
-		if ($limit) $qry .= " ORDER BY RAND() LIMIT 0,1";
+		$qry = "SELECT * FROM claims WHERE published = 1 AND featured = 1 ORDER BY RAND() LIMIT 0,1";
 
 		$r = $this->db->query($qry.';');
 		$claims = $this->resultSetToClaims($r);
