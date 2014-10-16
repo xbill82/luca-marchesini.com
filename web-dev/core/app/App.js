@@ -19,6 +19,13 @@ define(['jquery', 'backbone', 'marionette', 'underscore', 'handlebars'],
         App.mobile = isMobile();
 
         App.addInitializer(function (options) {
+            Backbone.history.on('route', function() {
+                var url;
+                url = Backbone.history.getFragment();
+
+                return _paq.push(['trackEvent', "/" + url]);
+            });
+
             Backbone.history.start();
         });
 
