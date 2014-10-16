@@ -43,6 +43,7 @@ bower_components
 web
 web-dev/lib
 db.bak
+graphics.wip
 web-dev/styles/main.css
  
 # build script local files
