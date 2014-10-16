@@ -28,7 +28,7 @@ RewriteRule . /index.php [L]
 </IfModule>
 # END WordPress
 
-SetEnv PHP_VER 5_3
+SetEnv PHP_VER 5_4
 
 <ifModule mod_gzip.c>
 mod_gzip_on Yes
