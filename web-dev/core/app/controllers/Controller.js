@@ -10,6 +10,8 @@ define(['jquery', 'backbone', 'marionette', 'App',
 		initialize: function(options) {
 			App.commands.setHandler('show:contact', function(options) {
 				App.contactRegion.$el.modal();
+				_paq.push(['setDocumentTitle', 'Contact']);
+				_paq.push(['trackPageView']);
 			});
 
 			App.commands.setHandler('show:gig', function(options) {
@@ -39,6 +41,7 @@ define(['jquery', 'backbone', 'marionette', 'App',
 				function(Home) {
 					App.mainRegion.show(new Home(section));
 					that.loadDeferredElements();
+					$(window).scrollTop(0);
 
 					_paq.push(['setDocumentTitle', 'Home']);
 					_paq.push(['trackPageView']);
@@ -56,6 +59,7 @@ define(['jquery', 'backbone', 'marionette', 'App',
 						)
 					);
 					that.loadDeferredElements();
+					$(window).scrollTop(0);
 
 					_paq.push(['setDocumentTitle', 'Show / ' + show.get('title')]);
 					_paq.push(['trackPageView']);
@@ -68,6 +72,7 @@ define(['jquery', 'backbone', 'marionette', 'App',
 			function(Calendar) {
 				App.mainRegion.show(new Calendar());
 				that.loadDeferredElements();
+				$(window).scrollTop(0);
 
 				_paq.push(['setDocumentTitle', 'Calendar']);
 				_paq.push(['trackPageView']);
@@ -80,6 +85,7 @@ define(['jquery', 'backbone', 'marionette', 'App',
 				function(Guestbook) {
 					App.mainRegion.show(new Guestbook());
 					that.loadDeferredElements();
+					$(window).scrollTop(0);
 
 					_paq.push(['setDocumentTitle', 'Guestbook']);
 					_paq.push(['trackPageView']);
@@ -111,8 +117,6 @@ define(['jquery', 'backbone', 'marionette', 'App',
 			App.contactRegion.show(new ContactModalView());
 		},
 
-		_onNavLinkClicked: function(e) {
-			$(window).scrollTop(0);
-		}
+		_onNavLinkClicked: function(e) {}
 	});
 });

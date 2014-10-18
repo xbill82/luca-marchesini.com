@@ -18,11 +18,9 @@ define([ 'marionette', 'handlebars', 'App'],
             _showContactModal: function(event) {
                 App.execute('show:contact');
                 this._hideMenuCollapse();
-                _paq.push(['trackEvent', 'Menu', 'Contact']);
             },
 
             _onLinkClicked: function(event) {
-            	App.vent.trigger('navlink:clicked');
                 _paq.push(['trackEvent', 'Menu', 'NavLink']);
             	this._hideMenuCollapse();
             },
