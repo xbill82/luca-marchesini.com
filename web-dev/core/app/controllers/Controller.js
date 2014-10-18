@@ -39,6 +39,9 @@ define(['jquery', 'backbone', 'marionette', 'App',
 				function(Home) {
 					App.mainRegion.show(new Home(section));
 					that.loadDeferredElements();
+
+					_paq.push(['setDocumentTitle', 'Home']);
+					_paq.push(['trackPageView']);
 				});
 		},
 
@@ -46,12 +49,16 @@ define(['jquery', 'backbone', 'marionette', 'App',
 			var that = this;
 			 require(['views/show/ShowLayout'], 
 				function(Show) {
+					var show = App.shows.showsHash[showName];
 					App.mainRegion.show(
 						new Show(
-							{ model: App.shows.showsHash[showName] }
+							{ model: show }
 						)
 					);
 					that.loadDeferredElements();
+
+					_paq.push(['setDocumentTitle', 'Show / ' + show.get('title')]);
+					_paq.push(['trackPageView']);
 				});
 		},
 
@@ -61,6 +68,9 @@ define(['jquery', 'backbone', 'marionette', 'App',
 			function(Calendar) {
 				App.mainRegion.show(new Calendar());
 				that.loadDeferredElements();
+
+				_paq.push(['setDocumentTitle', 'Calendar']);
+				_paq.push(['trackPageView']);
 			});
 		},
 		
@@ -70,6 +80,9 @@ define(['jquery', 'backbone', 'marionette', 'App',
 				function(Guestbook) {
 					App.mainRegion.show(new Guestbook());
 					that.loadDeferredElements();
+
+					_paq.push(['setDocumentTitle', 'Guestbook']);
+					_paq.push(['trackPageView']);
 				});
 		},
 
@@ -81,6 +94,9 @@ define(['jquery', 'backbone', 'marionette', 'App',
 						routeName: routeName
 					}));
 					that.loadDeferredElements();
+
+					_paq.push(['setDocumentTitle', '404']);
+					_paq.push(['trackPageView']);
 				});
 		},
 

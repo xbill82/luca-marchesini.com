@@ -6,10 +6,15 @@ define([ 'marionette', 'handlebars', 'App', 'models/Show', 'text!templates/home.
 	        tagName: 'div',
 	        className: 'show col-lg-4 col-md-4 col-md-offset-0 col-sm-5 col-sm-offset-1 col-xs-12',
 
+	        ui: {
+				learnMoreBtn: '.learn-more'
+	        },
+
 	        onRender: function(e) {
-	   //      	this.$el.find('img.lazy').lazyload({
-				//     effect : "fadeIn"
-				// });
+				var that = this;
+				this.ui.learnMoreBtn.on('click', function(e) {
+					_paq.push(['trackEvent', 'Home', 'LearnMoreShow']);
+				});
 	        }
 	    });
 	}

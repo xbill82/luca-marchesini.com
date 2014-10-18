@@ -16,6 +16,10 @@ define([ 'marionette', 'handlebars', 'App'],
             },
 
             onModalOpen: function(e) {
+                _paq.push(['setDocumentTitle', 'Gig (' + this.model.get('title') +
+                    ', ' + this.model.get('date') +')']);
+                _paq.push(['trackPageView']);
+
                 if (!this.model.get('address'))
                     return;
 
