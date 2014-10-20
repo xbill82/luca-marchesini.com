@@ -56,11 +56,11 @@ I've chosen to write the headings in **Belta Regular**,
 Belta is available on [Dafont](http://www.dafont.com/fr/belta.font).
 
 ##### The Buttons
-For the buttons I rely entirely on Bootsrap's default theme, because it provides beautiful and neat buttons.
-Since the audience of my website is mostly composed by people that aren't very familiar with computers, I needed to prioritize the functional aspect of the buttons over their design (no, my corporate image isn't enforced by fancy button design). Standard Bootstrap buttons are used on many sites, which makes them more easily recognizable on the page. Also, I needed the call-to-action to be clear, and so it is for those non-flat (slightly skeumorphic) buttons.
-Default Bootstrap buttons have neat styles for every state, so that the *click* or *tap* experience is enforced by visual feedback.
+In this case, I rely on Bootsrap's default theme, because it provides beautiful and neat buttons.
+Since the audience of my website is mostly composed by people that aren't very familiar with computers, I have to **prioritize the functional aspect of the buttons over their design** (no, my corporate image isn't enforced by fancy button design). Standard Bootstrap buttons are used on many sites, which makes them more **easily recognizable** on the page. Also, I needed the **call-to-action** to be clear, and so it is for these non-flat (slightly [skeuomorphic](https://en.wikipedia.org/wiki/Skeuomorph)) buttons.
+Default Bootstrap buttons have **neat styles for every state**, so that the *click* or *tap* experience is enforced by visual feedback.
 
-I also wanted to have icons on the buttons. I believe that, when the pixels are available, it is better to enforce the interaction by using both text and icons in buttons. The text enforces the discoverability, since the first time you click on a button, you're likely to be interested in the consequence of your action *before* you click. The icon enforces user habits, because it makes the button easier to find without reading all the labels.
+I also wanted to have **icons** on the buttons. I believe that, when the pixels are available, it is better to enforce the interaction by using both text and icons in buttons. The **text enforces the discoverability**, since the first time you click on a button, you're likely to be interested in the consequence of your action *before* you click. **The icon enforces user habits**, because it makes the button easier to find without reading all the labels.
 Obviously, for the icons, I've choosen the awesome [FontAwesome](https://fortawesome.github.io/Font-Awesome/) iconic font.
 
 ### Marionette.js and the client-side MVC pattern
