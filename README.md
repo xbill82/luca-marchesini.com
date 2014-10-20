@@ -53,6 +53,9 @@ For the "rough" part, I've chosen to write the headings in **Belta Regular**,
 
 also available on [Dafont](http://www.dafont.com/fr/belta.font).
 
+I also wanted to have icons on the buttons. I believe that, when the pixels are available, it is better to enforce the interaction by using both text and icons in buttons. The text enforces the discoverability, since the first time you click on a button, you're likely to be interested in the consequence of your action *before* you click. The icon enforces user habits, because it makes the button easier to find without reading all the labels.
+Obviously, for the icons, I've choosen the awesome [FontAwesome](https://fortawesome.github.io/Font-Awesome/) iconic font.
+
 ### Marionette.js and the client-side MVC pattern
 There's no real point in using an MVC js library in a non-data-driven website like this one. Content is very simple and the user doesn't really interact with data. The separation of concerns proper to MVC patterns can be implemented server-side (in the way J2EE, Symfony and many other frameworks do) so, why bothering the client with a library like Marionette.js?
 
