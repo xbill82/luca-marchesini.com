@@ -8,7 +8,7 @@ The Server-Side
 The server-side is ridiculosly simple: some very basic PHP scripts provide the data required to fill the lists of gigs and claims (the "guestbook" area, basically "they say about me" stuff).
 The scripts behave like a **REST**-ful service, even if the URLs are not formed in the pretty style that REST services use to feature (they use the old-fashioned HTTP GET variables).
 
-The way the code is organized in these scripts respects the MVC pattern.
+The way the code is organized in these scripts follows the MVC pattern and is shamelessly inspired by the [Symfony Framework](http://symfony.com/).
 
 
 The Client-Side
