@@ -98,10 +98,11 @@ Fortunately [`grunt-bower-task`](https://github.com/yatskevich/grunt-bower-task)
 That's what my Grunt `install` task is for, basically. 
  * Check-out the libs,
  * copy the necessary files to a separate `lib` directory (remember that I specfied version names in the package manager's config files, so that file paths will not break up).
+
 So, while I'm coding, I load libraries from my `lib` path (instead of `bower-components` or `node-components`), and when I build, I'm sure that only the necessary sources are optimized and concatenated.
 
 ##### LESS and Bootstrap
-Another issue I had is that **Bootstrap's** out-of-the-box built **stylesheet is just huge**, since it contains the styling for all the components. I didn't need all that, so I definitely had to optimize things. To do that, I centralized the building of my stylesheets in the `main.less` file, which linked together my own stylesheets with the ones that I needed from Bootstrap. Css are compiled and compressed by the [`grunt-contrib-less`](https://github.com/gruntjs/grunt-contrib-less), which is executed in my `install` (without compression) and `build` tasks.
+Another issue I had is that **Bootstrap's** out-of-the-box built **stylesheet is just huge**, since it contains the styling for all the components. I didn't need all that, so I definitely had to optimize things. To do that, I centralized the building of my stylesheets in the `main.less` file, which linked together my own stylesheets with the ones that I needed from Bootstrap. Stylesheets are compiled and compressed by the [`grunt-contrib-less`](https://github.com/gruntjs/grunt-contrib-less), which is executed in my `install` (without compression) and `build` tasks.
 
 ##### The images
 My Grunt `build` task also executes [`grunt-contrib-imagemin`](https://www.npmjs.org/.../grunt-contrib-imagemin) on all my images. **The size reduction is huge**, so I strongly recommend it. I use it in conjunction with [`grunt-newer`](https://github.com/tschaub/grunt-newer), which performs the minification only on files that have changed.
