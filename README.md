@@ -82,6 +82,9 @@ Default Bootstrap buttons have **neat styles for every state**, so that the *cli
 I also wanted to have **icons** on the buttons. I believe that, when the pixels are available, it is better to enforce the interaction by using both text and icons in buttons. The **text enforces the discoverability**, since the first time you click on a button, you're likely to be interested in the consequence of your action *before* you click. **The icon enforces user habits**, because it makes the button easier to find without reading all the labels.
 Obviously, for the icons, I've choosen the awesome [FontAwesome](https://fortawesome.github.io/Font-Awesome/) iconic font.
 
+#### Internationalization
+Since my storytelling activity is done mainly in France, I don't need any internationalization at the moment. Still I could have introduced it from the beginning because maybe one day I'll need it. Argh!
+
 ### The Workflow
 Starting a web project in 2014 is a clear chance to try out the latest workflow productivity patterns that make the buzz all over the community. Defining a workflow allows the developer to properly **separate tasks and understand the way these task can be automated**. I wanted my site to be ready for development and/or deployment on a machine with Git and Node.js within two or three commands, and this is now possible thanks to [Npm](https://www.npmjs.org/), [Grunt.js](http://gruntjs.com/) (although Gulp.js seems to be a very good alternative, I didn't try it and could not recomment one rather than the other) and [Bower.js](bower.io/).
 
