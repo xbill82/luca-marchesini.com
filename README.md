@@ -82,7 +82,7 @@ Default Bootstrap buttons have **neat styles for every state**, so that the *cli
 I also wanted to have **icons** on the buttons. I believe that, when the pixels are available, it is better to enforce the interaction by using both text and icons in buttons. The **text enforces the discoverability**, since the first time you click on a button, you're likely to be interested in the consequence of your action *before* you click. **The icon enforces user habits**, because it makes the button easier to find without reading all the labels.
 Obviously, for the icons, I've choosen the awesome [FontAwesome](https://fortawesome.github.io/Font-Awesome/) iconic font.
 
-#### Internationalization
+### Internationalization
 Since my storytelling activity is done mainly in France, I don't need any internationalization at the moment. Still I could have introduced it from the beginning because maybe one day I'll need it. Argh!
 
 ### The Workflow
