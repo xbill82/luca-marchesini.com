@@ -125,3 +125,29 @@ Here's some tricks that I introduced to improve my score:
   * [leveraging the browser cache](https://developers.google.com/speed/docs/insights/LeverageBrowserCaching)
 My score is currently still sucking (specially on mobile) so I still have a lot of work to do.
 One big bottleneck that I found is that, since I'm using an MVC library, I can't deliver any content before the library (and its dependencies) are loaded. This means that, before the first bit of content received, the use has already downloaded, like, 350Kb of data, which is huge specially on mobile.
+
+### The Analytics
+Even if building websites with modern techniques is fun, we basically do it to drive audience to them and convert visits to goal achievements. I had never used any analytics tool and I decided to try it out. I first considered the idea of using GoogleAnalytics, but I didn't like the idea that all my traffic data would be stored in Google servers and, since I don't have very complicated analysis to do, I opted for the open-source [Piwik Analytics](http://piwik.org) (that I installed on the production server).
+
+Piwik seems to work exactly like GoogleAnalytics. A small snippet of code in the home page loads asynchronously the JS script for tracking and that's it. Well, no. Not so easy.
+
+In single-page applications, the snippet is executed on the first page load and then, no tracking is done if the script is left "alone".
+Googling the problem shows some solutions that weren't enough for me: web analytics isn't just about URLs, it's about *events*.
+
+> "This guy opened the page and clicked this button after 15 seconds, then it slowly scrolled down the second page and downloaded the PDF at the bottom".
+
+This was the kind of *story* that I was looking for, and I found out that Piwik allowed me to do it with the `trackEvent` primitive. You can push your own events to the tracker, and they get displayed in a very readable way.
+With Marionette it's been really easy to notify the tracker of user actions.
+
+* In the Controller, which is in charge to load the page that matches the route in the URL, I call
+  _paq.push(['setDocumentTitle', pageTitle]);
+		_paq.push(['trackPageView']);
+Which notifies the tracker that a page has been viewed.
+* While for menu links and other buttons I call things like
+   _paq.push(['trackEvent', 'Menu', 'NavLink']);
+Which notifies the tracker of a user interaction with the page.
+
+My main goal is that visitor open the Contact page, and Piwik allows to define Goals associated with page views or events. It's been really easy to create a goal that triggers at any event that contains the word "contact".
+
+#### SEO
+Piwik also allowed me to discover that I'm not very visible on Google. This seems to be due to the single-page application structure, that Google robots don't seem to love. I'll check this as soon as possible.
