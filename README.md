@@ -32,27 +32,33 @@ As a storyteller, I expect my site to help me providing
 #### The "how"
 Before starting the design process, I studied all the other storyteller's websites and noticed that they use to be messy, buggy, overloaded of information and useless decoration. And, frankly, ugly (even if there are exceptions). And often they are very hard to use (on a desktop, and I'm not even talking about mobile).
 I wanted to provide a reasonably beautiful, smooth and light experience to the users of my website.
-I also believe that, as the time goes by, users will cease forgiving non-mobile-friendly websites, so I definitely wanted a **responsive, fast and simple** website, but yet I wanted to be **visual** (*pictures and typography are part of the content*, since they define the coroporate image).
+I also believe that, as the time goes by, users will cease forgiving non-mobile-friendly websites, so I definitely wanted a **responsive, fast and simple** website, but yet I wanted it to be **visual** (*pictures and typography are part of the content*, since they define the coroporate image).
 
 ##### The Layout
-Since I don't want the experience to be too different among different devices, the layout is "mobile-inspired" (ok, let's say "mobile-first", since it's so hype to say that). You basically scroll down to access information. This is useful for me because it forces me to organize the information in a hierarchical way, putting the most important thing on top of the fold.
-If the screen shrinks, the layout adapts itself to it, without changing its the way the content is organized.
-The role of the home-page is to welcome the user and to "headline" the different sections of the site, while on top of the screen, I fixed a navbar that allow quick access to the pages of these sections.
+Since I don't want the experience to be too different among different devices, the layout is "mobile-inspired" (ok, let's say **"mobile-first"**, since it's so hype to say that). You basically scroll down to access information. This is useful for me because it forces me to **organize the information in a hierarchical way**, putting the most important thing on top of the fold.
+If the screen shrinks, the layout adapts to it, without changing the way the content is organized.
+The role of the home-page is to welcome the user and to "headline" the different sections of the site. On top of the screen, I fixed **a navbar that allows quick access** to the pages of these sections.
 
 ##### The Typography
-In my website, I use typography as one of the main vehicles of *meaning*, so this choice is definitely a crucial part of the design process. Photos tell the user *the way I look like*, but typography gives the user the tone-of-voice and many other things. In some way, I could say that typography tells the user *the way I am*.
-If I look at the way I work as an artist, I can say I am **sunny and passionate, loud and rough**, and I wanted typography to reflect these adjectives.
+For the corporate image, Typography is one of the main vehicles of *meaning*, so this choice is definitely a crucial part of the design process. Photos tell the user *the way I look like*, but **typography tells the user the tone-of-voice** and provides emotional information about me. In some way, I could say that typography tells the user *the way I am*.
+If I look at my work as an artist, I can say I am **sunny and passionate, loud and rough**, and I wanted typography to reflect these adjectives.
 
 I've decided to write my name (which is some sort of logo, in the end) using **[TODO here]**, available on dafont.
 
 [image here]
 
-because it is sunny, passionate and loud.
-For the "rough" part, I've chosen to write the headings in **Belta Regular**, 
+because it is sunny, passionate and loud. This font is available on Dafont.
+
+I've chosen to write the headings in **Belta Regular**, 
 
 ![Belta Regular](http://www.dafont.com/img/preview/b/e/belta4.png)
 
-also available on [Dafont](http://www.dafont.com/fr/belta.font).
+Belta is available on [Dafont](http://www.dafont.com/fr/belta.font).
+
+##### The Buttons
+For the buttons I rely entirely on Bootsrap's default theme, because it provides beautiful and neat buttons.
+Since the audience of my website is mostly composed by people that aren't very familiar with computers, I needed to prioritize the functional aspect of the buttons over their design (no, my corporate image isn't enforced by fancy button design). Standard Bootstrap buttons are used on many sites, which makes them more easily recognizable on the page. Also, I needed the call-to-action to be clear, and so it is for those non-flat (slightly skeumorphic) buttons.
+Default Bootstrap buttons have neat styles for every state, so that the *click* or *tap* experience is enforced by visual feedback.
 
 I also wanted to have icons on the buttons. I believe that, when the pixels are available, it is better to enforce the interaction by using both text and icons in buttons. The text enforces the discoverability, since the first time you click on a button, you're likely to be interested in the consequence of your action *before* you click. The icon enforces user habits, because it makes the button easier to find without reading all the labels.
 Obviously, for the icons, I've choosen the awesome [FontAwesome](https://fortawesome.github.io/Font-Awesome/) iconic font.
