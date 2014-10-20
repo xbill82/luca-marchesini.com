@@ -55,31 +55,32 @@ I've chosen to write the headings in **Belta Regular**,
 
 Belta is available on [Dafont](http://www.dafont.com/fr/belta.font).
 
-##### The Buttons
+### Marionette.js and the client-side MVC pattern
+There's no real point in using an MVC js library in a non-data-driven website like this one. Content is very simple and the user doesn't really interact with data. The separation of concerns proper to MVC patterns can be implemented server-side (in the way J2EE, Symfony and many other frameworks do) so, why bothering the client with a library like Marionette.js?
+
+Well, because it's **hype** and I wanted to practice with it. No other point. 
+
+Oh, well, maybe yes, rendering pages in the client lets the developer improve **transitions** between them.
+Ok, let's put it this way: such a framework allows the developer to *really* polish the way pages are rendered, it's reasonably easy to put loaders almost everywhere, and (if the developer makes the effort) the user is never kept waiting without a visual feedback. But I didn't implement transitions yet, because pages are already loading reasonably fast.
+
+On the other side, client-side MVC frameorks have severe drawbacks on the [critial rendering path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/) as we'll see below.
+
+### Twitter Bootstrap and the Responsive Design
+On the other hand, I wanted neat colors, whitespace, clear buttons with clear states, responsive classes, rock-solid UI elements, and all this with **as less effort as possible**.
+
+I think interface design should be "invisible", which means that I don't need custom UI items to define my corporate identity, which is a bless, because custom UI items are expensive and difficult to mantain.
+
+In my opinion, **UI should just _work_**. On desktop, tablet and mobile.
+
+My intention was to use one of the existing responsive frameworks without the hassle of custom styling. The choice was between Foundation and Bootstrap, and the latter seemed fine to me, because of the **big community** built around it. A quick look to the [Bootstrap tag](https://stackoverflow.com/questions/tagged/bootstrap) on StackOverflow helped me in this choice, mostly because I knew I had to tweak things to get everything properly **optimized and squeezed**, as we will see below.
+
+#### The Buttons
 In this case, I rely on Bootsrap's default theme, because it provides beautiful and neat buttons.
 Since the audience of my website is mostly composed by people that aren't very familiar with computers, I have to **prioritize the functional aspect of the buttons over their design** (no, my corporate image isn't enforced by fancy button design). Standard Bootstrap buttons are used on many sites, which makes them more **easily recognizable** on the page. Also, I needed the **call-to-action** to be clear, and so it is for these non-flat (slightly [skeuomorphic](https://en.wikipedia.org/wiki/Skeuomorph)) buttons.
 Default Bootstrap buttons have **neat styles for every state**, so that the *click* or *tap* experience is enforced by visual feedback.
 
 I also wanted to have **icons** on the buttons. I believe that, when the pixels are available, it is better to enforce the interaction by using both text and icons in buttons. The **text enforces the discoverability**, since the first time you click on a button, you're likely to be interested in the consequence of your action *before* you click. **The icon enforces user habits**, because it makes the button easier to find without reading all the labels.
 Obviously, for the icons, I've choosen the awesome [FontAwesome](https://fortawesome.github.io/Font-Awesome/) iconic font.
-
-### Marionette.js and the client-side MVC pattern
-There's no real point in using an MVC js library in a non-data-driven website like this one. Content is very simple and the user doesn't really interact with data. The separation of concerns proper to MVC patterns can be implemented server-side (in the way J2EE, Symfony and many other frameworks do) so, why bothering the client with a library like Marionette.js?
-
-Well, because it's **hype** and I wanted to practice with it. No other point. 
-
-Oh, well, maybe yes, the **transitions** between pages (which are not implemented yet). Ok, let's put it this way: such a framework allows the developer to *really* polish the way pages are rendered, it's reasonably easy to put loaders almost everywhere, and (if the developer makes the effort) the user is never kept waiting without a visual feedback. But I didn't implement transitions yet.
-
-Instead, I've been studying the optimization strategies and the [critial rendering path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/) and we'll see below that using an MVC framework is a blocking point for page speed ranking and content delivery performance.
-
-### Twitter Bootstrap and the Responsive Design
-On the other hand, for this website I wanted neat colors, whitespace, clear buttons with clear states, responsive classes, rock-solid UI elements, and all this with **as less effort as possible**.
-
-I think interface design should be "invisible", which means that I don't need custom UI items to define my corporate identity, which is a bless, because custom UI items are expensive and difficult to mantain.
-
-In my opinion, **UI should just _work_**. On desktop, tablet and mobile.
-
-My intention was to use one of the existing responsive frameworks *as it is*, so the choice was between Foundation and Bootstrap, and the latter seemed fine to me, because of the **big community** built around it. A lot of people are talking about Bootstrap on StackOverflow and this is reassuring me, mostly because I knew I had to tweak things to get everything properly **optimized and squeezed**, as we will see below.
 
 ### The Workflow
 Starting a web project in 2014 is a clear chance to try out the latest workflow productivity patterns that make the buzz all over the community. Defining a workflow allows the developer to properly **separate tasks and understand the way these task can be automated**. I wanted my site to be ready for development and/or deployment on a machine with Git and Node.js within two or three commands, and this is now possible thanks to [Npm](https://www.npmjs.org/), [Grunt.js](http://gruntjs.com/) (although Gulp.js seems to be a very good alternative, I didn't try it and could not recomment one rather than the other) and [Bower.js](bower.io/).
@@ -88,10 +89,16 @@ Starting a web project in 2014 is a clear chance to try out the latest workflow 
 When thinking about how to organize the code and the dependencies, **I didn't want to Git the dependencies**, just my own code, because I wanted to allow dependencies to evolve, have bugfixes and version control independently from my own code. That's what Npm and Bower are for. The only thing I had to keep in mind is version constraints. I struggled a bit to understand that I'd rather not always specify that I want the `latest` version of every library, since file trees can change, breaking Require.js paths and messing things up. So I paid attention to use the `~x.y.z` [version syntax](http://semver.org/), which makes the package manager get the latest version *compatible* with the specified one. Very convenient.
 
 #### Optimization (let's be cool and call it Build!)
-Since one of the main goals was to achieve a decent Page Speed rank, I had to optimize **Js, CSS and images**. When optimization comes into play, most of the time I end up throwing away all the automated steps of the project to go and tweak things manually in order to achieve minimum file size and best compression. But now things are different. [R.js](http://requirejs.org/docs/optimization.html) optimizer is perfectly **integrated with Grunt** and can silently run in my `build` task. Same thing for the [LESS](http://lesscss.org/) compiler. Which is just *great*.
+Since one of my goals was to achieve a decent Page Speed rank, I had to optimize **Js, CSS and images**. When optimization comes into play, most of the time I end up throwing away all the automated steps of the project and tweaking things manually in order to achieve minimum file size and best compression. But now things are different, a lot of smart people have been working on the problem. [R.js](http://requirejs.org/docs/optimization.html) optimizer is perfectly **integrated with Grunt** and can smoothly run in my `build` task. Same thing for the [LESS](http://lesscss.org/) compiler. Which is just *great*.
 
 ##### r.js and the useless files
-Unfortunately I had to find a workaround for a quite annoying issue. When checking out packages with a manager like Npm or Bower.js, the whole git repository is downloaded, then **r.js scans the whole project tree for js and css files to uglify _everything_** (I didn't manage to change this behavior), daramatically slowing down the optimization task with useless computing (most of the time you only need one or two files from the library repo to be included in your build, since they are already the result of the build of all the source files of the repo). Fortunately [`grunt-bower-task`](https://github.com/yatskevich/grunt-bower-task) allows to **specify which files are needed from every library repository**. That's what my Grunt `install` task is for, basically. Check-out the libs, extract the necessary files (paths are explicit, but remember that I specfied version names in the package manager's config files, so that path's wont break up), and put them in a separate tree, which is used for development and optimization.
+Unfortunately I had to find a workaround for a quite annoying issue. When checking out packages with a manager like Npm or Bower.js, the whole git repository is downloaded, then **r.js scans the whole project tree for js and css files to uglify _everything_** (I didn't manage to change this behavior), daramatically slowing down the optimization task with useless computing. Also, I wanted to be able to choose which Bootstrap components to build in, in order to save space and bandwith, so I needed a way to **specify which files from every repository have to be included in the build process**.
+Fortunately [`grunt-bower-task`](https://github.com/yatskevich/grunt-bower-task) allows it. 
+
+That's what my Grunt `install` task is for, basically. 
+ * Check-out the libs,
+ * copy the necessary files to a separate `lib` directory (remember that I specfied version names in the package manager's config files, so that file paths will not break up).
+So, while I'm coding, I load libraries from my `lib` path (instead of `bower-components` or `node-components`), and when I build, I'm sure that only the necessary sources are optimized and concatenated.
 
 ##### LESS and Bootstrap
 Another issue I had is that **Bootstrap's** out-of-the-box built **stylesheet is just huge**, since it contains the styling for all the components. I didn't need all that, so I definitely had to optimize things. To do that, I centralized the building of my stylesheets in the `main.less` file, which linked together my own stylesheets with the ones that I needed from Bootstrap. Css are compiled and compressed by the [`grunt-contrib-less`](https://github.com/gruntjs/grunt-contrib-less), which is executed in my `install` (without compression) and `build` tasks.
