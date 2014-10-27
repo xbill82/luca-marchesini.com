@@ -205,5 +205,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('install', ['bower', 'less']);
   grunt.registerTask('default', ['jshint']);
-  grunt.registerTask('build', ['clean', 'jshint', 'requirejs', 'less', 'imagemin']);
+  grunt.registerTask('build', ['clean', 'jshint', 'requirejs', 'less']); //, 'imagemin'
 };
