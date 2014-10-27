@@ -91,6 +91,7 @@ module.exports = function(grunt) {
       install: {
         options: {
           compress: false,
+          cleancss: true,
           paths: ['bower_components/bootstrap/less/']
         },
         files: {
