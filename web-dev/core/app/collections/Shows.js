@@ -20,27 +20,27 @@ define(["jquery","backbone","models/Show"],
           age: 5
          }));
 
-         this.push(new Show({
-          id: 1,
-          name: 'abrazos',
-          title: 'Abrazos',
-          shortDesc: "A chacun d’entre nous, même à M. Tout-le-monde, il est arrivé au moins une fois dans la Vie quelque chose d’étonnant, d’émouvant ou tout simplement d’insolite...",
-          longDesc: "Abrazos est un spectacle de récits de vie issus d’une collecte que je mène sans arrêt dans mon entourage proche ou lointain. Il s’agit de personnes « normales », inconnues, qui m’ont raconté des moments tout à fait surprenants et émouvants de leur vie. AA l’intérieur de certaines histoires, des poèmes sont venus trouver leur place. Le fil conducteur qui relie les récits est l’histoire d’une de mes « migrations », mon déménagement de Grenade à Montpellier. En racontant ce voyage, parsemé d’imprévus et de situations comiques, j’explore les nuances qui se dessinent dans les différences entre le mot français et ses homologues espagnols et italiens: des nuances d'où se dégage un sens nouveau.",
-          artIntro: "Des récits extraordinaires provenants de vies tout à fait ordinaires. A chacun d’entre nous, même à M. Tout-le-monde, il est arrivé au moins une fois dans la Vie quelque chose d’étonnant, d’émouvant ou tout simplement d’insolite. Parfois, lorsque je m'y attends le moins, quelqu’un me raconte quelque chose qui lui est arrivé, ou j’entends une conversation dans le tramway (ou à la poste, ou au restaurant) et je me dis « tiens, cette histoire est faite pour être racontée! ». C’est comme ça que j’ai commencé ma collecte auprès des gens que je connaissais. Mais ne croyez pas que je me suis mis à espionner les gens dans les lieux publics! Les histoires, ce sont les gens qui me les ont racontées. D’ailleurs, je suis sur que vous aussi, vous en avez une...",
-          audience: 'adult',
-          duration: 90
-         }));
+         // this.push(new Show({
+         //  id: 1,
+         //  name: 'abrazos',
+         //  title: 'Abrazos',
+         //  shortDesc: "A chacun d’entre nous, même à M. Tout-le-monde, il est arrivé au moins une fois dans la Vie quelque chose d’étonnant, d’émouvant ou tout simplement d’insolite...",
+         //  longDesc: "Abrazos est un spectacle de récits de vie issus d’une collecte que je mène sans arrêt dans mon entourage proche ou lointain. Il s’agit de personnes « normales », inconnues, qui m’ont raconté des moments tout à fait surprenants et émouvants de leur vie. AA l’intérieur de certaines histoires, des poèmes sont venus trouver leur place. Le fil conducteur qui relie les récits est l’histoire d’une de mes « migrations », mon déménagement de Grenade à Montpellier. En racontant ce voyage, parsemé d’imprévus et de situations comiques, j’explore les nuances qui se dessinent dans les différences entre le mot français et ses homologues espagnols et italiens: des nuances d'où se dégage un sens nouveau.",
+         //  artIntro: "Des récits extraordinaires provenants de vies tout à fait ordinaires. A chacun d’entre nous, même à M. Tout-le-monde, il est arrivé au moins une fois dans la Vie quelque chose d’étonnant, d’émouvant ou tout simplement d’insolite. Parfois, lorsque je m'y attends le moins, quelqu’un me raconte quelque chose qui lui est arrivé, ou j’entends une conversation dans le tramway (ou à la poste, ou au restaurant) et je me dis « tiens, cette histoire est faite pour être racontée! ». C’est comme ça que j’ai commencé ma collecte auprès des gens que je connaissais. Mais ne croyez pas que je me suis mis à espionner les gens dans les lieux publics! Les histoires, ce sont les gens qui me les ont racontées. D’ailleurs, je suis sur que vous aussi, vous en avez une...",
+         //  audience: 'adult',
+         //  duration: 90
+         // }));
 
-         this.push(new Show({
-          id: 2,
-          name: 'talaya',
-          title: 'Le Rêve de Talaya',
-          shortDesc: "Granada, Andalucía, España. Talaya est un pêcheur simple et modeste qui n’est jamais sorti de son petit village Lújar. Mais une nuit, un rêve perturbe sa tranquillité",
-          longDesc: "Il s’agit d’un spectacle de narration orale qui met en scène des légendes inédites de la tradition orale andalouse récoltées par les anthropologues de l’association La Tortuga en 2009 dans la province de Granada.<br/>Le conte du Rêve de Talaya sert de “conte tiroir” dans lequel s’insèrent des légendes, des contes et des récits de vie étroitement liés à ce terroir, point de croisement de quatre cultures (arabe, chrétienne, gitane et juive) et réceptacle de croyances.",
-          artIntro: "Granada, Andalucía, España. Talaya est un pêcheur simple et modeste qui n’est jamais sorti de son petit village Lújar. Mais une nuit, un rêve perturbe sa tranquillité. Un rêve qui lui promet des grandeurs, qui l’invite au voyage. Le voyage de Talaya ce n’est pas un voyage onirique, c’est un voyage dans les terres qui l’entourent, les terres qui lui demandent d’écouter ses histoires, histoires d’ici et maintenant.",
-          audience: 'adult',
-          duration: 80
-         }));
+         // this.push(new Show({
+         //  id: 2,
+         //  name: 'talaya',
+         //  title: 'Le Rêve de Talaya',
+         //  shortDesc: "Granada, Andalucía, España. Talaya est un pêcheur simple et modeste qui n’est jamais sorti de son petit village Lújar. Mais une nuit, un rêve perturbe sa tranquillité",
+         //  longDesc: "Il s’agit d’un spectacle de narration orale qui met en scène des légendes inédites de la tradition orale andalouse récoltées par les anthropologues de l’association La Tortuga en 2009 dans la province de Granada.<br/>Le conte du Rêve de Talaya sert de “conte tiroir” dans lequel s’insèrent des légendes, des contes et des récits de vie étroitement liés à ce terroir, point de croisement de quatre cultures (arabe, chrétienne, gitane et juive) et réceptacle de croyances.",
+         //  artIntro: "Granada, Andalucía, España. Talaya est un pêcheur simple et modeste qui n’est jamais sorti de son petit village Lújar. Mais une nuit, un rêve perturbe sa tranquillité. Un rêve qui lui promet des grandeurs, qui l’invite au voyage. Le voyage de Talaya ce n’est pas un voyage onirique, c’est un voyage dans les terres qui l’entourent, les terres qui lui demandent d’écouter ses histoires, histoires d’ici et maintenant.",
+         //  audience: 'adult',
+         //  duration: 80
+         // }));
 
          this.push(new Show({
           id: 3,
@@ -54,16 +54,16 @@ define(["jquery","backbone","models/Show"],
           age: [4, 8]
          }));
 
-         this.push(new Show({
-          id: 4,
-          name: 'marsala',
-          title: 'La Mer et Moi',
-          shortDesc: "Pourquoi est-elle si infinie? Qu’est ce qu’elle cache dans ses profondeurs? Qui a mis autant de sel dedans? La mer me déconcerte. Depuis toujours.",
-          longDesc: "La Mer et Moi est un spectacle de contes dont la thématique centrale est la mer. Un monologue relie les histoires à un discours principal dés le début du spectacle. Des chansons jouées au piano apportent ce que je ne sais pas dire par les mots.",
-          artIntro: "Pourquoi est-elle si infinie? Qu’est ce qu’elle cache dans ses profondeurs? Qui a mis autant de sel dedans?<br/>La mer me déconcerte. Depuis toujours.<br/>Le sel, le sable, l'odeur de la crème solaire me renvoient à tout un tas de questions brûlantes que, au fil des années, des histoires ont su apaiser. Ces histoires sont venues me chercher dans mon château de sable et m'ont sorti pour naviguer dans l'immensité de la mer.<br/>Sans même que je m'en rende compte...",
-          duration: 80,
-          audience: 'adult'
-         }));
+         // this.push(new Show({
+         //  id: 4,
+         //  name: 'marsala',
+         //  title: 'La Mer et Moi',
+         //  shortDesc: "Pourquoi est-elle si infinie? Qu’est ce qu’elle cache dans ses profondeurs? Qui a mis autant de sel dedans? La mer me déconcerte. Depuis toujours.",
+         //  longDesc: "La Mer et Moi est un spectacle de contes dont la thématique centrale est la mer. Un monologue relie les histoires à un discours principal dés le début du spectacle. Des chansons jouées au piano apportent ce que je ne sais pas dire par les mots.",
+         //  artIntro: "Pourquoi est-elle si infinie? Qu’est ce qu’elle cache dans ses profondeurs? Qui a mis autant de sel dedans?<br/>La mer me déconcerte. Depuis toujours.<br/>Le sel, le sable, l'odeur de la crème solaire me renvoient à tout un tas de questions brûlantes que, au fil des années, des histoires ont su apaiser. Ces histoires sont venues me chercher dans mon château de sable et m'ont sorti pour naviguer dans l'immensité de la mer.<br/>Sans même que je m'en rende compte...",
+         //  duration: 80,
+         //  audience: 'adult'
+         // }));
 
          this.push(new Show({
           id: 5,
