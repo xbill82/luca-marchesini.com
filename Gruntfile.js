@@ -40,9 +40,11 @@ module.exports = function(grunt) {
                 "bs-dropdown",
                 "bs-modal",
                 "bs-transition",
-                "App", 
-                "routers/AppRouter", 
-                "controllers/Controller", 
+                "App",
+                "routers/AppRouter",
+                "controllers/Controller",
+                "controllers/AnalyticsController",
+                "controllers/PiwikController",
                 "handlebars-helpers-my",
                 // 'lazyloader'
               ]

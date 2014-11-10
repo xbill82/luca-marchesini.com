@@ -21,7 +21,7 @@ define([ 'marionette', 'handlebars', 'App'],
             },
 
             _onLinkClicked: function(event) {
-                _paq.push(['trackEvent', 'Menu', 'NavLink']);
+                App.execute('trackEvent', 'Menu', 'NavLink');
             	this._hideMenuCollapse();
             },
 

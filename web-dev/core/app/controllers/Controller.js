@@ -10,8 +10,7 @@ define(['jquery', 'backbone', 'marionette', 'App',
 		initialize: function(options) {
 			App.commands.setHandler('show:contact', function(options) {
 				App.contactRegion.$el.modal();
-				_paq.push(['setDocumentTitle', 'Contact']);
-				_paq.push(['trackPageView']);
+				App.execute('trackPageView', 'Contact');
 			});
 
 			App.commands.setHandler('show:gig', function(options) {
@@ -43,8 +42,7 @@ define(['jquery', 'backbone', 'marionette', 'App',
 					that.loadDeferredElements();
 					$(window).scrollTop(0);
 
-					_paq.push(['setDocumentTitle', 'Home']);
-					_paq.push(['trackPageView']);
+					App.execute('trackPageView', 'Home');
 				});
 		},
 
@@ -61,8 +59,7 @@ define(['jquery', 'backbone', 'marionette', 'App',
 					that.loadDeferredElements();
 					$(window).scrollTop(0);
 
-					_paq.push(['setDocumentTitle', 'Show / ' + show.get('title')]);
-					_paq.push(['trackPageView']);
+					App.execute('trackPageView', 'Show / ' + show.get('title'));
 				});
 		},
 
@@ -74,8 +71,7 @@ define(['jquery', 'backbone', 'marionette', 'App',
 				that.loadDeferredElements();
 				$(window).scrollTop(0);
 
-				_paq.push(['setDocumentTitle', 'Calendar']);
-				_paq.push(['trackPageView']);
+				App.execute('trackPageView', 'Calendar');
 			});
 		},
 		
@@ -87,8 +83,7 @@ define(['jquery', 'backbone', 'marionette', 'App',
 					that.loadDeferredElements();
 					$(window).scrollTop(0);
 
-					_paq.push(['setDocumentTitle', 'Guestbook']);
-					_paq.push(['trackPageView']);
+					App.execute('trackPageView', 'Guestbook');
 				});
 		},
 
@@ -101,8 +96,7 @@ define(['jquery', 'backbone', 'marionette', 'App',
 					}));
 					that.loadDeferredElements();
 
-					_paq.push(['setDocumentTitle', '404']);
-					_paq.push(['trackPageView']);
+					App.execute('trackPageView', '404');
 				});
 		},
 

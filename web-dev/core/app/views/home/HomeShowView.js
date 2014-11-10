@@ -13,7 +13,7 @@ define([ 'marionette', 'handlebars', 'App', 'models/Show', 'text!templates/home.
 	        onRender: function(e) {
 				var that = this;
 				this.ui.learnMoreBtn.on('click', function(e) {
-					_paq.push(['trackEvent', 'Home', 'LearnMoreShow']);
+					App.execute('trackEvent', 'Home', 'LearnMoreShow');
 				});
 	        }
 	    });
