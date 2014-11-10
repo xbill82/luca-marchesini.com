@@ -26,7 +26,7 @@ define([ 'marionette', 'handlebars', 'App'],
             },
 
             _hideMenuCollapse: function() {
-            	this.$el.find('.navbar-toggle').click();
+                this.$el.find('.navbar-collapse').collapse('hide');
             }
 	    });
 	}
