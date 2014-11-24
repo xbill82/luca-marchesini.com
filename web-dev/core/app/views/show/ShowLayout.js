@@ -1,6 +1,6 @@
-define([ 'marionette', 'handlebars', 'App', 'views/show/ShowCalendarView', 'collections/Gigs',
-	'collections/Claims', 'text!templates/show.html', "handlebars-helpers-my"],
-	function (Marionette, Handlebars, App, CalendarView, Gigs, Claims, template) {
+define([ 'marionette', 'handlebars', 'App', 'views/show/ShowCalendarView', 'views/show/ShowClaimsView',
+	'collections/Gigs', 'collections/Claims', 'text!templates/show.html', "handlebars-helpers-my"],
+	function (Marionette, Handlebars, App, CalendarView, ClaimsView, Gigs, Claims, template) {
 		return Marionette.LayoutView.extend({
 			template: Handlebars.compile(template),
 
@@ -10,7 +10,7 @@ define([ 'marionette', 'handlebars', 'App', 'views/show/ShowCalendarView', 'coll
 
 			regions: {
 				calendar: 'section.calendar-show',
-				claims: 'section.claims-show'
+				guestbook: 'section.claims-show'
 			},
 
 			onContactBtnClicked: function(e) {
@@ -19,23 +19,23 @@ define([ 'marionette', 'handlebars', 'App', 'views/show/ShowCalendarView', 'coll
 
 			onShow: function(e) {
 				var that = this;
-				this.gigs = new Gigs({
+				var gigs = new Gigs({
 					filter: 'some',
 					showName: this.model.get('name')
 				});
 
-				this.gigs.fetch({
+				gigs.fetch({
 					success: function(collection, response, options) {
 						that.onGigsFetched(collection);
 					}
 				});
 
-				this.claims = new Claims({
+				var claims = new Claims({
 					filter: 'featured',
 					showName: this.model.get('name')
 				});
 
-				this.claims.fetch({
+				claims.fetch({
 					success: function(collection, response, options) {
 						that.onClaimsFetched(collection);
 					}
@@ -51,6 +51,11 @@ define([ 'marionette', 'handlebars', 'App', 'views/show/ShowCalendarView', 'coll
 			},
 
 			onClaimsFetched: function(claims) {
+				if (claims.length > 0) {
+					this.guestbook.show(new ClaimsView({
+						collection: claims
+					}));
+				}
 			}
 		});
 	}

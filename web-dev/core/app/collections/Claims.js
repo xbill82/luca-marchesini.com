@@ -4,40 +4,39 @@ define(['jquery', 'underscore', 'backbone','models/Claim'],
 
     var Collection = Backbone.Collection.extend({
       model: Claim,
-      claimFilter: false,
+      filter: false,
       claimLimit: false,
 
       url: function() {
         var u = 'API/claims.php';
-
-        if (this.claimFilter)
-          u += '?filter=' + this.claimFilter;
+        u += '?' + $.param(this.options);
 
         return u;
       },
 
       initialize: function(options) {
+        if (_.isUndefined(options)) options = {};
         this.options = _.defaults(options, {});
       },
 
       setFeatured: function() {
-        this.claimFilter = 'featured';
+        this.options.filter = 'featured';
       },
 
       setOneFeatured: function() {
-        this.claimFilter = 'one-featured';
+        this.options.filter = 'one-featured';
       },
 
       resetFilter: function() {
-        this.claimFilter = false;
+        this.options.filter = false;
       },
 
       setLimit: function(limit) {
-        this.claimLimit = limit;
+        this.options.claimLimit = limit;
       },
       
       resetLimit: function() {
-        this.claimLimit = false;
+        this.options.claimLimit = false;
       },
     });
 
