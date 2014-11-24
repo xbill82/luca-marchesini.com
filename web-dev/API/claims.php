@@ -41,10 +41,11 @@ class Request
 		$claims;
 		$filter = $this->value('filter', '');
 		$limit = $this->value('limit', 0);
+		$showName = $this->value('showName', null);
 
 		switch ($filter) {
 			case 'featured':
-				$claims = $service->getFeatured($limit);
+				$claims = $service->getFeatured($limit, $showName);
 				break;
 
 			case 'one-featured':

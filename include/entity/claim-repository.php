@@ -13,21 +13,23 @@ class ClaimRepository
 		try {
 			$this->db = new Db();
 		} catch (Exception $e) {
-			throw new Exception("Error initializing database", 500);
+			throw new Exception("Error initializing database: ".$e->getMessage(), 500);
 		}
 	}
 
-	public function getOneFeaturedClaim() {
-		$qry = "SELECT * FROM claims WHERE published = 1 AND featured = 1 ORDER BY RAND() LIMIT 0,1";
+	public function getOneFeaturedClaim($showName = null) {
+		$qry = "SELECT * FROM claims WHERE published = 1 AND featured = 1 ";
+		if ($showName) $qry .= " AND show_name = '$showName' ";
+		$qry .= " ORDER BY RAND() LIMIT 0,1";
 
 		$r = $this->db->query($qry.';');
 		$claims = $this->resultSetToClaims($r);
 		return $claims;
 	}
 
-	public function getFeaturedClaims($limit = 0) {
+	public function getFeaturedClaims($limit = 0, $showName = null) {
 		$qry = "SELECT * FROM claims WHERE published = 1 AND featured = 1";
-		if ($showName) $qry .= " AND show_name $showName ";
+		if ($showName) $qry .= " AND show_name = '$showName' ";
 		if ($limit) $qry .= " LIMIT $limit";
 
 		$r = $this->db->query($qry.';');

@@ -13,8 +13,8 @@ class ClaimService
 		$this->repo = new ClaimRepository();
 	}
 
-	public function getFeatured($limit = 0) {
-		return $this->repo->getFeaturedClaims($limit);
+	public function getFeatured($limit = 0, $showName = null) {
+		return $this->repo->getFeaturedClaims($limit, $showName);
 	}
 
 	public function getOneFeatured() {
