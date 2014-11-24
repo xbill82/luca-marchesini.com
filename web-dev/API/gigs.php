@@ -53,6 +53,11 @@ class Request
 				$gigs = $service->getOldGigs($limit);
 				break;
 
+			case 'some':
+				$limit = $this->value('limit', 5);
+				$gigs = $service->getSomeGigs($limit, $showName);
+				break;
+
 			case 'all':
 			default:
 				$gigs = array(

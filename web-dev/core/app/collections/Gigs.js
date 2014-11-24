@@ -27,6 +27,10 @@ define(['jquery', 'underscore','backbone','models/Gig'],
         this.options.filter = 'old';
       },
 
+      setSome: function() {
+        this.options.filter = 'some';
+      },
+
       resetFilter: function() {
         this.options.filter = null;
       },

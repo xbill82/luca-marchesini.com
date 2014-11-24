@@ -52,30 +52,34 @@
           <dt>Durée:</dt><dd> approximativement {{duration}} minutes (ça peut varier en fonction du niveau d'attention du public).</dd>
         </dl>
         <a href="/docs/tech-{{name}}.pdf" target="_blank" class="btn btn-primary"><span class="glyphicon glyphicon-file"></span> Télécharger la Fiche Technique</a>
-        <a class="btn btn-info contact-btn" role="button">Contact</a></div>
-      </section>
-    <div class="col-lg-6">
-      <section class="calendar-show">
-        <h1>Prochaines dates pour ce spectacle</h1>
-        <div class="table table-responsive"></div>
+        <a class="btn btn-info contact-btn" role="button">Contact</a>
       </section>
     </div>
+    <div class="col-lg-6">
+      <section class="claims-show"></section>
+    </div>
   </div>
+
+  <section class="calendar-show"></section>
+
 </div>
 
 <script type="text/template" id="t-calendar-show">
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Lieu</th>
-      <th>Prix</th>
-    </tr>
-  </thead>
-  <tbody></tbody>
+  <h1>Quelques dates</h1>
+  <div class="table table-responsive">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Lieu</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
 </script>
 
 <script type="text/template" id="t-calendar-gig-show">
   <td>{{formattedDate date}}</td>
   <td>{{location}}</td>
-  <td>{{parentEvent}}</td>
 </script>

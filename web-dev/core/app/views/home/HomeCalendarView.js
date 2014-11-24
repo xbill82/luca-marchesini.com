@@ -15,7 +15,7 @@ define([ 'marionette', 'handlebars', 'App', 'text!templates/home.html', 'collect
 			},
 
 			initialize: function() {
-				this.collection.setUpcoming();
+				this.collection.setSome();
 				this.collection.setLimit(5);
 			},
 

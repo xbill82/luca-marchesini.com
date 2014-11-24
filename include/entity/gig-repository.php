@@ -13,8 +13,19 @@ class GigRepository
 		try {
 			$this->db = new Db();
 		} catch (Exception $e) {
-			throw new Exception("Error initializing database", 500);
+			throw new Exception("Error initializing database: ".$e->getMessage(), 500);
 		}
+	}
+
+	public function getSomeGigs($limit = 0, $showName = null) {
+		$qry = "SELECT * FROM gigs WHERE 1";
+		if ($showName) $qry .= " AND show_name = '$showName' ";
+		$qry .= " AND published = 1  ORDER BY DATE(date) DESC";
+		if ($limit) $qry .= " LIMIT $limit";
+
+		$r = $this->db->query($qry.';');
+		$gigs = $this->resultSetToGigs($r);
+		return $gigs;
 	}
 
 	public function getUpcomingGigs($limit = 0, $showName = null) {

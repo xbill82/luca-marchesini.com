@@ -13,6 +13,10 @@ class GigService
 		$this->repo = new GigRepository();
 	}
 
+	public function getSomeGigs($limit = 0, $showName = null) {
+		return $this->repo->getSomeGigs($limit, $showName);
+	}
+
 	public function getUpcomingGigs($limit = 0, $showName = null) {
 		return $this->repo->getUpcomingGigs($limit, $showName);
 	}
