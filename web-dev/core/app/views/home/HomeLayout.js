@@ -22,10 +22,6 @@ define( [ 'App', 'marionette', 'handlebars', './HomeCalendarView',
                 this.renderCalendar();
                 this.renderShows();
                 this.renderGuestbookClaims();
-
-                // this.$el.find('img.lazy').lazyload({
-                //     effect : "fadeIn"
-                // });
             },
             
             renderCalendar: function() {
