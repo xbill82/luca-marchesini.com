@@ -44,7 +44,7 @@ module.exports = function(grunt) {
                 "routers/AppRouter",
                 "controllers/Controller",
                 "controllers/AnalyticsController",
-                "controllers/PiwikController",
+                "controllers/GoogleAnalyticsController",
                 "handlebars-helpers-my",
                 // 'lazyloader'
               ]

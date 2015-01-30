@@ -1,7 +1,7 @@
-require(["jquery", "App", "routers/AppRouter", "controllers/Controller", "controllers/PiwikController",
+require(["jquery", "App", "routers/AppRouter", "controllers/Controller", "controllers/GoogleAnalyticsController",
 	"bs-button", "bs-collapse", "bs-dropdown", "bs-modal", "bs-transition"],
-function ($, App, AppRouter, Controller, PiwikController) {
-    App.piwikController = new PiwikController();
+function ($, App, AppRouter, Controller, GoogleAnalyticsController) {
+    App.analytics = new GoogleAnalyticsController();
 
     App.appRouter = new AppRouter({
         controller:new Controller()
