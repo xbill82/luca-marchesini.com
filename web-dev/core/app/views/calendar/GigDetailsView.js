@@ -11,14 +11,11 @@ define([ 'marionette', 'handlebars', 'App'],
                 'click .show-name-a': 'onTitleClicked'
             },
 
-            onRender: function(e) {
-                //this.listenTo(, 'shown.bs.modal', this.onModalOpen);
-            },
+            onRender: function(e) {},
 
             onModalOpen: function(e) {
-                _paq.push(['setDocumentTitle', 'Gig (' + this.model.get('title') +
-                    ', ' + this.model.get('date') +')']);
-                _paq.push(['trackPageView']);
+                App.execute('trackPageView', 'Gig (' + this.model.get('title') +
+                    ', ' + this.model.get('date') +')');
 
                 if (!this.model.get('address'))
                     return;
