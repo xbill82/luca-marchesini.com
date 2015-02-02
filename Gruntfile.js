@@ -3,8 +3,44 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    watch: {
+      options: {
+        livereload: 35729,
+          debounceDelay: 250
+      },
+      scripts : {
+        files: ['web-dev/core/app/**/*.js'],
+        tasks: ['jshint'],
+        options: {
+          livereload: 35729
+        }
+      },
+      html : {
+        files: ['web-dev/core/app/**/*.html'],
+        options: {
+          livereload: 35729
+        }
+      },
+      configFiles : {
+        files: [ 'Gruntfile.js', 'config/*.js' ],
+        options: {
+          reload: true, //reload the grunt task
+          livereload: 35729 // reload the page under watching change
+        }
+      },
+      less : {
+        files: 'web-dev/styles/less/*.less',
+        tasks: ['less'],
+        options: {
+          livereload: 35729
+        }
+      }
+    },
+    livereload: {
+      port: 35729
+    },
     jshint: {
-      all: ['web-dev/js/app/**/*.js']
+      all: ['web-dev/core/app/**/*.js']
     },
     clean: ["web"],
     requirejs: {
@@ -126,6 +162,22 @@ module.exports = function(grunt) {
         }
       }
     },
+    /**
+     * This task runs processhtml on the specified files. Processhtml is a tool
+     * that parses some special comment-tags in html files in order to perform
+     * some transformations. We use it here to wipe out some dev scripts from
+     * build result.
+     */
+    processhtml: {
+      build: {
+        options: {
+          process: true,
+        },
+        files: {
+          'web/index.html': ['web-dev/index.html']
+        }
+      }
+    },
     imagemin: {
       build: {                         // Another target
         files: [{
@@ -198,6 +250,7 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
@@ -205,9 +258,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-processhtml');
   // grunt.loadNpmTasks('grunt-uncss');
 
   grunt.registerTask('install', ['bower', 'less']);
   grunt.registerTask('default', ['jshint']);
-  grunt.registerTask('build', ['clean', 'jshint', 'requirejs', 'less']); //, 'imagemin'
+  grunt.registerTask('build', ['clean', 'jshint', 'requirejs', 'less', 'processhtml']); //, 'imagemin'
 };
