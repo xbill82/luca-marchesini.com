@@ -1,7 +1,8 @@
-define([ 'marionette', 'handlebars', 'App', 'models/Gig', 'text!templates/show.html'],
+define([ 'marionette', 'handlebars', 'App', 'models/Gig',
+	'text!./templates/item-gig-reduced.html'],
 	function (Marionette, Handlebars, App, Gig, template) {
 	    return Marionette.ItemView.extend({
-	        template: Handlebars.compile($(template).filter("#t-calendar-gig-show").html()),
+	        template: Handlebars.compile(template),
 	        model: new Gig(),
 	        tagName: 'tr',
 	        

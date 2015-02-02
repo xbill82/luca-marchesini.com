@@ -1,5 +1,5 @@
 define( [ 'App', 'marionette', 'handlebars', 'views/calendar/RecentUpcomingGigsView', 
-    'views/show/ShowsListView', "views/guestbook/PicksView", 'text!templates/home.html',
+    'views/show/ShowsListView', "views/guestbook/PicksView", 'text!./templates/home.html',
     "handlebars-helpers-my"],
     function( App, Marionette, Handlebars, HomeCalendarView,
         ShowsListView, GuestbookPicksView, template) {
