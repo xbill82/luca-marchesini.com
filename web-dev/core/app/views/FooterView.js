@@ -1,15 +1,15 @@
-define([ 'marionette', 'handlebars', 'lazyloader'],
-    function (Marionette, Handlebars) {
-        //ItemView provides some default rendering logic
+define([ 'marionette', 'handlebars', 'text!templates/footer.html',
+    'text!templates/contact-info.html', 'lazyloader'],
+    function (Marionette, Handlebars, template, contactTemplate) {
         return Marionette.ItemView.extend({
-            template: Handlebars.compile($('#t-footer').html()),
+            template: Handlebars.compile(template),
 
             ui: {
                 contact: '.contact'
             },
 
             onRender: function(e) {
-                var tContact = Handlebars.compile($('#t-contact-info').html());
+                var tContact = Handlebars.compile(contactTemplate);
                 this.ui.contact.append(tContact());
 
                 this.$el.find('img.lazy').lazyload({

@@ -1,7 +1,7 @@
-define([ 'marionette', 'handlebars', 'App', 'collections/Claims', './HomeClaimView'],
-	function (Marionette, Handlebars, App, Claims, HomeClaimView) {
+define([ 'marionette', 'handlebars', 'App', 'collections/Claims', './PickView'],
+	function (Marionette, Handlebars, App, Claims, PickView) {
 		return Marionette.CollectionView.extend({
-			childView: HomeClaimView,
+			childView: PickView,
 			collection: new Claims(),
 
 			onShow: function() {

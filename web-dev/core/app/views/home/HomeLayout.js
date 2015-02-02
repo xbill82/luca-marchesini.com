@@ -1,8 +1,8 @@
-define( [ 'App', 'marionette', 'handlebars', './HomeCalendarView', 
-    './HomeShowsView', "./HomeClaimsView", 'text!templates/home.html',
-    "handlebars-helpers-my"], //, 'lazyloader'
+define( [ 'App', 'marionette', 'handlebars', 'views/calendar/RecentUpcomingGigsView', 
+    'views/show/ShowsListView', "views/guestbook/PicksView", 'text!templates/home.html',
+    "handlebars-helpers-my"],
     function( App, Marionette, Handlebars, HomeCalendarView,
-        HomeShowsView, HomeClaimsView, template) {
+        ShowsListView, GuestbookPicksView, template) {
         return Marionette.LayoutView.extend( {
             template: Handlebars.compile(template),
 
@@ -21,7 +21,7 @@ define( [ 'App', 'marionette', 'handlebars', './HomeCalendarView',
             onRender: function(e) {
                 this.renderCalendar();
                 this.renderShows();
-                this.renderGuestbookClaims();
+                this.renderGuestbookPicks();
             },
             
             renderCalendar: function() {
@@ -29,11 +29,11 @@ define( [ 'App', 'marionette', 'handlebars', './HomeCalendarView',
             },
 
             renderShows: function() {
-                this.shows.show(new HomeShowsView({collection: App.shows}));
+                this.shows.show(new ShowsListView({collection: App.shows}));
             },
 
-            renderGuestbookClaims: function() {
-                this.guestbook.show(new HomeClaimsView());
+            renderGuestbookPicks: function() {
+                this.guestbook.show(new GuestbookPicksView());
             }
         });
     });

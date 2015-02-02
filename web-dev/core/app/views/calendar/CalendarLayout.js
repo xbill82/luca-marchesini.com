@@ -1,5 +1,5 @@
-define( [ 'App', 'marionette', 'handlebars', 'views/calendar/OldGigsView', 'views/calendar/UpcomingGigsView', 'text!templates/calendar.html',
-    "handlebars-helpers-my", 'lazyloader'],
+define( [ 'App', 'marionette', 'handlebars', 'views/calendar/OldGigsView', 'views/calendar/UpcomingGigsView',
+    'text!./templates/calendar.html', "handlebars-helpers-my"],
 function( App, Marionette, Handlebars, OldGigsView, UpcomingGigsView, template) {
     return Marionette.LayoutView.extend( {
         template: Handlebars.compile(template),

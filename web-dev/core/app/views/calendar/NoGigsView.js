@@ -1,7 +1,7 @@
-define([ 'marionette', 'handlebars', 'App', 'text!templates/home.html'],
+define([ 'marionette', 'handlebars', 'App', 'text!./templates/no-gigs.html'],
 	function (Marionette, Handlebars, App, template) {
 	    return Marionette.ItemView.extend({
-	        template: Handlebars.compile($(template).filter("#t-calendar-empty").html()),
+	        template: Handlebars.compile(template),
 	        tagName: 'tr',
 	        className: 'gigs-empty'
 	    });

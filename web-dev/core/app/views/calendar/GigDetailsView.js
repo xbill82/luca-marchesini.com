@@ -1,7 +1,7 @@
-define([ 'marionette', 'handlebars', 'App'],
-    function (Marionette, Handlebars, App) {
+define([ 'marionette', 'handlebars', 'App', "text!./templates/gig-details.html"],
+    function (Marionette, Handlebars, App, template) {
         return Marionette.ItemView.extend({
-            template: Handlebars.compile($('#t-gig-extended').html()),
+            template: Handlebars.compile(template),
             
             ui: {
             	map: '.gig-map'

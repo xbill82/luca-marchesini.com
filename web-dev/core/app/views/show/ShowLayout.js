@@ -1,4 +1,4 @@
-define([ 'marionette', 'handlebars', 'App', 'views/show/ShowCalendarView', 'views/show/ShowClaimsView',
+define([ 'marionette', 'handlebars', 'App', 'views/show/ShowCalendarView', 'views/guestbook/PicksView',
 	'collections/Gigs', 'collections/Claims', 'text!templates/show.html', "handlebars-helpers-my"],
 	function (Marionette, Handlebars, App, CalendarView, ClaimsView, Gigs, Claims, template) {
 		return Marionette.LayoutView.extend({

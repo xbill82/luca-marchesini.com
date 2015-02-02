@@ -31,7 +31,6 @@
 		</div>
 	</section> 
 
-	<!-- <a name='calendar'></a> -->
 	<hr>
 
 	<section class="calendar">
@@ -59,47 +58,3 @@
 	</section> 
 
 </div> <!-- /container -->
-
-<script type="text/template" id="t-calendar">
-			<thead>
-				<tr>
-					<th>Date</th>
-					<th>Spectacle</th>
-					<th>Lieu</th>
-				</tr>
-			</thead>
-			<tbody></tbody>
-</script>
-
-<script type="text/template" id="t-calendar-gig">
-		<td>{{formattedDate date}}</td>
-		<td>{{title}}</td>
-		<td>{{location}}</td>
-</script>
-
-<script type="text/template" id="t-calendar-empty"><td colspan="3">Aucune date prévue.</td></script>
-
-<script type="text/template" id="t-show">
-	<img class="img-responsive img-circle" src="img/show-{{name}}.jpg" alt="{{title}}">
-	<h2>{{title}}</h2>
-	{{#if_eq audience compare='family'}}
-		<span class="label label-warning" title="Public familial">Familial</span>
-	{{/if_eq}}
-
-	{{#if_eq audience compare='young'}}
-		<span class="label label-success" title="Jeune public de {{first age}} à {{last age}} ans">Jeune public {{first age}}-{{last age}} ans</span>
-	{{/if_eq}}
-
-	{{#if_eq audience compare='adult'}}
-		<span class="label label-info" title="Public adulte">Adultes</span>
-	{{/if_eq}}
-	<p>{{{shortDesc}}}</p>
-	<a href="#show/{{name}}" class="btn btn-primary learn-more">En savoir plus &raquo;</a>
-</script>
-
-<script type="text/template" id="t-claim">
-		<h1 class="claim-txt"><em>"{{txt}}"</em></h1>
-		<p class="claim-author">{{author}}</p>
-		<p class="claim-organization">{{position}} - {{location}}</p>
-</script>
-
