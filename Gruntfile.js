@@ -15,6 +15,8 @@ module.exports = function(grunt) {
           dir: "web",
           optimize: "uglify",
           optimizeCss: "none",
+          inlineText: true, // inline templates in concatenated module
+          preserveLicenseComments: true, // used for legal reasons
           done: function(done, output) {
             var duplicates = require('rjs-build-analysis').duplicates(output);
 
@@ -52,18 +54,18 @@ module.exports = function(grunt) {
             {
               name: "views/home/HomeLayout",
               include: [
-                'views/home/HomeCalendarView', 
-                'views/home/HomeShowsView',
-                "views/home/HomeClaimsView",
-                'text!templates/home.html'
+                'views/calendar/RecentUpcomingGigsView',
+                'views/show/ShowsListView',
+                "views/guestbook/PicksView",
+                'text!views/home/templates/home.html'
               ],
               exclude: ['config/Main']
             },
             {
               name: "views/show/ShowLayout",
               include: [
-                'views/show/ShowCalendarView',
-                'text!templates/show.html',
+                'views/calendar/GigsListReduced',
+                'text!views/show/templates/show.html',
               ],
               exclude: ['config/Main']
             },
@@ -72,7 +74,7 @@ module.exports = function(grunt) {
               include: [
                 'views/calendar/OldGigsView',
                 'views/calendar/UpcomingGigsView',
-                'text!templates/calendar.html',
+                'text!views/calendar/templates/calendar.html',
               ],
               exclude: ['config/Main']
             },
@@ -81,7 +83,7 @@ module.exports = function(grunt) {
               include: [
                 'views/guestbook/ClaimsView',
                 'views/guestbook/SubmitClaimView',
-                'text!templates/guestbook.html'
+                'text!views/guestbook/templates/guestbook.html'
               ],
               exclude: ['config/Main']
             }
