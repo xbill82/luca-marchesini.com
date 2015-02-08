@@ -67,32 +67,18 @@ define(['handlebars', 'underscore', 'moment', 'moment-fr'], /*'js/vendor/datejs/
         });
 
 		/**
-		* {{first}}
-		* Returns the first item in a collection.
-		*
-		* @param  {Array}  array
-		* @param  {[type]} count
-		* @return {[type]}
-		*/
-		Handlebars.registerHelper('first', function (array, count) {
-			if (_.isUndefined(count)) {
+		 * {{first}}
+		 * Returns the first item in a collection.
+		 */
+		Handlebars.registerHelper('first', function (array) {
 				return array[0];
-			} else {
-				return array.slice(0, count);
-			}
 		});
+
 		/**
-		* Returns the last item in a collection. Opposite of `first`.
-		* @param  {Array}  array [description]
-		* @param  {[type]} count [description]
-		* @return {[type]}       [description]
-		*/
-		Handlebars.registerHelper('last', function (array, count) {
-			if (_.isUndefined(count)) {
+		 * Returns the last item in a collection. Opposite of `first`.
+		 */
+		Handlebars.registerHelper('last', function (array) {
 				return array[array.length - 1];
-			} else {
-				return array.slice(-count);
-		}
 		});
 	}
 );
