@@ -35,18 +35,21 @@ define(['jquery', 'backbone', 'marionette', 'App',
 		},
 
 		home: function(section) {
+			App.loaderRegion.$el.show();
 			var that = this;
 			require(['views/home/HomeLayout'], 
 				function(Home) {
 					App.mainRegion.show(new Home(section));
 					that.loadDeferredElements();
 					$(window).scrollTop(0);
+					App.loaderRegion.$el.hide();
 
 					App.execute('trackPageView', 'Home');
 				});
 		},
 
 		show: function(showName) {
+			App.loaderRegion.$el.show();
 			var that = this;
 			 require(['views/show/ShowLayout'], 
 				function(Show) {
@@ -58,36 +61,42 @@ define(['jquery', 'backbone', 'marionette', 'App',
 					);
 					that.loadDeferredElements();
 					$(window).scrollTop(0);
+					App.loaderRegion.$el.hide();
 
 					App.execute('trackPageView', 'Show / ' + show.get('title'));
 				});
 		},
 
 		calendar: function() {
+			App.loaderRegion.$el.show();
 			var that = this;
 			require(['views/calendar/CalendarLayout'], 
 			function(Calendar) {
 				App.mainRegion.show(new Calendar());
 				that.loadDeferredElements();
 				$(window).scrollTop(0);
+				App.loaderRegion.$el.hide();
 
 				App.execute('trackPageView', 'Calendar');
 			});
 		},
 		
 		guestbook: function() {
+			App.loaderRegion.$el.show();
 			var that = this;
 			require(['views/guestbook/GuestbookLayout'], 
 				function(Guestbook) {
 					App.mainRegion.show(new Guestbook());
 					that.loadDeferredElements();
 					$(window).scrollTop(0);
+					App.loaderRegion.$el.hide();
 
 					App.execute('trackPageView', 'Guestbook');
 				});
 		},
 
 		notFound: function(routeName) {
+			App.loaderRegion.$el.show();
 			var that = this;
 			require(['views/404'], 
 				function(View404) {
@@ -95,6 +104,7 @@ define(['jquery', 'backbone', 'marionette', 'App',
 						routeName: routeName
 					}));
 					that.loadDeferredElements();
+					App.loaderRegion.$el.hide();
 
 					App.execute('trackPageView', '404');
 				});

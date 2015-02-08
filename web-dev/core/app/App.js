@@ -5,6 +5,7 @@ define(['jquery', 'backbone', 'marionette', 'underscore', 'handlebars'],
         App.addRegions({
             navRegion:"nav",
             headerRegion:"header",
+            loaderRegion: "#the-loader",
             mainRegion:"#the-content",
             footerRegion:"footer",
             contactRegion:"#contact-modal",

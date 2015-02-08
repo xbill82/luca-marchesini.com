@@ -174,7 +174,7 @@ module.exports = function(grunt) {
           process: true,
         },
         files: {
-          'web/index.html': ['web-dev/index.html']
+          'web/index.html': ['web/index.html']
         }
       }
     },
