@@ -4,7 +4,7 @@ define([ 'marionette', 'handlebars', 'App', 'models/Show', 'text!./templates/sho
 	        template: Handlebars.compile(template),
 	        model: new Show(),
 	        tagName: 'div',
-	        className: 'show col-lg-4 col-md-4 col-md-offset-0 col-sm-5 col-sm-offset-1 col-xs-12',
+	        className: 'show col-lg-4 col-md-4 col-md-offset-0 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1',
 
 	        ui: {
 				learnMoreBtn: '.learn-more'
