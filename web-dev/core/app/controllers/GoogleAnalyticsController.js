@@ -1,14 +1,14 @@
-define(['controllers/AnalyticsController'],
-	function (AnalyticsController) {
-	return AnalyticsController.extend({
-		setupTracker: function() {},
+define(['controllers/AnalyticsController', 'GA'],
+	function(AnalyticsController, GA) {
+		return AnalyticsController.extend({
+			setupTracker: function(apiKey) {},
 
-		trackEvent: function(category, action) {
-			ga('send', 'event', category, action);
-		},
+			trackEvent: function(category, action) {
+				GA.event(category, action);
+			},
 
-		trackPageView: function(pageTitle) {
-			ga('send', 'pageview', {'title': pageTitle});
-		}
+			trackPageView: function(pageTitle) {
+				GA.view(pageTitle);
+			}
+		});
 	});
-});

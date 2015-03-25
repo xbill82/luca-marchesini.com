@@ -31,6 +31,8 @@ require.config({
         "lazyloader" : '../../lib/js/jquery.lazyload/jquery.lazyload',
         "moment": "../../lib/js/momentjs/moment.min",
         "moment-fr": "../../lib/js/momentjs/fr",
+        "EventEmitter": "../../lib/js/event-emitter/EventEmitter",
+        "GA": "../../lib/js/requirejs-google-analytics/GoogleAnalytics",
 
         // Customizations
         "handlebars-helpers-my": "../lib/handlebars-helpers"
@@ -47,5 +49,11 @@ require.config({
             "exports":"Handlebars"
         },
         "lazyloader":["jquery"]
+    },
+    
+    config: {
+        'GA': {
+            'id' : 'UA-56607741-1'
+        }
     }
 });

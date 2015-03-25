@@ -16,7 +16,8 @@
     "backbone": "~1.1.2",
     "requirejs-plugins": "~1.0.2",
     "momentjs": "~2.6.0",
-    "spinjs": "~2.0.2"
+    "spinjs": "~2.0.2",
+    "requirejs-google-analytics": "~0.1.11"
   },
   "ignore": [
     "**/.*",
@@ -99,6 +100,12 @@
     },
     "text": {
       "js": "text.js"
+    },
+    "requirejs-google-analytics": {
+      "js": "dist/GoogleAnalytics.js"
+    },
+    "event-emitter": {
+      "js": "dist/EventEmitter.js"
     },
     "momentjs": {
       "js": [
