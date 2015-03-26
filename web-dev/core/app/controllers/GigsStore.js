@@ -22,6 +22,36 @@ function (require) {
 
 			return deferred.promise();
 		},
+
+		getUpcomingGigs: function() {
+			var gigs = new Gigs();
+			var deferred = $.Deferred();
+
+			gigs.setUpcoming();
+
+			gigs.fetch({
+				success: function(collection, response, options) {
+					deferred.resolve(collection);
+				},
+			});
+
+			return deferred.promise();
+		},
+
+		getOldGigs: function() {
+			var gigs = new Gigs();
+			var deferred = $.Deferred();
+
+			gigs.setOld();
+
+			gigs.fetch({
+				success: function(collection, response, options) {
+					deferred.resolve(collection);
+				},
+			});
+
+			return deferred.promise();
+		},
 	});
 
 	return new GigStore();
