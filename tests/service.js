@@ -34,7 +34,16 @@ describe('GET /gigs.php?filter=old', function() {
 					throw err;
 				res.statusCode.should.equal(200, "Gig list is retrieved successfully.");
 				res.body.should.be.type('object');
-				res.body.length.should.be.above(0);
+				res.body.length.should.be.above(0, "List is not empty.");
+
+				for (var i = res.body.length - 1; i >= 0; i--) {
+					var gigDate = moment(res.body[i].date + " " + res.body[i].time);
+					var now = moment();
+
+					(gigDate.isBefore(now)).should.be.true();
+
+				};
+
 				done();
 			});
 	});
@@ -51,8 +60,8 @@ describe('GET /gigs.php?filter=old&limit=' + LIMIT, function() {
 					throw err;
 				res.statusCode.should.equal(200, "Gig list is retrieved successfully.");
 				res.body.should.be.type('object');
-				res.body.length.should.be.above(0);
-				res.body.length.should.not.be.above(LIMIT);
+				res.body.length.should.be.above(0, "List is not empty.");
+				res.body.length.should.not.be.above(LIMIT, "Limit works.");
 				done();
 			});
 	});
@@ -86,8 +95,8 @@ describe('GET /gigs.php?filter=some&limit=' + LIMIT, function() {
 					throw err;
 				res.statusCode.should.equal(200, "Gig list is retrieved successfully.");
 				res.body.should.be.type('object');
-				res.body.length.should.not.be.above(LIMIT);
-				res.body.length.should.be.above(0);
+				res.body.length.should.not.be.above(LIMIT, "Limit works.");
+				res.body.length.should.be.above(0, "List is not empty.");
 				done();
 			});
 	});
