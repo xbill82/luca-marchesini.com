@@ -32,7 +32,7 @@ define( [ 'require', 'App', 'marionette', 'handlebars', 'views/calendar/RecentUp
                 var spinner = new Spinner(Constants.SPINNER_TINY).spin();
                 $(this.calendar.$el.selector).append(spinner.el);
 
-                var fetchingGigs = GigsStore.getRecentUpcomingGigs();
+                var fetchingGigs = App.reqres.request('store:gigs:getRecentUpcoming');
                 var that = this;
 
                 $.when(fetchingGigs)

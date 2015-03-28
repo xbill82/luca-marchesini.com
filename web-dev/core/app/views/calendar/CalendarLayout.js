@@ -29,7 +29,7 @@ function(require) {
             var spinner = new Spinner(Constants.SPINNER_TINY).spin();
             $(this.upcoming.$el.selector).append(spinner.el);
 
-            var fetchingGigs = GigsStore.getUpcomingGigs();
+            var fetchingGigs = App.reqres.request('store:gigs:getUpcoming');
             var that = this;
 
             $.when(fetchingGigs)
@@ -49,7 +49,7 @@ function(require) {
             var spinner = new Spinner(Constants.SPINNER_TINY).spin();
             $(this.old.$el.selector).append(spinner.el);
 
-            var fetchingGigs = GigsStore.getOldGigs();
+            var fetchingGigs =  App.reqres.request('store:gigs:getOld');
             var that = this;
 
             $.when(fetchingGigs)

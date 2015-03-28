@@ -81,6 +81,7 @@ module.exports = function(grunt) {
                 "App",
                 "routers/AppRouter",
                 "controllers/Controller",
+                "controllers/GigsStore",
                 "controllers/AnalyticsController",
                 "controllers/GoogleAnalyticsController",
                 "handlebars-helpers-my",
@@ -121,6 +122,10 @@ module.exports = function(grunt) {
                 'views/guestbook/SubmitClaimView',
                 'text!views/guestbook/templates/guestbook.html'
               ],
+              exclude: ['config/Main']
+            },
+            {
+              name: "views/calendar/FetchFailView",
               exclude: ['config/Main']
             }
           ]

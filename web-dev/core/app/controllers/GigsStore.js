@@ -1,12 +1,29 @@
-define(['require', 'marionette', 'collections/Gigs'],
+define(['require', 'marionette', 'App', 'collections/Gigs'],
 function (require) {
 	'use strict';
 
-	var Marionette = require('marionette');
-	var Gigs = require('collections/Gigs');
+    var App = require('App'),
+		Marionette = require('marionette'),
+		Gigs = require('collections/Gigs');
 
 	var GigStore = Marionette.Controller.extend({
 		
+		initialize: function() {
+			var that = this;
+
+			App.reqres.setHandler('store:gigs:getRecentUpcoming', function() {
+				return that.getRecentUpcomingGigs();
+			});
+
+			App.reqres.setHandler('store:gigs:getUpcoming', function() {
+				return that.getUpcomingGigs();
+			});
+
+			App.reqres.setHandler('store:gigs:getOld', function() {
+				return that.getOldGigs();
+			});
+		},
+
 		getRecentUpcomingGigs: function() {
 			var gigs = new Gigs();
 			var deferred = $.Deferred();
