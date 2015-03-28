@@ -32,11 +32,17 @@ function(require) {
             var fetchingGigs = GigsStore.getUpcomingGigs();
             var that = this;
 
-            $.when(fetchingGigs).done(function(fetchedGigs) {
-                that.upcoming.show(new UpcomingGigsView({
-                    collection: fetchedGigs
-                }));
-            });
+            $.when(fetchingGigs)
+                .done(function(fetchedGigs) {
+                    that.upcoming.show(new UpcomingGigsView({
+                        collection: fetchedGigs
+                    }));
+                })
+                .fail(function() {
+                    require(['views/calendar/FetchFailView'], function(FetchFail) {
+                        that.upcoming.show(new FetchFail());
+                    });
+                });
         },
 
         showOld: function() {
@@ -46,11 +52,17 @@ function(require) {
             var fetchingGigs = GigsStore.getOldGigs();
             var that = this;
 
-            $.when(fetchingGigs).done(function(fetchedGigs) {
-                that.old.show(new OldGigsView({
-                    collection: fetchedGigs
-                }));
-            });
+            $.when(fetchingGigs)
+                .done(function(fetchedGigs) {
+                    that.old.show(new OldGigsView({
+                        collection: fetchedGigs
+                    }));
+                })
+                .fail(function() {
+                    require(['views/calendar/FetchFailView'], function(FetchFail) {
+                        that.old.show(new FetchFail());
+                    });
+                });
         },
     });
 });

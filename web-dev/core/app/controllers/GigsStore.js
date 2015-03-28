@@ -18,6 +18,9 @@ function (require) {
 				success: function(collection, response, options) {
 					deferred.resolve(collection);
 				},
+				error: function(collection, response, options) {
+					deferred.reject();
+				},
 			});
 
 			return deferred.promise();
@@ -33,6 +36,9 @@ function (require) {
 				success: function(collection, response, options) {
 					deferred.resolve(collection);
 				},
+				error: function(collection, response, options) {
+					deferred.reject();
+				},
 			});
 
 			return deferred.promise();
@@ -47,6 +53,9 @@ function (require) {
 			gigs.fetch({
 				success: function(collection, response, options) {
 					deferred.resolve(collection);
+				},
+				error: function(collection, response, options) {
+					deferred.reject();
 				},
 			});
 

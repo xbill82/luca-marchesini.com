@@ -35,11 +35,17 @@ define( [ 'require', 'App', 'marionette', 'handlebars', 'views/calendar/RecentUp
                 var fetchingGigs = GigsStore.getRecentUpcomingGigs();
                 var that = this;
 
-                $.when(fetchingGigs).done(function(fetchedGigs) {
-                    that.calendar.show(new HomeCalendarView({
-                        collection: fetchedGigs
-                    }));
-                });
+                $.when(fetchingGigs)
+                    .done(function(fetchedGigs) {
+                        that.calendar.show(new HomeCalendarView({
+                            collection: fetchedGigs
+                        }));
+                    })
+                    .fail(function() {
+                        require(['views/calendar/FetchFailView'], function(FetchFail) {
+                            that.calendar.show(new FetchFail());
+                        });
+                    });
             },
 
             renderShows: function() {
