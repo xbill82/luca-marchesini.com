@@ -17,7 +17,8 @@
     "rjs-build-analysis": "0.0.3",
     "should": "^5.2.0",
     "supertest": "^0.15.0",
-    "moment": "~2.9.0"
+    "moment": "~2.9.0",
+    "underscore": "~1.8.2"
   },
   "dependencies": {
     "handlebars-helpers": "^0.5.2"
