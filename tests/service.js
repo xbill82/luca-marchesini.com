@@ -2,9 +2,37 @@ var should = require('should');
 var request = require('supertest');
 var moment = require('moment');
 var _ = require('underscore');
+var fs = require('fs');
+var colors = require('colors/safe');
 
-var url = 'localhost:8888/luca-marchesini.com/web-dev/API/';
-// var url = 'sandbox/luca-marchesini.com/web-dev/API/';
+colors.setTheme({
+  silly: 'rainbow',
+  input: 'grey',
+  verbose: 'cyan',
+  prompt: 'grey',
+  info: 'green',
+  data: 'grey',
+  help: 'cyan',
+  warn: 'yellow',
+  debug: 'blue',
+  error: 'red'
+});
+
+try {
+	var configFile = fs.readFileSync(__dirname + '/config.json');
+} catch (e) {
+	console.log(colors.error("You don't seem to have any config.json file in the tests directory, do you?"))
+	return;
+}
+
+var config = JSON.parse(configFile);
+
+if (_.isUndefined(config.baseUrl)) {
+	console.log(colors.error("Couldn't find any baseUrl attribute in your config file. Aborting."));
+	return;
+}
+
+var url = config.baseUrl;
 
 var LIMIT = 2;
 
@@ -149,7 +177,6 @@ describe('GET /gigs.php?filter=upcoming&limit=' + LIMIT, function() {
 					throw err;
 				res.statusCode.should.equal(200, "Gig list is retrieved successfully.");
 				res.body.should.be.type('object');
-				debugger
 				res.body.length.should.not.be.above(LIMIT, "Limit works.");
 
 				for (var i = res.body.length - 1; i >= 0; i--) {

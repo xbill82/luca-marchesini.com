@@ -18,7 +18,8 @@
     "should": "^5.2.0",
     "supertest": "^0.15.0",
     "moment": "~2.9.0",
-    "underscore": "~1.8.2"
+    "underscore": "~1.8.2",
+    "colors": "~1.0.3"
   },
   "dependencies": {
     "handlebars-helpers": "^0.5.2"
