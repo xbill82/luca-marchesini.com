@@ -82,6 +82,7 @@ module.exports = function(grunt) {
                 "routers/AppRouter",
                 "controllers/Controller",
                 "controllers/GigsStore",
+                "controllers/ClaimsStore",
                 "controllers/AnalyticsController",
                 "controllers/GoogleAnalyticsController",
                 "handlebars-helpers-my",
