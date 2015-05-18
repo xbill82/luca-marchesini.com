@@ -3,7 +3,8 @@ define(['require', 'jquery', 'backbone', 'marionette', 'App',
 	'views/FooterView',
 	'views/ContactModalView',
 	'collections/Shows',
-	'controllers/GigsStore'],
+	'controllers/GigsStore',
+	'controllers/ClaimsStore'],
 	function (require) {
 
 	var $ = require('jquery'),
@@ -14,7 +15,8 @@ define(['require', 'jquery', 'backbone', 'marionette', 'App',
         FooterView = require('views/FooterView'),
         ContactModalView = require('views/ContactModalView'),
         Shows = require('collections/Shows'),
-        GigStore = require('controllers/GigsStore');
+        GigsStore = require('controllers/GigsStore'),
+        ClaimsStore = require('controllers/ClaimsStore');
 
 	return Backbone.Marionette.Controller.extend({
 		deferredElementsLoaded: false,

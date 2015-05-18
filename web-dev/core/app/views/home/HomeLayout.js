@@ -25,7 +25,7 @@ define( [ 'require', 'App', 'marionette', 'handlebars', 'views/calendar/RecentUp
             onShow: function(e) {
                 this.renderCalendar();
                 this.renderShows();
-                this.renderGuestbookPicks();
+                this.renderFeaturedClaims();
             },
             
             renderCalendar: function() {
@@ -52,8 +52,22 @@ define( [ 'require', 'App', 'marionette', 'handlebars', 'views/calendar/RecentUp
                 this.shows.show(new ShowsListView({collection: App.shows}));
             },
 
-            renderGuestbookPicks: function() {
-                this.guestbook.show(new GuestbookPicksView());
+            renderFeaturedClaims: function() {
+                var spinner = new Spinner(Constants.SPINNER_TINY).spin();
+                $(this.guestbook.$el.selector).append(spinner.el);
+
+                var fetchingPicks = App.reqres.request('store:claims:getOneFeatured');
+                var that = this;
+
+                $.when(fetchingPicks)
+                    .done(function(fetchedPicks) {
+                        that.guestbook.show(new GuestbookPicksView({
+                            collection: fetchedPicks
+                        }));
+                    })
+                    .fail(function() {
+                        console.log('Whoops, unable to fetch homepage featured claim. Please, take a look when you get a sec...');
+                    });
             }
         });
     });
