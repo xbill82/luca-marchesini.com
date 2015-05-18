@@ -1,9 +1,23 @@
-define(['jquery', 'backbone', 'marionette', 'App',
+define(['require', 'jquery', 'backbone', 'marionette', 'App',
 	'views/NavView',
 	'views/FooterView',
 	'views/ContactModalView',
-	'collections/Shows'],
-	function ($, Backbone, Marionette, App, NavView, FooterView, ContactModalView, Shows) {
+	'collections/Shows',
+	'controllers/GigsStore',
+	'controllers/ClaimsStore'],
+	function (require) {
+
+	var $ = require('jquery'),
+		Backbone = require('backbone'),
+		Marionette = require('marionette'),
+        App = require('App'),
+        NavView = require('views/NavView'),
+        FooterView = require('views/FooterView'),
+        ContactModalView = require('views/ContactModalView'),
+        Shows = require('collections/Shows'),
+        GigsStore = require('controllers/GigsStore'),
+        ClaimsStore = require('controllers/ClaimsStore');
+
 	return Backbone.Marionette.Controller.extend({
 		deferredElementsLoaded: false,
 

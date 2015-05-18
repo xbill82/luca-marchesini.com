@@ -4,24 +4,9 @@ define([ 'marionette', 'handlebars', 'App', 'text!./templates/gigs-list.html',
 		return Marionette.CompositeView.extend({
 			template: Handlebars.compile(template),
 			childView: GigView,
-			collection: new Gigs(),
 			itemViewContainer: 'tbody',
 			tagName: 'table',
 			className: 'table',
-
-			ui: {
-			},
-
-			events: {
-			},
-
-			initialize: function() {
-				this.collection.setUpcoming();
-			},
-
-			onShow: function() {
-				this.collection.fetch();
-			},
 		});
 	}
 );
