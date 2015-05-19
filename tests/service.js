@@ -48,6 +48,26 @@ var gigIsOld = function(gig) {
 	return (gigDate.isBefore(now));
 };
 
+var claimIsFeatured = function(claim) {
+	if (!claim)
+		return false;
+
+	if (!claim.featured)
+		return false;
+
+	return claim.featured == true;
+};
+
+var claimIsRelatedToShow = function(claim, showName) {
+	if (!claim)
+		return false;
+
+	if (!claim.show_name)
+		return false;
+
+	return claim.show_name == showName;
+};
+
 describe('GET /gigs.php', function() {
 	it('Should return a list of gigs grouped by upcoming and old.', function(done) {
 		request(url)
@@ -181,6 +201,109 @@ describe('GET /gigs.php?filter=upcoming&limit=' + LIMIT, function() {
 
 				for (var i = res.body.length - 1; i >= 0; i--) {
 					gigIsOld(res.body[i]).should.be.false;
+				};
+
+				done();
+			});
+	});
+});
+
+
+describe('GET /claims.php', function() {
+	it('Should return a list of claims', function(done) {
+		request(url)
+			.get('/claims.php')
+			.expect('Content-Type', /json/)
+			.expect(200)
+			.end(function(err, res) {
+				if (err)
+					throw err;
+				res.statusCode.should.equal(200, "Claim list is retrieved successfully.");
+				res.body.should.be.type('object');
+
+				done();
+			});
+	});
+});
+
+describe('GET /claims.php?filter=featured', function() {
+	it('Should return a list of featured claims', function(done) {
+		request(url)
+			.get('/claims.php?filter=featured')
+			.expect('Content-Type', /json/)
+			.expect(200)
+			.end(function(err, res) {
+				if (err)
+					throw err;
+				res.statusCode.should.equal(200, "Claim list is retrieved successfully.");
+				res.body.should.be.type('object');
+
+				for (var i = res.body.length - 1; i >= 0; i--) {
+					claimIsFeatured(res.body[i]).should.be.true;
+				};
+
+				done();
+			});
+	});
+});
+
+describe('GET /claims.php?limit=' + LIMIT, function() {
+	it('Should return a list of ' + LIMIT + ' claims', function(done) {
+		request(url)
+			.get('/claims.php?limit=' + LIMIT)
+			.expect('Content-Type', /json/)
+			.expect(200)
+			.end(function(err, res) {
+				if (err)
+					throw err;
+				res.statusCode.should.equal(200, "Claim list is retrieved successfully.");
+				res.body.should.be.type('object');
+
+				res.body.length.should.not.be.above(LIMIT, "Limit works.");
+
+				done();
+			});
+	});
+});
+
+describe('GET /claims.php?filter=featured&limit=' + LIMIT, function() {
+	it('Should return a list of ' + LIMIT + ' featured claims', function(done) {
+		request(url)
+			.get('/claims.php?filter=featured&limit=' + LIMIT)
+			.expect('Content-Type', /json/)
+			.expect(200)
+			.end(function(err, res) {
+				if (err)
+					throw err;
+				res.statusCode.should.equal(200, "Claim list is retrieved successfully.");
+				res.body.should.be.type('object');
+
+				res.body.length.should.not.be.above(LIMIT, "Limit works.");
+
+				for (var i = res.body.length - 1; i >= 0; i--) {
+					claimIsFeatured(res.body[i]).should.be.true;
+				};
+
+				done();
+			});
+	});
+});
+
+describe('GET /claims.php?filter=featured&showName=sorcieres', function() {
+	it('Should return a list of featured claims relative to the "sorcieres" show', function(done) {
+		request(url)
+			.get('/claims.php?filter=featured&showName=sorcieres')
+			.expect('Content-Type', /json/)
+			.expect(200)
+			.end(function(err, res) {
+				if (err)
+					throw err;
+				res.statusCode.should.equal(200, "Claim list is retrieved successfully.");
+				res.body.should.be.type('object');
+
+				for (var i = res.body.length - 1; i >= 0; i--) {
+					claimIsRelatedToShow(res.body[i], 'sorcieres').should.be.true;
+					claimIsFeatured(res.body[i]).should.be.true;
 				};
 
 				done();
