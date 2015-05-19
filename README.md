@@ -130,6 +130,9 @@ My score is currently still sucking (specially on mobile) so I still have a lot 
 One big bottleneck that I found is that, since I'm using an MVC library, I can't deliver any content before the library (and its dependencies) are loaded. This means that, before the first bit of content received, the use has already downloaded, like, 350Kb of data, which is huge specially on mobile.
 
 ### The Analytics
+
+#### UPDATE: I currently switched to GoogleAnalytics, so some of the information in this document may be obsolete.
+
 Even if building websites with modern techniques is fun, we basically do it to **drive audience to them and convert visits to goals**. I had never used any analytics tool and I decided to try it out. I first considered the idea of using GoogleAnalytics, but I didn't like the idea that all my traffic data would be stored in Google servers and, since I don't have very complicated analysis to do, I opted for the open-source [Piwik Analytics](http://piwik.org) (that I installed on the production server).
 
 Piwik seems to work exactly like GoogleAnalytics. A small snippet of code in the home page loads asynchronously the JS script for tracking and that's it. Well, no. Not so easy.
