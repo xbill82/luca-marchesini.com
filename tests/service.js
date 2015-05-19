@@ -2,7 +2,7 @@ var should = require('should');
 var request = require('supertest');
 var moment = require('moment');
 var _ = require('underscore');
-var fs = require('fs');
+var config = require('./config.js');
 var colors = require('colors/safe');
 
 colors.setTheme({
@@ -17,15 +17,6 @@ colors.setTheme({
   debug: 'blue',
   error: 'red'
 });
-
-try {
-	var configFile = fs.readFileSync(__dirname + '/config.json');
-} catch (e) {
-	console.log(colors.error("You don't seem to have any config.json file in the tests directory, do you?"))
-	return;
-}
-
-var config = JSON.parse(configFile);
 
 if (_.isUndefined(config.baseUrl)) {
 	console.log(colors.error("Couldn't find any baseUrl attribute in your config file. Aborting."));
