@@ -32,7 +32,7 @@ if (_.isUndefined(config.baseUrl)) {
 	return;
 }
 
-var url = config.baseUrl;
+var url = config.baseUrl + '/API';
 
 var LIMIT = 2;
 

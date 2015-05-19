@@ -40,7 +40,7 @@ module.exports = function(grunt) {
       port: 35729
     },
     jshint: {
-      all: ['web-dev/core/app/**/*.js']
+      all: ['web-dev/core/app/**/*.js', 'tests/**/*.js']
     },
     clean: ["web"],
     requirejs: {
