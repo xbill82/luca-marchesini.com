@@ -115,9 +115,34 @@ Once images are minified, they are **scaled delivered on-the-fly** by [Adaptive 
 ##### Typography
 Typography is very important for my "brand" experience, and I don't want it to be loaded asynchronously because of [FOUC effects](https://en.wikipedia.org/wiki/Flash_of_unstyled_content). So, since I wante do inline web-fonts in my stylesheet (using the [base64 encoding](http://www.smashingmagazine.com/2011/03/02/the-font-face-rule-revisited-and-useful-tricks/)), typography represented a *lot* of data being transferred before any content could be rendered, so this needed some optimization. While for Belta I needed the whole typeset, I was sure something could be done for FontAwesome, since a really small subset of icons was used. Meet [Fontello](http://fontello.com/), an iconic font generator which let me choose which icons I wanted to select from FontAwesome (and some other fonts, or even custom SVGs) to compose my own, optimized iconic font. At the time being, the font I use was created by hand on the website, which means that if I need to add a new icon, I have to repeat the whole process again (and I don't even have a clear list of the icons I use written somewhere). Fortunately, Fontello has a [web API](https://github.com/fontello/fontello#developers-api) that allow developers to programmatically generate iconic fonts (yes, it supports [Grunt integration](https://github.com/jubalm/grunt-fontello)).
 
+#### The Tests
+I have recently implemented a set of Service Tests, contained in `tests/service.js` and UI Tests, in `tests/ui.js`. They can be launched with the command `npm test`, or separately via
+
+    $ npm run test-service 
+    $ npm run test-ui
+
+##### The Service Tests
+The Service Tests are based on [Mocha.js](http://mochajs.org) and [Should.js](https://shouldjs.github.io/), which are great nodejs-based tools. Their purpose is to ensure that the data RESTful API is working correctly, that data are returned in the expsected format and that nothing is missing.
+I've tried to reach full coverage from the beginning because it was actually feasible and also because I don't want to mess with data.
+
+##### The UI Tests (currently in the `ui_tests` branch)
+UI tests are based on [Casper.js](http://casperjs.org/), which purpose is to test the state of the interface. I'm not hoping to reach full coverage because it can be very tedious and extremely time-consuming.
+My strategy is
+
+> whenever I find an interface bug that can be expressed in Casper code, I write down a test.
+
+One nice thing that Casper does is taking screenshots. I plan to create automatic scheduled tests that fill the `tests/screenshots` with the results, so that glitches can be found with a rapid eye sight.
+
 #### Deployment
 Since my web-hosting provider doesn't allow me to make pulls from GitHub (mutualized servers don't allow outgoing connections), I have to deploy my code by FTP. So, in order to automate that, **I need a Grunt task that synchronizes the remote server with my build tree by FTP**.
 Unfortunately, **none of the available tools worked for me**, so this is the only step I still do by hand.
+
+##### Docker
+I am currently working on a [Docker](https://www.docker.com/) image to be able to ship a running version of this website within one single command. Something like
+
+    docker run -t -d luca-marchesini.com /run.sh
+
+Docker is a great solution, either to ship to production as to be able to easily setup a development envronment. This is still in work-in-progress mode, but I'll wrap it up soon!
 
 ### The Page Speed Index
 Google recently released some great tools to let us improve the quality of our web applications. These tools are either [tutorials](https://developers.google.com/web/fundamentals/) and [how-tos](https://www.google.com/events/io/io14videos), [visual guidelines](http://www.google.com/design/spec/material-design/introduction.html), and proper apps that test your site from different perspectives. One of them is the [Page Speed Insights](https://developers.google.com/speed/pagespeed/insights/).
@@ -131,36 +156,32 @@ One big bottleneck that I found is that, since I'm using an MVC library, I can't
 
 ### The Analytics
 
-#### UPDATE: I currently switched to GoogleAnalytics, so some of the information in this document may be obsolete.
+Even if building websites with modern techniques is fun, we basically do it to **drive audience to them and convert visits to goals**. I had never used any analytics tool and I decided to try it out. I opted for the classic Google Analytics.
 
-Even if building websites with modern techniques is fun, we basically do it to **drive audience to them and convert visits to goals**. I had never used any analytics tool and I decided to try it out. I first considered the idea of using GoogleAnalytics, but I didn't like the idea that all my traffic data would be stored in Google servers and, since I don't have very complicated analysis to do, I opted for the open-source [Piwik Analytics](http://piwik.org) (that I installed on the production server).
-
-Piwik seems to work exactly like GoogleAnalytics. A small snippet of code in the home page loads asynchronously the JS script for tracking and that's it. Well, no. Not so easy.
+It seems to work seamlessly. A small snippet of code in the home page loads asynchronously the JS script for tracking and that's it. Well, no. Not so easy.
 
 In single-page applications, the snippet is executed on the first page load and then, no tracking is done if the script is left "alone".
 Googling the problem shows some solutions that weren't enough for me: **web analytics isn't just about URLs**, it's about *events*.
 
 > "This guy opened the page and clicked this button after 15 seconds, then it slowly scrolled down the second page and downloaded the PDF at the bottom".
 
-This was the kind of *story* that I was looking for, and I found out that Piwik allowed me to do it with the `trackEvent` primitive. **You can push your own events to the tracker**, and they get displayed in a very readable way.
-With Marionette Views it's been really easy to notify the tracker of user actions.
+This was the kind of *story* that I was looking for, and I found out that Google Analytics allowed me to do it with the `event` primitive. **You can push your own events to the tracker**, and they get displayed in a very readable way.
 
-* In the Controller, which is in charge to load the page that matches the route in the URL, I call
+To make things in a proper way, I created a dedicated controller (the `AnalyticsController`), which is in charge to expose the analytics API. In my case it's very simple.
 
-```javascript
-_paq.push(['setDocumentTitle', pageTitle]);
-_paq.push(['trackPageView']);
-```
-Which notifies the tracker that a page has been viewed.
-* While for menu links and other buttons I call things like
+    trackEvent: function(category, action) {},
+    trackPageView: function(pageTitle) {}
 
-```javascript
-_paq.push(['trackEvent', 'Menu', 'NavLink']);
-```
+The `AnalyticsController` works like an *abstract class*, because its purpose is to simply expose an API, but its methods are actually empty.
 
-Which notifies the tracker of a user interaction with the page.
+The `GoogleAnalyticsController` inherits from the `AnalyticsController` and *implements* these abstract methods.
 
-My main goal is that visitor open the Contact page, and Piwik allows to define **Goals** associated with page views or events. It's been really easy to create a goal that triggers at any event that contains the word "contact".
+> I've done things this way because I wanted to create an abstraction layer between my application and the analytics tracker, since I didn't know which one I was going to keep (I have actually tried Google Analytics and Piwik).
+
+The `AnalyticsController` also registers the `trackEvent` and `trackPageView` commands in the application. The purpose is
+
+* to let components of the application call these commands without being coupled to the controller, and
+* to be able to plug in and off the controller without breaking the application (if a non-registered command is launched, no error is triggered).
 
 #### SEO
-Piwik also allowed me to discover that I'm not very visible on Google. This seems to be due to the single-page application structure, that Google robots don't seem to love. I'll check this as soon as possible.
+Analytics also allowed me to discover that I'm not very visible on Google. This seems to be due to the single-page application structure, that Google robots don't seem to love. I'll check this as soon as possible.
