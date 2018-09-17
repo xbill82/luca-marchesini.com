@@ -19,10 +19,14 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: "#3B8070" },
+  css: ["@/assets/belta-regular.css", "@/assets/sitewise.scss"],
   /*
   ** Build configuration
   */
   build: {
+    styleResources: {
+      scss: "./assets/variables.scss"
+    },
     /*
     ** Run ESLint on save
     */
