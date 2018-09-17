@@ -32,6 +32,14 @@
               <iframe src="http://www.youtube.com/embed/taLPgu72eic" allowfullscreen="" frameborder="0"></iframe>
             </div>
             <div class="Teaser-videoCredits">Crédits Vidéo © Marion Chataing</div>
+
+            <div class="Claim">
+              <div class="Claim-txt">
+                  "Nous sommes vraiment très très contents de l'intervention de Luca! Et nous le remercions une fois de plus pour sa bonne humeur et son professionnalisme."
+              </div>
+              <p class="Claim-author">Nathalie Destre</p>
+              <p class="Claim-organization">Association ¡Vamos! - Marvejols</p>
+            </div>
           </b-col>
         </b-row>
 
@@ -39,7 +47,7 @@
 
 			<!-- <div class="col-md-7 col-md-offset-1 col-xs-12 text-center">
 
-				<div class="guestbook-picks"><div><div class="claim"><h1 class="claim-txt"><em>"Sous une grande église, sur un petit banc, il conte.
+				<div><div class="claim"><h1 class="claim-txt"><em>"Sous une grande église, sur un petit banc, il conte.
 Il conte les sorcières, les humains, les folies, les rêves, les lutins, les peurs et les envies.
 Il conte et nous rions, nous écoutons attentivement, avec joie. Et je les vois les sourires des gens, je les entends leurs rires, et je sens l'émotion qui est parmi nous, grâce à ce moment de partage si beau que nous vivons.
 Merci Luca pour ta générosité et ce beau voyage!
@@ -96,7 +104,33 @@ export default {
 .Teaser-videoCredits {
   text-align: right;
   font-size: 0.7em;
-  color: #777;
+  color: $color_grey;
+}
+
+.Claim {
+  font-family: Georgia, serif;
+  margin: 3.5em;
+  text-align: right;
+}
+
+.Claim-txt {
+  line-height: 1.1;
+  font-size: 1.3em;
+  color: $color_grey;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.Claim-author {
+  color: darken($color_grey, 10%);
+  margin: 0;
+  font-size: 1em;
+}
+
+.Claim-organization {
+  font-size: 0.8em;
+  color: darken($color_grey, 10%);
 }
 </style>
 
