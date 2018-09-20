@@ -53,6 +53,7 @@
 </template>
 
 <script>
+import moment from "moment";
 import Navbar from "~/components/Navbar.vue";
 import * as gigs from "../data/gigs.api";
 
@@ -63,7 +64,21 @@ export default {
   },
   data() {
     return {
-      fields: ["date", "title", "location"],
+      fields: {
+        date: {
+          label: "Date",
+          formatter: date =>
+            moment(date, "YYYY-MM-DD")
+              .locale("fr")
+              .format("D MMMM YYYY")
+        },
+        title: {
+          label: "Spectacle"
+        },
+        location: {
+          label: "Lieu"
+        }
+      },
       gigs: gigs.some(5)
     };
   }
