@@ -46,7 +46,7 @@
       <hr>
       <section class="Calendar">
         <h1>Les prochaines dates</h1>
-        <b-table :items="dates" :fields="fields"></b-table>
+        <b-table :items="gigs" :fields="fields"></b-table>
       </section>
     </div>
   </div>
@@ -54,31 +54,17 @@
 
 <script>
 import Navbar from "~/components/Navbar.vue";
+import * as gigs from "../data/gigs.api";
 
 export default {
+  name: "Home",
   components: {
     Navbar
   },
   data() {
     return {
-      fields: ["date", "spectacle", "lieu"],
-      dates: [
-        {
-          date: "mercredi 31 octobre 2018",
-          spectacle: "La Danse des Sorcières",
-          lieu: "Parignargues (30)"
-        },
-        {
-          date: "mercredi 31 octobre 2018",
-          spectacle: "La Danse des Sorcières",
-          lieu: "Parignargues (30)"
-        },
-        {
-          date: "mercredi 31 octobre 2018",
-          spectacle: "La Danse des Sorcières",
-          lieu: "Parignargues (30)"
-        }
-      ]
+      fields: ["date", "title", "location"],
+      gigs: gigs.some(5)
     };
   }
 };
