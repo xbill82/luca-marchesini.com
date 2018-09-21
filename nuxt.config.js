@@ -21,7 +21,7 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: "#3B8070" },
-  css: ["@/assets/belta-regular.css"],
+  css: ["@/assets/belta-regular.css", "@assets/custom-awesome.css"],
   /*
   ** Build configuration
   */

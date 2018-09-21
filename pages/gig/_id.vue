@@ -7,34 +7,54 @@
           <b-col
             lg="6" md="7" sm="8" xs="12"
             offset-lg="1">
-            <h1>{{ gig.title }}</h1>
+            <h1> <i class="icon-star"></i> {{ gig.title }}</h1>
           </b-col>
         </b-row>
       </div>
     </header>
     <div class="container">
-      <div class="GigPage-date">
-        Date: {{ formatGigDate(gig.date) }}
-      </div>
-      <div v-if="gig.time" class="GigPage-time">
-        Heure: {{ formatGigTime(gig.time) }}
-      </div>
-      <div class="GigPage-location">
-        Lieu: {{ gig.location }}
-      </div>
-      <div v-if="gig.address" class="GigPage-address">
-        Adresse: {{ gig.address }}
-      </div>
-      <div v-if="gig.parentEvent" class="GigPage-parentEvent">
-        Cadre: <a v-if="gig.parentEventUrl" :href="gig.parentEventUrl">{{ gig.parentEvent }}</a>
-        <span v-else>{{ gig.parentEvent }}</span>
-      </div>
-      <div v-if="gig.price" class="GigPage-price">
-        Prix: {{ gig.price }}
-      </div>
-      <div v-if="gig.showName" class="GigPage-showName">
-        <b-button :to="`show/${gig.showName}`">Accéder à la fiche du spectacle</b-button>
-      </div>
+      <section class="GigPage-content">
+        <div class="GigPage-element">
+          <i class="icon-calendar"></i>
+          <div class="GigPage-element--content">
+            <div class="GigPage-element--key">Date</div>
+            <div class="GigPage-element--value">{{ formatGigDate(gig.date) }}</div>
+          </div>
+        </div>
+        <div v-if="gig.time" class="GigPage-element">
+          <i class="icon-clock"></i>
+          <div class="GigPage-element--content">
+            <div class="GigPage-element--key">Heure</div>
+            <div>{{ formatGigTime(gig.time) }}</div>
+          </div>
+        </div>
+        <div class="GigPage-element">
+          <i class="icon-location"></i>
+          <div class="GigPage-element--content">
+            <div class="GigPage-element--key">Lieu</div>
+            <div>{{ gig.location }}</div>
+            <div class="GigPage-element--address" v-if="gig.address">{{ gig.address }}</div>
+          </div>
+        </div>
+        <div v-if="gig.parentEvent" class="GigPage-element">
+          <i class="icon-flag"></i>
+          <div class="GigPage-element--content">
+            <div class="GigPage-element--key">Cadre</div>
+            <a v-if="gig.parentEventUrl" :href="gig.parentEventUrl">{{ gig.parentEvent }}</a>
+            <div v-else>{{ gig.parentEvent }}</div>
+          </div>
+        </div>
+        <div v-if="gig.price" class="GigPage-element">
+          <i class="icon-money"></i>
+          <div class="GigPage-element--content">
+            <div class="GigPage-element--key">Prix</div>
+            <div>{{ gig.price }}</div>
+          </div>
+        </div>
+        <div v-if="gig.showName" class="GigPage-goToShow">
+          <b-button variant="primary" :to="`show/${gig.showName}`">Accéder à la fiche du spectacle</b-button>
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -87,6 +107,35 @@ header {
     color: $color_white;
     font-size: 3em;
   }
+}
+
+.GigPage-content {
+  margin-top: 40px;
+}
+
+.GigPage-element {
+  i {
+    font-size: 3em;
+    display: inline;
+    color: $color_grey;
+  }
+
+  .GigPage-element--content {
+    display: inline-block;
+  }
+
+  .GigPage-element--key {
+    font-weight: 800;
+  }
+
+  .GigPage-element--address {
+    font-style: italic;
+    color: $color_darkgrey;
+  }
+}
+
+.GigPage-goToShow {
+  margin-top: 40px;
 }
 </style>
 
