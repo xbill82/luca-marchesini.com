@@ -1,6 +1,5 @@
 <template>
   <div>
-    <navbar></navbar>
     <header class="Header">
       <b-img src="/header-home-bg.jpg" fluid-grow ></b-img>
       <div class="Header-jumbofon">
@@ -43,7 +42,6 @@
           </b-col>
         </b-row>
       </section>
-      <hr>
       <section class="Calendar">
         <h1>Les prochaines dates</h1>
         <b-table :items="gigs" :fields="fields"></b-table>
@@ -99,43 +97,18 @@
         </div>
       </section>
     </div>
-    <footer>
-      <div class="container">
-        <b-row>
-          <b-col
-            lg="4" md="4" sm="4" xs="12">
-            <b-img src="logo-footer.png"></b-img>
-            <a href="mailto:contact@luca-marchesini.com"><span class="icon-envelope"></span>&nbsp;contact@luca-marchesini.com</a>
-            <br>
-            <a href="tel:+33633596151"><span class="icon-phone"></span>&nbsp;+33 (0) 6 33 59 61 51</a>
-          </b-col>
-          <b-col
-            lg="4" md="4" sm="4" xs="12"
-            offset-lg="3" offset-md="3" offset-sm="3">
-            <h3>Plan du site</h3>
-            <ul class="list-unstyled">
-              <li><a href="">Accueil</a></li>
-              <li><a href="">Agenda</a></li>
-              <li><a href="">Spectacles</a></li>
-              <li><a href="">Livre d'Or</a></li>
-						</ul>
-          </b-col>
-        </b-row>
-      </div>
-    </footer>
+
   </div>
 </template>
 
 <script>
 import moment from "moment";
-import Navbar from "~/components/Navbar.vue";
+
 import * as gigs from "../data/gigs.api";
 
 export default {
   name: "Home",
-  components: {
-    Navbar
-  },
+  components: {},
   data() {
     return {
       fields: {
@@ -178,15 +151,31 @@ export default {
     font-size: 2.2em;
   }
 }
-.container {
-  max-width: 960px;
-}
 
 .Teaser-lead {
   margin-bottom: 20px;
   font-size: 21px;
   font-weight: 300;
   line-height: 1.4;
+}
+
+// Courtesy of embedresponsively.com
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .Teaser-videoCredits {
@@ -223,13 +212,6 @@ export default {
 
 .Shows-itemContent {
   margin-top: 15px;
-}
-
-footer {
-  margin-top: 50px;
-  background-color: $color_white;
-  padding: 20px;
-  color: $color_grey;
 }
 </style>
 
