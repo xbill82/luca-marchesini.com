@@ -29,7 +29,7 @@
             offset-md="1"
             xs="12">
             <div class="embed-container">
-              <iframe src="http://www.youtube.com/embed/taLPgu72eic" allowfullscreen="" frameborder="0"></iframe>
+              <iframe src="https://www.youtube.com/embed/taLPgu72eic" allowfullscreen="" frameborder="0"></iframe>
             </div>
             <div class="Teaser-videoCredits">Crédits Vidéo © Marion Chataing</div>
 
