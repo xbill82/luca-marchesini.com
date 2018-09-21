@@ -44,7 +44,19 @@
       </section>
       <section class="Calendar">
         <h1>Les prochaines dates</h1>
-        <b-table :items="gigs" :fields="fields"></b-table>
+        <b-table :items="gigs" :fields="fields">
+          <template slot="Date" slot-scope="data">
+            <nuxt-link :to="`show/${data.item.id}`">
+              {{ formatGigDate(data.item.date) }}
+            </nuxt-link>
+          </template>
+          <template slot="Spectacle" slot-scope="data">
+            <nuxt-link :to="`show/${data.item.id}`">{{ data.item.title }}</nuxt-link>
+          </template>
+          <template slot="Lieu" slot-scope="data">
+            <nuxt-link :to="`show/${data.item.id}`">{{ data.item.location }}</nuxt-link>
+          </template>
+        </b-table>
       </section>
       <hr>
       <section class="Shows">
@@ -52,10 +64,7 @@
         <div class="Shows-item">
           <b-row>
             <b-col
-              lg="4"
-              md="4"
-              sm="5"
-              xs="10">
+              lg="4" md="4" sm="5" xs="10">
               <b-img
                 src="/show-sorcieres.jpg" rounded="circle">
               </b-img>
@@ -67,10 +76,7 @@
               </div>
             </b-col>
             <b-col
-              lg="4"
-              md="4"
-              sm="5"
-              xs="10">
+              lg="4" md="4" sm="5" xs="10">
               <b-img
                 src="/show-europe.jpg" rounded="circle">
               </b-img>
@@ -103,7 +109,6 @@
 
 <script>
 import moment from "moment";
-
 import * as gigs from "../data/gigs.api";
 
 export default {
@@ -111,23 +116,31 @@ export default {
   components: {},
   data() {
     return {
-      fields: {
-        date: {
-          label: "Date",
-          formatter: date =>
-            moment(date, "YYYY-MM-DD")
-              .locale("fr")
-              .format("D MMMM YYYY")
-        },
-        title: {
-          label: "Spectacle"
-        },
-        location: {
-          label: "Lieu"
-        }
-      },
+      // fields: {
+      //   date: {
+      //     label: "Date",
+      //     formatter: date =>
+      //       moment(date, "YYYY-MM-DD")
+      //         .locale("fr")
+      //         .format("D MMMM YYYY")
+      //   },
+      //   title: {
+      //     label: "Spectacle"
+      //   },
+      //   location: {
+      //     label: "Lieu"
+      //   }
+      // },
+      fields: ["Date", "Spectacle", "Lieu"],
       gigs: gigs.some(5)
     };
+  },
+  methods: {
+    formatGigDate(date) {
+      return moment(date, "YYYY-MM-DD")
+        .locale("fr")
+        .format("D MMMM YYYY");
+    }
   }
 };
 </script>
@@ -208,6 +221,13 @@ export default {
 .Claim-organization {
   font-size: 0.8em;
   color: darken($color_grey, 10%);
+}
+
+.Calendar {
+  a {
+    color: $color_black;
+    text-decoration: none;
+  }
 }
 
 .Shows-itemContent {

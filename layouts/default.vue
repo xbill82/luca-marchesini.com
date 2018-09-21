@@ -1,7 +1,9 @@
 <template>
   <div>
     <navbar></navbar>
-    <nuxt/>
+    <div class="Page">
+      <nuxt/>
+    </div>
     <site-footer></site-footer>
   </div>
 </template>
@@ -52,6 +54,10 @@ h2 {
 
 .container {
   max-width: 960px;
+}
+
+.Page {
+  margin-top: 67px;
 }
 </style>
 
