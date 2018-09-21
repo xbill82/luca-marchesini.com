@@ -2,7 +2,7 @@
   <div>
     <navbar></navbar>
     <header class="Header">
-      <b-img src="~/assets/header-home-bg.jpg" fluid-grow ></b-img>
+      <b-img src="/header-home-bg.jpg" fluid-grow ></b-img>
       <div class="Header-jumbofon">
         <b-row>
           <b-col
@@ -11,7 +11,7 @@
             sm="8"
             xs="12">
             <h1>Messieurs dames, souriez!</h1>
-            <b-img src="~/assets/logo-header.png" fluid></b-img>
+            <b-img src="/logo-header.png" fluid></b-img>
             <h1>va vous raconter une histoire!</h1>
           </b-col>
         </b-row>
@@ -48,7 +48,81 @@
         <h1>Les prochaines dates</h1>
         <b-table :items="gigs" :fields="fields"></b-table>
       </section>
+      <hr>
+      <section class="Shows">
+        <h1>Les pestacles</h1>
+        <div class="Shows-item">
+          <b-row>
+            <b-col
+              lg="4"
+              md="4"
+              sm="5"
+              xs="10">
+              <b-img
+                src="/show-sorcieres.jpg" rounded="circle">
+              </b-img>
+              <div class="Shows-itemContent">
+                <h2>La Danse des Sorcières</h2>
+                <b-badge variant="warning">Familial</b-badge>
+                <p>Il ne faut jamais dire que les sorcières n’existent pas, car ça les dérangerait. Ou alors il faut être bien rusé... </p>
+                <b-button variant="primary">En savoir plus »</b-button>
+              </div>
+            </b-col>
+            <b-col
+              lg="4"
+              md="4"
+              sm="5"
+              xs="10">
+              <b-img
+                src="/show-europe.jpg" rounded="circle">
+              </b-img>
+              <div class="Shows-itemContent">
+                <h2>Le Voyage en Europe</h2>
+                <b-badge variant="success">Jeune public 4-8 ans</b-badge>
+                <p>Chaque pays un un personnage, chaque personnage un conte. Tu veux monter?</p>
+                <b-button variant="primary">En savoir plus »</b-button>
+              </div>
+            </b-col>
+            <b-col
+              lg="4" md="4" sm="5" xs="10">
+              <b-img
+                src="/show-lucavidesonsac.jpg" rounded="circle">
+              </b-img>
+              <div class="Shows-itemContent">
+                <h2>Luca Vide son Sac!</h2>
+                <b-badge variant="warning">Familial</b-badge>
+                <p>Chaque pays un un personnage, chaque personnage un conte. Tu veux monter?</p>
+                <b-button variant="primary">En savoir plus »</b-button>
+              </div>
+            </b-col>
+          </b-row>
+        </div>
+      </section>
     </div>
+    <footer>
+      <div class="container">
+        <b-row>
+          <b-col
+            lg="4" md="4" sm="4" xs="12">
+            <b-img src="logo-footer.png"></b-img>
+            <a href="mailto:contact@luca-marchesini.com"><span class="icon-envelope"></span>&nbsp;contact@luca-marchesini.com</a>
+            <br>
+            <a href="tel:+33633596151"><span class="icon-phone"></span>&nbsp;+33 (0) 6 33 59 61 51</a>
+          </b-col>
+          <b-col
+            lg="4" md="4" sm="4" xs="12"
+            offset-lg="3" offset-md="3" offset-sm="3">
+            <h3>Plan du site</h3>
+            <ul class="list-unstyled">
+              <li><a href="">Accueil</a></li>
+              <li><a href="">Agenda</a></li>
+              <li><a href="">Spectacles</a></li>
+              <li><a href="">Livre d'Or</a></li>
+						</ul>
+          </b-col>
+        </b-row>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -145,6 +219,17 @@ export default {
 .Claim-organization {
   font-size: 0.8em;
   color: darken($color_grey, 10%);
+}
+
+.Shows-itemContent {
+  margin-top: 15px;
+}
+
+footer {
+  margin-top: 50px;
+  background-color: $color_white;
+  padding: 20px;
+  color: $color_grey;
 }
 </style>
 

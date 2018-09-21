@@ -42,16 +42,16 @@ module.exports = {
       const vueLoader = config.module.rules.find(
         rule => rule.loader === "vue-loader"
       );
-      vueLoader.options.transformToRequire = {
-        img: "src",
-        image: "xlink:href",
-        "b-img": "src",
-        "b-img-lazy": ["src", "blank-src"],
-        "b-card": "img-src",
-        "b-card-img": "img-src",
-        "b-carousel-slide": "img-src",
-        "b-embed": "src"
-      };
+      // vueLoader.options.transformToRequire = {
+      //   img: "src",
+      //   image: "xlink:href",
+      //   "b-img": "src",
+      //   "b-img-lazy": ["src", "blank-src"],
+      //   "b-card": "img-src",
+      //   "b-card-img": "img-src",
+      //   "b-carousel-slide": "img-src",
+      //   "b-embed": "src"
+      // };
     }
   },
   modules: ["bootstrap-vue/nuxt"]
