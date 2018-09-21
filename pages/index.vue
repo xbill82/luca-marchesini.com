@@ -41,19 +41,9 @@
       </section>
       <section class="Calendar">
         <h1>Les prochaines dates</h1>
-        <b-table :items="gigs" :fields="fields">
-          <template slot="Date" slot-scope="data">
-            <nuxt-link :to="`gig/${data.item.id}`">
-              {{ formatGigDate(data.item.date) }}
-            </nuxt-link>
-          </template>
-          <template slot="Spectacle" slot-scope="data">
-            <nuxt-link :to="`gig/${data.item.id}`">{{ data.item.title }}</nuxt-link>
-          </template>
-          <template slot="Lieu" slot-scope="data">
-            <nuxt-link :to="`gig/${data.item.id}`">{{ data.item.location }}</nuxt-link>
-          </template>
-        </b-table>
+        <gig-list
+          :gigs="gigs">
+        </gig-list>
       </section>
       <hr>
       <section class="Shows">
@@ -107,13 +97,13 @@
 <script>
 import moment from "moment";
 import * as gigs from "../data/gigs.api";
+import GigList from "~/components/GigList.vue";
 
 export default {
   name: "Home",
-  components: {},
+  components: { GigList },
   data() {
     return {
-      fields: ["Date", "Spectacle", "Lieu"],
       gigs: gigs.some(5)
     };
   },
@@ -199,13 +189,6 @@ export default {
 .Claim-organization {
   font-size: 0.8em;
   color: darken($color_grey, 10%);
-}
-
-.Calendar {
-  a {
-    color: $color_black;
-    text-decoration: none;
-  }
 }
 
 .Shows-itemContent {

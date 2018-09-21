@@ -8,7 +8,7 @@
 
     <b-collapse is-nav id="nav_collapse">
       <b-navbar-nav>
-        <b-nav-item href="#">Agenda</b-nav-item>
+        <b-nav-item href="/agenda">Agenda</b-nav-item>
         <b-nav-item-dropdown text="Spectacles" right>
           <b-dropdown-item href="#">Luca Vide son Sac</b-dropdown-item>
           <b-dropdown-item href="#">La Danse des Sorcières</b-dropdown-item>
