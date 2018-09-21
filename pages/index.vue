@@ -5,10 +5,7 @@
       <div class="Header-jumbofon">
         <b-row>
           <b-col
-            lg="6"
-            md="7"
-            sm="8"
-            xs="12">
+            lg="6" md="7" sm="8" xs="12">
             <h1>Messieurs dames, souriez!</h1>
             <b-img src="/logo-header.png" fluid></b-img>
             <h1>va vous raconter une histoire!</h1>
@@ -46,15 +43,15 @@
         <h1>Les prochaines dates</h1>
         <b-table :items="gigs" :fields="fields">
           <template slot="Date" slot-scope="data">
-            <nuxt-link :to="`show/${data.item.id}`">
+            <nuxt-link :to="`gig/${data.item.id}`">
               {{ formatGigDate(data.item.date) }}
             </nuxt-link>
           </template>
           <template slot="Spectacle" slot-scope="data">
-            <nuxt-link :to="`show/${data.item.id}`">{{ data.item.title }}</nuxt-link>
+            <nuxt-link :to="`gig/${data.item.id}`">{{ data.item.title }}</nuxt-link>
           </template>
           <template slot="Lieu" slot-scope="data">
-            <nuxt-link :to="`show/${data.item.id}`">{{ data.item.location }}</nuxt-link>
+            <nuxt-link :to="`gig/${data.item.id}`">{{ data.item.location }}</nuxt-link>
           </template>
         </b-table>
       </section>
@@ -116,31 +113,12 @@ export default {
   components: {},
   data() {
     return {
-      // fields: {
-      //   date: {
-      //     label: "Date",
-      //     formatter: date =>
-      //       moment(date, "YYYY-MM-DD")
-      //         .locale("fr")
-      //         .format("D MMMM YYYY")
-      //   },
-      //   title: {
-      //     label: "Spectacle"
-      //   },
-      //   location: {
-      //     label: "Lieu"
-      //   }
-      // },
       fields: ["Date", "Spectacle", "Lieu"],
       gigs: gigs.some(5)
     };
   },
   methods: {
-    formatGigDate(date) {
-      return moment(date, "YYYY-MM-DD")
-        .locale("fr")
-        .format("D MMMM YYYY");
-    }
+    formatGigDate: gigs.formatDate
   }
 };
 </script>
