@@ -1,3 +1,5 @@
+const gigs = require("./data/gigs.json");
+
 module.exports = {
   /*
   ** Headers of the page
@@ -54,5 +56,8 @@ module.exports = {
       // };
     }
   },
-  modules: ["bootstrap-vue/nuxt"]
+  modules: ["bootstrap-vue/nuxt"],
+  generate: {
+    routes: gigs.map(gig => `/gig/${gig.id}`)
+  }
 };
