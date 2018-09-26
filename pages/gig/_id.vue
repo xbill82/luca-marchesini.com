@@ -1,7 +1,9 @@
 <template>
   <div class="GigPage">
     <header>
-      <div class="GigPage-map" :style="`background: url('${mapFile}') center`"></div>
+      <a :href="gig.url">
+        <div class="GigPage-map" :style="`background: url('${mapFile}') center`"></div>
+      </a>
       <div class="Header-jumbofon">
         <b-row>
           <b-col
@@ -61,6 +63,7 @@
 
 <script>
 import * as gigs from "../../data/gigs.api";
+import _ from "lodash";
 
 export default {
   name: "GigPage",
@@ -71,7 +74,10 @@ export default {
   },
   computed: {
     mapFile() {
-      return "/maps/sarmede.png";
+      if (!this.gig.address) {
+        return "";
+      }
+      return `/maps/${_.kebabCase(this.gig.address)}.png`;
     }
   },
   methods: {

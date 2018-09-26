@@ -25,10 +25,12 @@ const gigScreenshot = async address => {
     await b.click(page, "#widget-zoom-out");
   }
 
-  await b.screenshot(page, `./${_.kebabCase(address)}.png`);
-  console.log(page.url());
+  await b.screenshot(page, `../static/maps/${_.kebabCase(address)}.png`);
 
+  const url = page.url();
   await browser.close();
+
+  return url;
 };
 
-module.exports = doIt();
+module.exports = gigScreenshot;
