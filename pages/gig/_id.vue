@@ -1,7 +1,7 @@
 <template>
   <div class="GigPage">
     <header>
-      <b-img src="/maps/sarmede.png" fluid></b-img>
+      <div class="GigPage-map" :style="`background: url('${mapFile}') center`"></div>
       <div class="Header-jumbofon">
         <b-row>
           <b-col
@@ -69,6 +69,11 @@ export default {
       gig: gigs.byId(this.$route.params.id)
     };
   },
+  computed: {
+    mapFile() {
+      return "/maps/sarmede.png";
+    }
+  },
   methods: {
     formatGigDate: gigs.formatDate,
     formatGigTime: gigs.formatTime
@@ -87,13 +92,14 @@ header {
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0.65) 100%
   );
+}
 
-  img {
-    position: relative;
-    z-index: -1;
-    display: block;
-    width: auto;
-  }
+.GigPage-map {
+  position: relative;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 350px;
 }
 
 .Header-jumbofon {
