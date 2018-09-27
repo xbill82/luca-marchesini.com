@@ -1,7 +1,7 @@
 <template>
   <div class="GigPage">
     <header>
-      <a :href="gig.url">
+      <a :href="gig.mapUrl">
         <div class="GigPage-map" :style="`background: url('${mapFile}') center`"></div>
       </a>
       <div class="Header-jumbofon">
