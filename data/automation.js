@@ -1,4 +1,4 @@
-const defaultWaitElTimeout = 3000;
+const defaultWaitElTimeout = 30000;
 
 const waitForSelector = async (page, selector, timeout) => {
   if (!page) {
