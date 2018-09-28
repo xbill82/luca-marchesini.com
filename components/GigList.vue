@@ -1,15 +1,15 @@
 <template>
   <b-table class="GigList" :items="gigs" :fields="fields">
     <template slot="Date" slot-scope="data">
-      <nuxt-link :to="`gig/${data.item.id}`">
+      <nuxt-link :to="`/gig/${data.item.id}`">
         {{ formatGigDate(data.item.date) }}
       </nuxt-link>
     </template>
     <template slot="Spectacle" slot-scope="data">
-      <nuxt-link :to="`gig/${data.item.id}`">{{ data.item.title }}</nuxt-link>
+      <nuxt-link :to="`/gig/${data.item.id}`">{{ data.item.title }}</nuxt-link>
     </template>
     <template slot="Lieu" slot-scope="data">
-      <nuxt-link :to="`gig/${data.item.id}`">{{ data.item.location }}</nuxt-link>
+      <nuxt-link :to="`/gig/${data.item.id}`">{{ data.item.location }}</nuxt-link>
     </template>
   </b-table>
 </template>

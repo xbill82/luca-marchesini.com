@@ -1,7 +1,7 @@
 <template>
   <div class="GigPage">
     <header>
-      <a :href="gig.mapUrl">
+      <a :href="gig.mapUrl" target="_blank">
         <div class="GigPage-map" :style="`background: url('${mapFile}') center`"></div>
       </a>
       <div class="Header-jumbofon">
@@ -35,7 +35,9 @@
           <div class="GigPage-element--content">
             <div class="GigPage-element--key">Lieu</div>
             <div>{{ gig.location }}</div>
-            <div class="GigPage-element--address" v-if="gig.address">{{ gig.address }}</div>
+            <div class="GigPage-element--address" v-if="gig.address">
+              <a :href="gig.mapUrl" target="_blank">{{ gig.address }}</a>
+            </div>
           </div>
         </div>
         <div v-if="gig.parentEvent" class="GigPage-element">
