@@ -1,11 +1,35 @@
 <template>
-  <div class="VideoSorcieres">
+  <div class="TeaserVideo">
     <div class="embed-container">
-      <iframe src="https://www.youtube.com/embed/taLPgu72eic" allowfullscreen="" frameborder="0"></iframe>
+      <iframe :src="ytUrl" allowfullscreen="" frameborder="0"></iframe>
     </div>
-    <div class="VideoCredits">Crédits Vidéo © Marion Chataing</div>
+    <div
+      v-if="videoCredits"
+      class="VideoCredits">Crédits Vidéo © {{ videoCredits }}</div>
   </div>
 </template>
+
+<script>
+export default {
+  name: "TeaserVideo",
+  props: {
+    youtubeId: {
+      type: String,
+      required: true
+    },
+    videoCredits: {
+      type: String,
+      required: false
+    }
+  },
+  computed: {
+    ytUrl() {
+      return `https://www.youtube.com/embed/${this.youtubeId}`;
+    }
+  }
+};
+</script>
+
 
 <style lang="scss" scoped>
 /* Courtesy of embedresponsively.com */

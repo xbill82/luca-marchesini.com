@@ -24,7 +24,10 @@
             md="7"
             offset-md="1"
             xs="12">
-            <video-sorcieres></video-sorcieres>
+            <teaser-video
+              youtube-id="taLPgu72eic"
+              video-credits="Marion Chataing"
+            ></teaser-video>
             <div class="Claim">
               <div class="Claim-txt">
                 "Nous sommes vraiment très très contents de l'intervention de Luca! Et nous le remercions une fois de plus pour sa bonne humeur et son professionnalisme."
@@ -68,7 +71,7 @@
                 <h2>Le Voyage en Europe</h2>
                 <b-badge variant="success">Jeune public 4-8 ans</b-badge>
                 <p>Chaque pays un un personnage, chaque personnage un conte. Tu veux monter?</p>
-                <b-button variant="primary">En savoir plus »</b-button>
+                <b-button to="/show/europe" variant="primary">En savoir plus »</b-button>
               </div>
             </b-col>
             <b-col
@@ -80,7 +83,7 @@
                 <h2>Luca Vide son Sac!</h2>
                 <b-badge variant="warning">Familial</b-badge>
                 <p>Chaque pays un un personnage, chaque personnage un conte. Tu veux monter?</p>
-                <b-button variant="primary">En savoir plus »</b-button>
+                <b-button to="/show/lucavidesonsac" variant="primary">En savoir plus »</b-button>
               </div>
             </b-col>
           </b-row>
@@ -95,11 +98,11 @@
 import moment from "moment";
 import * as gigs from "../data/gigs.api";
 import GigList from "~/components/GigList.vue";
-import VideoSorcieres from "~/components/VideoSorcieres.vue";
+import TeaserVideo from "~/components/TeaserVideo.vue";
 
 export default {
   name: "Home",
-  components: { GigList, VideoSorcieres },
+  components: { GigList, TeaserVideo },
   data() {
     return {
       gigs: gigs.some(5)
