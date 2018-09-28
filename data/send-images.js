@@ -33,7 +33,7 @@ const sendToCloudinary = (path, publicId, tags) => {
 };
 
 const sendHeaders = async () => {
-  const mapsPath = path.join("..", "static", "headers");
+  const mapsPath = path.join("..", "static", "maps");
   const mapImgs = fs.readdirSync(mapsPath);
 
   for (imageFile of mapImgs) {
@@ -42,7 +42,7 @@ const sendHeaders = async () => {
 
     console.log(`Sending ${imageName}`);
 
-    await sendToCloudinary(imagePath, imageName, ["header"]);
+    await sendToCloudinary(imagePath, imageName, ["map"]);
   }
 };
 
