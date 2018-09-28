@@ -13,6 +13,10 @@ module.exports = {
         hid: "description",
         name: "description",
         content: "Luca Marchesini - Storyteller"
+      },
+      {
+        name: "http-equiv",
+        content: "DPR, Width"
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]

@@ -1,7 +1,10 @@
 <template>
   <show>
     <template slot="header">
-      <b-img src="/headers/header-sorcieres.jpg" fluid></b-img>
+      <img
+        sizes="100vw"
+        class="img-fluid"
+        src="https://res.cloudinary.com/luca-le-conteur/image/upload/w_auto:100:1280/v1538139917/header-sorcieres.jpg">
     </template>
     <template slot="intro-lead">
       Les bois d’Italie et de Galice, au plus profond de la nuit, abritent d’étranges farandoles autour de grands feux de camp. Tout le monde a entendu parler de ça: ces femmes là, on les appelle « le macare », « le strie », « las meigas ». Leurs danses sont rythmées par de mystérieuses paroles magiques... Peu d’entre nous ont eu le malheur (ou la chance) de les rencontrer; ceux qui en sont revenus l’ont raconté. Et leurs histoires n’ont jamais cessé de nous faire peur, d’exercer sur nous un charme magique...

@@ -42,6 +42,12 @@ p {
   font-size: 120%;
 }
 
+.img-fluid,
+.img-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
 section {
   margin-top: 50px;
 }

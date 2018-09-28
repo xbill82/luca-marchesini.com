@@ -1,7 +1,10 @@
 <template>
   <show>
     <template slot="header">
-      <b-img src="/headers/header-lucavidesonsac.jpg" fluid></b-img>
+      <img
+        sizes="100vw"
+        class="img-fluid"
+        src="https://res.cloudinary.com/luca-le-conteur/image/upload/w_auto:100:1280/v1538139917/header-lucavidesonsac.jpg">
     </template>
     <template slot="intro-lead">
       Pourquoi se priver de liberté quand on peut tout simplement raconter les histoires qui nous viennent à l’esprit? Mais c’est pas que de mon esprit que je parle, non. C’est de l’esprit (ou de l’âme) qui se dégage du moment que l’on passe ensemble, public et conteur. Parfois on dirait que les histoires étaient là avant qu’on arrive, alors on a qu'à les laisser venir. Les histoires, elles nous choisissent, c’est pour ça qu’elles nous viennent à l’esprit.

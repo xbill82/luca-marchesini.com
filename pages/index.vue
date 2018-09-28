@@ -1,7 +1,10 @@
 <template>
   <div>
     <header class="Header">
-      <b-img src="/header-home-bg.jpg" fluid-grow ></b-img>
+      <img
+        sizes="100vw"
+        src="https://res.cloudinary.com/luca-le-conteur/image/upload/w_auto:100:1280/v1538139917/header-home-bg.jpg"
+        class="img-fluid">
       <div class="Header-jumbofon">
         <b-row>
           <b-col

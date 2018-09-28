@@ -1,7 +1,10 @@
 <template>
   <div class="Agenda">
     <header>
-      <b-img src="/headers/header-calendar.jpg" fluid></b-img>
+      <img
+        sizes="100vw"
+        src="https://res.cloudinary.com/luca-le-conteur/image/upload/w_auto:100:1280/v1538139917/header-calendar.jpg"
+        class="img-fluid">
     </header>
     <div class="container">
       <gig-list

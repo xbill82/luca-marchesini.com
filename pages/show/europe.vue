@@ -1,7 +1,10 @@
 <template>
   <show>
     <template slot="header">
-      <b-img src="/headers/header-europe.jpg" fluid></b-img>
+      <img
+        sizes="100vw"
+        class="img-fluid"
+        src="https://res.cloudinary.com/luca-le-conteur/image/upload/w_auto:100:1280/v1538139917/header-europe.jpg">
     </template>
     <template slot="intro-lead">
       Il y a un train, comme ceux d’antan, qui parcourt toute l’Europe. Il n’a pas peur de la mer, des montagnes, de la neige ou de la chaleur: lui, il voyage en s’arrêtant dans des lieux inattendus, des villages cachés où nous attendent des personnages qui ont des histoires à raconter. Chaque pays un un personnage, chaque personnage un conte. Tu veux monter?

@@ -1,7 +1,10 @@
 <template>
   <div class="Guestbook">
     <header>
-      <b-img src="/headers/header-guestbook.jpg" fluid></b-img>
+      <img
+        sizes="100vw"
+        class="img-fluid"
+        src="https://res.cloudinary.com/luca-le-conteur/image/upload/w_auto:100:1280/v1538139917/header-guestbook.jpg">
     </header>
     <div class="container">
       <section class="claims">
