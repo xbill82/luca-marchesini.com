@@ -4,10 +4,7 @@
       <b-row>
         <b-col
           lg="4" md="4" sm="4" xs="12">
-          <b-img src="/logo-footer.png"></b-img>
-          <a href="mailto:contact@luca-marchesini.com"><span class="icon-envelope"></span>&nbsp;contact@luca-marchesini.com</a>
-          <br>
-          <a href="tel:+33633596151"><span class="icon-phone"></span>&nbsp;+33 (0) 6 33 59 61 51</a>
+          <contact></contact>
         </b-col>
         <b-col
           lg="4" md="4" sm="4" xs="12"
@@ -24,6 +21,18 @@
     </div>
   </footer>
 </template>
+
+<script>
+import Contact from "~/components/Contact.vue";
+
+export default {
+  name: "Footer",
+  components: {
+    Contact
+  }
+};
+</script>
+
 
 <style lang="scss" scoped>
 footer {
