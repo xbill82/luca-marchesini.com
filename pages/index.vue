@@ -24,14 +24,10 @@
             md="7"
             offset-md="1"
             xs="12">
-            <div class="embed-container">
-              <iframe src="https://www.youtube.com/embed/taLPgu72eic" allowfullscreen="" frameborder="0"></iframe>
-            </div>
-            <div class="Teaser-videoCredits">Crédits Vidéo © Marion Chataing</div>
-
+            <video-sorcieres></video-sorcieres>
             <div class="Claim">
               <div class="Claim-txt">
-                  "Nous sommes vraiment très très contents de l'intervention de Luca! Et nous le remercions une fois de plus pour sa bonne humeur et son professionnalisme."
+                "Nous sommes vraiment très très contents de l'intervention de Luca! Et nous le remercions une fois de plus pour sa bonne humeur et son professionnalisme."
               </div>
               <p class="Claim-author">Nathalie Destre</p>
               <p class="Claim-organization">Association ¡Vamos! - Marvejols</p>
@@ -45,6 +41,7 @@
           :gigs="gigs">
         </gig-list>
       </section>
+      <a name="shows"></a>
       <hr>
       <section class="Shows">
         <h1>Les pestacles</h1>
@@ -59,7 +56,7 @@
                 <h2>La Danse des Sorcières</h2>
                 <b-badge variant="warning">Familial</b-badge>
                 <p>Il ne faut jamais dire que les sorcières n’existent pas, car ça les dérangerait. Ou alors il faut être bien rusé... </p>
-                <b-button variant="primary">En savoir plus »</b-button>
+                <b-button to="/show/sorcieres" variant="primary">En savoir plus »</b-button>
               </div>
             </b-col>
             <b-col
@@ -98,10 +95,11 @@
 import moment from "moment";
 import * as gigs from "../data/gigs.api";
 import GigList from "~/components/GigList.vue";
+import VideoSorcieres from "~/components/VideoSorcieres.vue";
 
 export default {
   name: "Home",
-  components: { GigList },
+  components: { GigList, VideoSorcieres },
   data() {
     return {
       gigs: gigs.some(5)
@@ -138,31 +136,6 @@ export default {
   font-size: 21px;
   font-weight: 300;
   line-height: 1.4;
-}
-
-// Courtesy of embedresponsively.com
-.embed-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  height: auto;
-}
-.embed-container iframe,
-.embed-container object,
-.embed-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.Teaser-videoCredits {
-  text-align: right;
-  font-size: 0.7em;
-  color: $color_grey;
 }
 
 .Claim {
