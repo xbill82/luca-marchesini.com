@@ -79,7 +79,9 @@ export default {
       if (!this.gig.address) {
         return "";
       }
-      return `/maps/${_.kebabCase(this.gig.address)}.png`;
+      return `https://res.cloudinary.com/luca-le-conteur/image/upload/v1538139097/${_.kebabCase(
+        this.gig.address
+      )}.png`;
     }
   },
   methods: {
