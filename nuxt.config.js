@@ -15,8 +15,8 @@ module.exports = {
         content: "Luca Marchesini - Storyteller"
       },
       {
-        name: "http-equiv",
-        content: "DPR, Width"
+        "http-equiv": "Accept-CH",
+        content: "Width"
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
