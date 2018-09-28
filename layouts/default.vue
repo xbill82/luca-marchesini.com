@@ -44,7 +44,7 @@ p {
 
 .img-fluid,
 .img-thumbnail {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
