@@ -5,18 +5,18 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: "Luca Marchesini, storyteller",
+    title: "Luca Marchesini, Conteur",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "description",
         name: "description",
-        content: "Luca Marchesini - Storyteller"
+        content: "Luca Marchesini - Conteur"
       },
       {
         "http-equiv": "Accept-CH",
-        content: "Width"
+        content: "DPR, Viewport-Width, Width"
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
