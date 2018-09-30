@@ -60,7 +60,15 @@ module.exports = {
       // };
     }
   },
-  modules: ["bootstrap-vue/nuxt"],
+  modules: [
+    "bootstrap-vue/nuxt",
+    [
+      "@nuxtjs/google-analytics",
+      {
+        id: "UA-56607741-1"
+      }
+    ]
+  ],
   generate: {
     routes: gigs.map(gig => `/gig/${gig.id}`)
   }
