@@ -42,7 +42,7 @@ header {
   margin-bottom: 30px;
 }
 .ContactData {
-  margin-top: 90px;
+  margin: 30px 0;
 }
 </style>
 

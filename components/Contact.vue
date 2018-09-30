@@ -7,3 +7,9 @@
     <a href="tel:+33633596151"><span class="icon-phone"></span>&nbsp;+33 (0) 6 33 59 61 51</a>
   </div>
 </template>
+
+<style scoped>
+.Contact {
+  margin-bottom: 30px;
+}
+</style>

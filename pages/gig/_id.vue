@@ -130,6 +130,9 @@ header {
 }
 
 .GigPage-element {
+  width: 100%;
+  display: flex;
+
   i {
     font-size: 3em;
     display: inline;
