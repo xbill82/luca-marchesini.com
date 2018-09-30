@@ -94,7 +94,7 @@ TODO
 
 #### Deployment
 
-TODO
+All builds are automatically deployed on Netlify.
 
 ### The Page Speed Index
 
