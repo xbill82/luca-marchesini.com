@@ -2,8 +2,8 @@
   <b-navbar fixed="top" toggleable="md" type="light" variant="light">
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-    <b-navbar-brand class="ml-5" href="#">
-      <a href="/#"><img src="/logo-nav.png" alt="Luca Marchesini"></a>
+    <b-navbar-brand class="ml-5" href="/">
+      <img src="/logo-nav.png" alt="Luca Marchesini">
     </b-navbar-brand>
 
     <b-collapse is-nav id="nav_collapse">

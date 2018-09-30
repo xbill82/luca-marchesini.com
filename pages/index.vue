@@ -1,5 +1,6 @@
 <template>
   <div>
+    <a name="home"></a>
     <header class="Header">
       <img
         sizes="100vw"
@@ -122,6 +123,8 @@ export default {
   box-shadow: 0 0 20px 0 #656565;
   position: relative;
   overflow: hidden;
+  // Yeah, this is a horrible hack
+  height: 42vw;
 }
 
 .Header-jumbofon {
