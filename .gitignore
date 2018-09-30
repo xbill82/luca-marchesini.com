@@ -1,55 +1,14 @@
-# Numerous always-ignore extensions
-*.diff
-*.err
-*.orig
-*.log
-*.rej
-*.swo
-*.swp
-*.vi
-*~
-*.sass-cache
- 
-# OS or Editor folders
-.DS_Store
-Thumbs.db
-.cache
-.project
-.settings
-.tmproj
-*.esproj
-nbproject
-*.sublime-project
-*.sublime-workspace
-sftp-config*.json
- 
-# Dreamweaver added files
-_notes
-dwsync.xml
- 
-# Komodo
-*.komodoproject
-.komodotools
- 
-# Folders to ignore
-.hg
-.svn
-.CVS
-intermediate
-publish
-.idea
+# dependencies
 node_modules
-bower_components
-web
-web-dev/lib
-db.bak
-graphics.wip
-web-dev/styles/main.css
- 
-# build script local files
-build/buildinfo.properties
-build/config/buildinfo.properties
 
-config.json
-config.js
-screenshots
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+
+.DS_Store
+static/.DS_Store
