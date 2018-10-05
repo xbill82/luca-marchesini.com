@@ -9,7 +9,10 @@
           <b-col
             lg="6" md="7" sm="8" xs="12"
             offset-lg="1">
-            <h1> <i class="icon-star"></i> {{ gig.title }}</h1>
+            <a v-if="gig.showName" :href="`/show/${gig.showName}`">
+              <h1> <i class="icon-star"></i> {{ gig.title }}</h1>
+            </a>
+            <h1 v-else> <i class="icon-star"></i> {{ gig.title }}</h1>
           </b-col>
         </b-row>
       </div>
