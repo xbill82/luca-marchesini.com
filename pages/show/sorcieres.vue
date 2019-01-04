@@ -17,7 +17,7 @@
     </template>
     <template slot="description">La Danse des Sorcières est un spectacle familial où l’on va titiller 
     l’imaginaire mystérieux qui vit autour des êtres surnaturels hostiles: sorcières, ogres, géants méchants ou stupides, 
-    lutins malicieux, etc… Les histoires, située autour des superstitions italiennes, produisent une ambiance inquiétante 
+    lutins malicieux, etc… Les histoires, situées autour des superstitions italiennes, produisent une ambiance inquiétante 
     mais également beaucoup de suspense et d’humour. Dans ces contes souvent facétieux, la ruse du héros le sauve in-extrémis 
     du danger. Ce spectacle est destiné au jeune public à partir de 5 ans et s’adapte à tous les créneaux d’âge.</template>
     <template slot="info-age">public familial à partir de 5 ans.</template>
