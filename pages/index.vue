@@ -5,36 +5,39 @@
       <img
         sizes="100vw"
         src="https://res.cloudinary.com/luca-le-conteur/image/upload/w_auto:100:1280/v1538139917/header-home-bg.jpg"
-        class="img-fluid">
+        class="img-fluid"
+      />
       <div class="Header-jumbofon">
         <b-row>
-          <b-col
-            lg="6" md="7" sm="8" xs="12">
+          <b-col lg="6" md="7" sm="8" xs="12">
             <h1>Messieurs dames, souriez!</h1>
             <b-img src="/logo-header.png" fluid></b-img>
             <h1>va vous raconter une histoire!</h1>
           </b-col>
         </b-row>
-
       </div>
     </header>
     <div class="container">
       <section class="Teaser">
         <b-row>
           <b-col md="4" xs="12">
-            <p class="Teaser-lead">Luca Marchesini est un conteur italien (mais aussi franco-et-hispano-phone) installé à Montpellier depuis 2009. Sa parole est inventive, voyageuse et bonne franquette. Ça vous intrigue? Voici un petit extrait!</p>
+            <p class="Teaser-lead">
+              Luca Marchesini est un conteur italien (mais aussi
+              franco-et-hispano-phone) installé à Montpellier depuis 2009. Sa
+              parole est inventive, voyageuse et bonne franquette. Ça vous
+              intrigue? Voici un petit extrait!
+            </p>
           </b-col>
-          <b-col
-            md="7"
-            offset-md="1"
-            xs="12">
+          <b-col md="7" offset-md="1" xs="12">
             <teaser-video
-              youtube-id="taLPgu72eic"
-              video-credits="Marion Chataing"
+              youtube-id="8W8O4g6yjRQ"
+              video-credits="Désirée Snackey"
             ></teaser-video>
             <div class="Claim">
               <div class="Claim-txt">
-                "Nous sommes vraiment très très contents de l'intervention de Luca! Et nous le remercions une fois de plus pour sa bonne humeur et son professionnalisme."
+                "Nous sommes vraiment très très contents de l'intervention de
+                Luca! Et nous le remercions une fois de plus pour sa bonne
+                humeur et son professionnalisme."
               </div>
               <p class="Claim-author">Nathalie Destre</p>
               <p class="Claim-organization">Association ¡Vamos! - Marvejols</p>
@@ -44,57 +47,66 @@
       </section>
       <section class="Calendar">
         <h1>Les prochaines dates</h1>
-        <gig-list
-          :gigs="gigs">
-        </gig-list>
+        <gig-list :gigs="gigs"> </gig-list>
       </section>
       <a name="shows"></a>
-      <hr>
+      <hr />
       <section class="Shows">
-        <h1>Les pestacles</h1>
+        <h1>Les spectacles</h1>
         <div class="Shows-item">
           <b-row>
-            <b-col
-              lg="4" md="4" sm="5" xs="10">
-              <b-img
-                src="/show-sorcieres.jpg" rounded="circle">
-              </b-img>
+            <b-col lg="4" md="4" sm="5" xs="10">
+              <router-link to="/show/sorcieres">
+                <b-img src="/show-sorcieres.jpg" rounded="circle"> </b-img>
+              </router-link>
               <div class="Shows-itemContent">
                 <h2>La Danse des Sorcières</h2>
                 <b-badge variant="warning">Familial</b-badge>
-                <p>Il ne faut jamais dire que les sorcières n’existent pas, car ça les dérangerait. Ou alors il faut être bien rusé... </p>
-                <b-button to="/show/sorcieres" variant="primary">En savoir plus »</b-button>
+                <p>
+                  Il ne faut jamais dire que les sorcières n’existent pas, car
+                  ça les dérangerait. Ou alors il faut être bien rusé...
+                </p>
+                <b-button to="/show/sorcieres" variant="primary"
+                  >En savoir plus »</b-button
+                >
               </div>
             </b-col>
-            <b-col
-              lg="4" md="4" sm="5" xs="10">
-              <b-img
-                src="/show-europe.jpg" rounded="circle">
-              </b-img>
+            <b-col lg="4" md="4" sm="5" xs="10">
+              <router-link to="/show/europe">
+                <b-img src="/show-europe.jpg" rounded="circle"> </b-img>
+              </router-link>
               <div class="Shows-itemContent">
                 <h2>Le Voyage en Europe</h2>
                 <b-badge variant="success">Jeune public 4-8 ans</b-badge>
-                <p>Chaque pays un un personnage, chaque personnage un conte. Tu veux monter?</p>
-                <b-button to="/show/europe" variant="primary">En savoir plus »</b-button>
+                <p>
+                  Chaque pays un un personnage, chaque personnage un conte. Tu
+                  veux monter?
+                </p>
+                <b-button to="/show/europe" variant="primary"
+                  >En savoir plus »</b-button
+                >
               </div>
             </b-col>
-            <b-col
-              lg="4" md="4" sm="5" xs="10">
-              <b-img
-                src="/show-lucavidesonsac.jpg" rounded="circle">
-              </b-img>
+            <b-col lg="4" md="4" sm="5" xs="10">
+              <router-link to="/show/lucavidesonsac">
+                <b-img src="/show-lucavidesonsac.jpg" rounded="circle"> </b-img>
+              </router-link>
               <div class="Shows-itemContent">
                 <h2>Luca Vide son Sac!</h2>
                 <b-badge variant="warning">Familial</b-badge>
-                <p>Chaque pays un un personnage, chaque personnage un conte. Tu veux monter?</p>
-                <b-button to="/show/lucavidesonsac" variant="primary">En savoir plus »</b-button>
+                <p>
+                  Chaque pays un un personnage, chaque personnage un conte. Tu
+                  veux monter?
+                </p>
+                <b-button to="/show/lucavidesonsac" variant="primary"
+                  >En savoir plus »</b-button
+                >
               </div>
             </b-col>
           </b-row>
         </div>
       </section>
     </div>
-
   </div>
 </template>
 
