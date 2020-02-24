@@ -30,7 +30,7 @@
           </b-col>
           <b-col md="7" offset-md="1" xs="12">
             <teaser-video
-              youtube-id="8W8O4g6yjRQ"
+              youtube-id="YWcMT4do2v8"
               video-credits="Désirée Snackey"
             ></teaser-video>
             <div class="Claim">
