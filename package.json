@@ -19,7 +19,7 @@
     "moment": "^2.22.2",
     "node-sass": "^4.13.0",
     "nuxt": "^1.0.0",
-    "puppeteer": "^1.8.0",
+    "puppeteer": "^1.13.0",
     "sass-loader": "^7.1.0"
   },
   "devDependencies": {
