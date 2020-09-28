@@ -18,7 +18,7 @@
     </template>
     <template slot="intro-video">
       <teaser-video
-        youtube-id="8W8O4g6yjRQ"
+        youtube-id="YWcMT4do2v8"
         video-credits="Désirée Snackey"
       ></teaser-video>
     </template>
@@ -40,9 +40,9 @@
       d'attention du public).</template
     >
     <template slot="btn-dl-file">
-      <b-btn to="/docs/tech-sorcieres.pdf" variant="primary" target="_blank"
-        ><span class="glyphicon glyphicon-file"></span> Télécharger la Fiche
-        Technique</b-btn
+      <b-btn to="/docs/dossier-sorcieres.pdf" variant="primary" target="_blank"
+        ><span class="glyphicon glyphicon-file"></span> Télécharger le
+        Dossier</b-btn
       >
     </template>
     <template slot="claim-txt">
