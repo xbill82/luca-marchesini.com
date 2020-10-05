@@ -5,7 +5,7 @@
     "date": "2020-11-01",
     "time": "10:30:00",
     "id": "122",
-    "location": "Théâtre Tabard Beaux Arts",
+    "location": "Théâtre Tabard Beaux Arts (Montpellier)",
     "title": "La Danse des Sorcières",
     "showName": "sorcieres"
   },
@@ -15,7 +15,7 @@
     "date": "2020-10-31",
     "time": "10:30:00",
     "id": "121",
-    "location": "Théâtre Tabard Beaux Arts",
+    "location": "Théâtre Tabard Beaux Arts (Montpellier)",
     "title": "La Danse des Sorcières",
     "showName": "sorcieres"
   },
@@ -25,7 +25,7 @@
     "date": "2020-10-30",
     "time": "10:30:00",
     "id": "120",
-    "location": "Théâtre Tabard Beaux Arts",
+    "location": "Théâtre Tabard Beaux Arts (Montpellier)",
     "title": "La Danse des Sorcières",
     "showName": "sorcieres"
   },
@@ -35,7 +35,7 @@
     "date": "2020-10-29",
     "time": "10:30:00",
     "id": "119",
-    "location": "Théâtre Tabard Beaux Arts",
+    "location": "Théâtre Tabard Beaux Arts (Montpellier)",
     "title": "La Danse des Sorcières",
     "showName": "sorcieres"
   },
@@ -45,7 +45,7 @@
     "date": "2020-10-28",
     "time": "10:30:00",
     "id": "118",
-    "location": "Théâtre Tabard Beaux Arts",
+    "location": "Théâtre Tabard Beaux Arts (Montpellier)",
     "title": "La Danse des Sorcières",
     "showName": "sorcieres"
   },
@@ -55,7 +55,7 @@
     "date": "2020-09-26",
     "time": "16:30:00",
     "id": "117",
-    "location": "Salle des Fêtes",
+    "location": "Salle des Fêtes (Nébian)",
     "title": "La Danse des Sorcières",
     "parentEvent": "Le Samedi où on Nébian",
     "showName": "sorcieres"
@@ -88,7 +88,7 @@
     "date": "2019-10-18",
     "time": "18:30:00",
     "id": "114",
-    "location": "Théâtre Gérard-Philipe",
+    "location": "Théâtre Gérard-Philipe (Montpellier)",
     "title": "La Danse des Sorcières",
     "parentEvent": "Résidence de Création Lumière en partenariat avec Pahaska Productions",
     "showName": "sorcieres"

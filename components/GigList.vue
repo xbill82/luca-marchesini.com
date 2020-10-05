@@ -9,7 +9,9 @@
       <nuxt-link :to="`/gig/${data.item.id}`">{{ data.item.title }}</nuxt-link>
     </template>
     <template slot="Lieu" slot-scope="data">
-      <nuxt-link :to="`/gig/${data.item.id}`">{{ data.item.location }}</nuxt-link>
+      <nuxt-link :to="`/gig/${data.item.id}`">{{
+        data.item.location
+      }}</nuxt-link>
     </template>
   </b-table>
 </template>
@@ -22,17 +24,17 @@ export default {
   props: {
     gigs: {
       type: Array,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
-      fields: ["Date", "Spectacle", "Lieu"]
+      fields: ["Date", "Spectacle", "Lieu"],
     };
   },
   methods: {
-    formatGigDate: gigs.formatDate
-  }
+    formatGigDate: gigs.formatDate,
+  },
 };
 </script>
 
