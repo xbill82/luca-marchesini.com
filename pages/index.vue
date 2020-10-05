@@ -35,12 +35,13 @@
             ></teaser-video>
             <div class="Claim">
               <div class="Claim-txt">
-                "Nous sommes vraiment très très contents de l'intervention de
-                Luca! Et nous le remercions une fois de plus pour sa bonne
-                humeur et son professionnalisme."
+                "J'ai vu un conteur super chouette samedi, il est de
+                Montpellier, super feeling avec les mômes, pêchu, belle
+                présence, subtil, tout public, super spectacle convenant à toute
+                la famille: Luca Marchesini"
               </div>
-              <p class="Claim-author">Nathalie Destre</p>
-              <p class="Claim-organization">Association ¡Vamos! - Marvejols</p>
+              <p class="Claim-author">Isabelle Bach</p>
+              <p class="Claim-organization">Compagnie Mungo</p>
             </div>
           </b-col>
         </b-row>
@@ -121,12 +122,12 @@ export default {
   components: { GigList, TeaserVideo },
   data() {
     return {
-      gigs: gigs.some(5)
+      gigs: gigs.some(5),
     };
   },
   methods: {
-    formatGigDate: gigs.formatDate
-  }
+    formatGigDate: gigs.formatDate,
+  },
 };
 </script>
 
