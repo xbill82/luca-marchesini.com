@@ -30,8 +30,10 @@
       ambiance inquiétante mais également beaucoup de suspense et d’humour. Dans
       ces contes souvent facétieux, la ruse du héros le sauve in-extrémis du
       danger. Ce spectacle est destiné au jeune public à partir de 5 ans et
-      s’adapte à tous les créneaux d’âge. Ce spectacle peut être joué avec ou
-      sans plan de feux. Voici un extrait de sa version "tout-terrain".
+      s’adapte à tous les créneaux d’âge. <br /><br />
+      Ce spectacle peut être joué avec ou sans plan de feux. Voici un extrait de
+      sa version "tout-terrain".
+      <br /><br />
 
       <teaser-video
         youtube-id="taLPgu72eic"
