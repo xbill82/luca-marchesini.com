@@ -30,11 +30,15 @@
       ambiance inquiétante mais également beaucoup de suspense et d’humour. Dans
       ces contes souvent facétieux, la ruse du héros le sauve in-extrémis du
       danger. Ce spectacle est destiné au jeune public à partir de 5 ans et
-      s’adapte à tous les créneaux d’âge.</template
-    >
-    <template slot="info-age"
-      >public familial à partir de 5 ans.</template
-    >
+      s’adapte à tous les créneaux d’âge. Ce spectacle peut être joué avec ou
+      sans plan de feux. Voici un extrait de sa version "tout-terrain".
+
+      <teaser-video
+        youtube-id="taLPgu72eic"
+        video-credits="Marion Chataing"
+      ></teaser-video>
+    </template>
+    <template slot="info-age">public familial à partir de 5 ans.</template>
     <template slot="info-duration"
       >approximativement 50 minutes (ça peut varier en fonction du niveau
       d'attention du public).</template
@@ -54,9 +58,7 @@
       que nous vivons. Merci Luca pour ta générosité et ce beau voyage! Sous une
       grande église, sur un petit banc, un formidable conteur conte."
     </template>
-    <template slot="claim-author"
-      >Lou Barriol</template
-    >
+    <template slot="claim-author">Lou Barriol</template>
     <template slot="claim-organization"
       >Chargée de Programmation Artistique - Festival des 4 Saisons -
       Saint-Jean-de-la-Blaquière (34)</template
@@ -70,6 +72,6 @@ import TeaserVideo from "~/components/TeaserVideo.vue";
 
 export default {
   name: "SorcieresPage",
-  components: { Show, TeaserVideo }
+  components: { Show, TeaserVideo },
 };
 </script>
