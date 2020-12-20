@@ -27,12 +27,19 @@
               parole est inventive, voyageuse et bonne franquette. Ça vous
               intrigue? Voici un petit extrait!
             </p>
+            <br />
+            <div class="text-right">
+              <b-button variant="primary" to="/videos"
+                >Voir toutes les videos</b-button
+              >
+            </div>
           </b-col>
           <b-col md="7" offset-md="1" xs="12">
             <teaser-video
               youtube-id="YWcMT4do2v8"
               video-credits="Désirée Snackey"
             ></teaser-video>
+
             <div class="Claim">
               <div class="Claim-txt">
                 "J'ai vu un conteur super chouette samedi, il est de
@@ -42,6 +49,11 @@
               </div>
               <p class="Claim-author">Isabelle Bach</p>
               <p class="Claim-organization">Compagnie Mungo</p>
+              <div class="text-right">
+                <b-button variant="primary" to="/guestbook"
+                  >Voir le livre d'or</b-button
+                >
+              </div>
             </div>
           </b-col>
         </b-row>
@@ -49,6 +61,11 @@
       <section class="Calendar">
         <h1>Les prochaines dates</h1>
         <gig-list :gigs="gigs"> </gig-list>
+        <div>
+          <b-button variant="primary" to="/agenda"
+            >Voir toutes les dates</b-button
+          >
+        </div>
       </section>
       <a name="shows"></a>
       <hr />
@@ -161,12 +178,12 @@ export default {
 }
 
 .Claim {
-  font-family: Georgia, serif;
   margin: 3.5em;
   text-align: right;
 }
 
 .Claim-txt {
+  font-family: Georgia, serif;
   line-height: 1.1;
   font-size: 1.3em;
   color: $color_grey;
