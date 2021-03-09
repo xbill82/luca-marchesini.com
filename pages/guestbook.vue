@@ -16,7 +16,7 @@
               >Une chaise, des sorcières, lutins et des portes qui grincent
               comme un refrain... et surtout un conteur qui nous embarque dans
               ses histoires, une parenthèse très appréciée des petits comme des
-              grands Bravo et merci Luca</em
+              grands. Bravo et merci, Luca!</em
             >
           </h1>
           <h3 class="claim-author">Véronique Bourdon</h3>

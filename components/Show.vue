@@ -5,10 +5,7 @@
     </header>
     <div class="container">
       <b-row>
-        <b-col
-          md="10"
-          offset-md="1"
-          xs="12">
+        <b-col md="10" offset-md="1" xs="12">
           <section class="Intro">
             <p class="Intro-lead">
               <slot name="intro-lead"></slot>
@@ -17,14 +14,14 @@
           </section>
         </b-col>
       </b-row>
-      <hr>
+      <hr />
       <section class="Description">
         <h1>Description</h1>
         <p>
           <slot name="description"></slot>
         </p>
       </section>
-      <hr>
+      <hr />
       <section class="Info">
         <b-row>
           <b-col>
@@ -36,15 +33,16 @@
               <dd><slot name="info-duration"></slot></dd>
             </dl>
             <slot name="btn-dl-file"></slot>
-            &nbsp;
-            <b-btn to="/contact" variant="info">Contact</b-btn>
           </b-col>
           <b-col>
             <div class="Claim">
-              <div class="Claim-txt"><em><slot name="claim-txt"></slot></em>
+              <div class="Claim-txt">
+                <em><slot name="claim-txt"></slot></em>
               </div>
               <p class="Claim-author"><slot name="claim-author"></slot></p>
-              <p class="Claim-organization"><slot name="claim-organization"></slot></p>
+              <p class="Claim-organization">
+                <slot name="claim-organization"></slot>
+              </p>
             </div>
           </b-col>
         </b-row>
@@ -55,7 +53,7 @@
 
 <script>
 export default {
-  name: "Show"
+  name: "Show",
 };
 </script>
 

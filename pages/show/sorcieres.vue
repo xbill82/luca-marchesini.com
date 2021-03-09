@@ -47,8 +47,14 @@
     >
     <template slot="btn-dl-file">
       <b-btn to="/docs/dossier-sorcieres.pdf" variant="primary" target="_blank"
-        ><span class="glyphicon glyphicon-file"></span> Télécharger le
-        Dossier</b-btn
+        >Télécharger le Dossier</b-btn
+      ><br />
+      <b-btn
+        class="mt-1"
+        to="/docs/tech-sorcieres.pdf"
+        variant="primary"
+        target="_blank"
+        >Télécharger la fiche technique</b-btn
       >
     </template>
     <template slot="claim-txt">
