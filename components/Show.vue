@@ -32,6 +32,7 @@
               <dt>Durée:</dt>
               <dd><slot name="info-duration"></slot></dd>
             </dl>
+            <slot name="info-more"></slot>
             <slot name="btn-dl-file"></slot>
           </b-col>
           <b-col>
@@ -46,6 +47,7 @@
             </div>
           </b-col>
         </b-row>
+        <slot name="wall-of-logos"></slot>
       </section>
     </div>
   </div>

@@ -45,6 +45,15 @@
       >approximativement 50 minutes (ça peut varier en fonction du niveau
       d'attention du public).</template
     >
+    <template slot="info-more">
+      <h1>Crédits</h1>
+      <dl>
+        <dt>Œil extérieur</dt>
+        <dd>Serge Valentin</dd>
+        <dt>Création lumière avec l'aide de</dt>
+        <dd>Roland Cerdelli</dd>
+      </dl>
+    </template>
     <template slot="btn-dl-file">
       <b-btn to="/docs/dossier-sorcieres.pdf" variant="primary" target="_blank"
         >Télécharger le Dossier</b-btn
@@ -71,6 +80,16 @@
       >Chargée de Programmation Artistique - Festival des 4 Saisons -
       Saint-Jean-de-la-Blaquière (34)</template
     >
+    <template slot="wall-of-logos">
+      <div class="mb-2 mt-3">
+        <img src="/logo-mpl.png" alt="" height="100" />
+      </div>
+
+      <em
+        >Ce spectacle a bénéficié d'une résidence de création au Théâtre Gérard
+        Philippe (Montpellier) en octobre 2019.</em
+      >
+    </template>
   </show>
 </template>
 
