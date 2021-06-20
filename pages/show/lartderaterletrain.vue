@@ -8,25 +8,28 @@
       />
     </template>
     <template slot="intro-lead">
-      « Face au choix, la seule chose que je sais faire, c’est ne rien faire.
-      »<br />
+      <strong
+        >« Face au choix, la seule chose que je sais faire, c’est ne rien faire.
+        »</strong
+      ><br />
       Le plus souvent, pour moi, le choix, c’était ça: un blocage. Attendre que
       ça passe. Attendre de ne plus avoir le choix. Mais au moment où j’ai
       décidé d’aller vivre en Andalousie, seul, loin de ma famille et de mes
       proches, quelque chose a basculé.
       <br /><br />
-      « Comme animé par une force invisible... »<br />Me voilà projeté dans
-      cette ville où tout est possible: Granada, où les rencontres se produisent
-      magiquement et les opportunités surgissent au coin d’une rue, à la table
-      d’une terrasse. Comme si la ville œuvrait secrètement pour que les indécis
-      basculent vers le destin qui est le leur.
+      <strong>« Comme animé par une force invisible... »</strong> <br />Me voilà
+      projeté dans cette ville où tout est possible: Granada, où les rencontres
+      se produisent magiquement et les opportunités surgissent au coin d’une
+      rue, à la table d’une terrasse. Comme si la ville œuvrait secrètement pour
+      que les indécis basculent vers le destin qui est le leur.
     </template>
-    <!-- <template slot="intro-video">
-      <teaser-video
+    <template slot="intro-video">
+      🎥 <em>Une vidéo de ce spectacle sera bientôt en ligne.</em>
+      <!-- <teaser-video
         youtube-id="YWcMT4do2v8"
         video-credits="Désirée Snackey"
-      ></teaser-video>
-    </template> -->
+      ></teaser-video> -->
+    </template>
     <template slot="description">
       L’Art de Rater le Train est un voyage inspiré des aventures que j’ai vécu
       en allant vivre à Granada, en Andalousie, où j’ai habité trois ans avant
@@ -73,7 +76,7 @@
       <em
         >Ce spectacle a bénéficié d'une résidence de création à la Fundació la
         Plana (Barcélone) en mars 2019 et bénéficiera d'une résidence de
-        création au Théâtre Gérard Philippe (Montpellier) en janvier 2021.</em
+        création au Théâtre Gérard Philippe (Montpellier) en janvier 2022.</em
       >
     </template>
   </show>

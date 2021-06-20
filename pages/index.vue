@@ -73,7 +73,7 @@
         <h1>Les spectacles</h1>
         <div class="Shows-item">
           <b-row>
-            <b-col lg="4" md="4" sm="5" xs="10">
+            <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
               <router-link to="/show/sorcieres">
                 <b-img src="/show-sorcieres.jpg" rounded="circle"> </b-img>
               </router-link>
@@ -89,7 +89,24 @@
                 >
               </div>
             </b-col>
-            <b-col lg="4" md="4" sm="5" xs="10">
+            <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
+              <router-link to="/show/sorcieres">
+                <b-img src="/show-lartderaterletrain.jpg" rounded="circle">
+                </b-img>
+              </router-link>
+              <div class="Shows-itemContent">
+                <h2>L'Art de Rater le Train</h2>
+                <b-badge variant="info">Adulte 13+</b-badge>
+                <p>
+                  Face au choix, je reste bloqué. Puis, comme animé par une
+                  force invisible...
+                </p>
+                <b-button to="/show/lartderaterletrain" variant="primary"
+                  >En savoir plus »</b-button
+                >
+              </div>
+            </b-col>
+            <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
               <router-link to="/show/europe">
                 <b-img src="/show-europe.jpg" rounded="circle"> </b-img>
               </router-link>
@@ -105,7 +122,7 @@
                 >
               </div>
             </b-col>
-            <b-col lg="4" md="4" sm="5" xs="10">
+            <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
               <router-link to="/show/lucavidesonsac">
                 <b-img src="/show-lucavidesonsac.jpg" rounded="circle"> </b-img>
               </router-link>
