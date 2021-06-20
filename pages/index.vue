@@ -90,7 +90,7 @@
               </div>
             </b-col>
             <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
-              <router-link to="/show/sorcieres">
+              <router-link to="/show/lartderaterletrain">
                 <b-img src="/show-lartderaterletrain.jpg" rounded="circle">
                 </b-img>
               </router-link>
@@ -102,6 +102,23 @@
                   force invisible...
                 </p>
                 <b-button to="/show/lartderaterletrain" variant="primary"
+                  >En savoir plus »</b-button
+                >
+              </div>
+            </b-col>
+            <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
+              <router-link to="/show/otello">
+                <b-img src="/show-otello.jpg" rounded="circle"> </b-img>
+              </router-link>
+              <div class="Shows-itemContent">
+                <h2>Otello</h2>
+                <b-badge variant="info">Adulte 13+</b-badge>
+                <p>
+                  Otello décide d'ouvrir un cinéma dans un petit village de
+                  l'Italie d'après-guerre. Les gens sont éblouis: sa vie est
+                  comme un film.
+                </p>
+                <b-button to="/show/otello" variant="primary"
                   >En savoir plus »</b-button
                 >
               </div>
