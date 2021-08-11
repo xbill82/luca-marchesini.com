@@ -1,18 +1,19 @@
 <template>
   <div class="GigPage">
     <header>
-      <a :href="gig.mapUrl" target="_blank">
-        <div class="GigPage-map" :style="`background: url('${mapFile}') center`"></div>
+      <a :href="`/show/${gig.showName}`">
+        <div
+          class="GigPage-map"
+          :style="`background: url('/headers/header-${gig.showName}.jpg')`"
+        ></div>
       </a>
       <div class="Header-jumbofon">
         <b-row>
-          <b-col
-            lg="6" md="7" sm="8" xs="12"
-            offset-lg="1">
+          <b-col lg="6" md="7" sm="8" xs="12" offset-lg="1">
             <a v-if="gig.showName" :href="`/show/${gig.showName}`">
-              <h1> <i class="icon-star"></i> {{ gig.title }}</h1>
+              <h1><i class="icon-star"></i> {{ gig.title }}</h1>
             </a>
-            <h1 v-else> <i class="icon-star"></i> {{ gig.title }}</h1>
+            <h1 v-else><i class="icon-star"></i> {{ gig.title }}</h1>
           </b-col>
         </b-row>
       </div>
@@ -23,7 +24,9 @@
           <i class="icon-calendar"></i>
           <div class="GigPage-element--content">
             <div class="GigPage-element--key">Date</div>
-            <div class="GigPage-element--value">{{ formatGigDate(gig.date) }}</div>
+            <div class="GigPage-element--value">
+              {{ formatGigDate(gig.date) }}
+            </div>
           </div>
         </div>
         <div v-if="gig.time" class="GigPage-element">
@@ -47,7 +50,9 @@
           <i class="icon-flag"></i>
           <div class="GigPage-element--content">
             <div class="GigPage-element--key">Cadre</div>
-            <a v-if="gig.parentEventUrl" :href="gig.parentEventUrl">{{ gig.parentEvent }}</a>
+            <a v-if="gig.parentEventUrl" :href="gig.parentEventUrl">{{
+              gig.parentEvent
+            }}</a>
             <div v-else>{{ gig.parentEvent }}</div>
           </div>
         </div>
@@ -59,7 +64,9 @@
           </div>
         </div>
         <div v-if="gig.showName" class="GigPage-goToShow">
-          <b-button variant="primary" :to="`show/${gig.showName}`">Accéder à la fiche du spectacle</b-button>
+          <b-button variant="primary" :to="`show/${gig.showName}`"
+            >Accéder à la fiche du spectacle</b-button
+          >
         </div>
       </section>
     </div>
@@ -74,7 +81,7 @@ export default {
   name: "GigPage",
   data() {
     return {
-      gig: gigs.byId(this.$route.params.id)
+      gig: gigs.byId(this.$route.params.id),
     };
   },
   computed: {
@@ -85,12 +92,12 @@ export default {
       return `https://res.cloudinary.com/luca-le-conteur/image/upload/v1538139097/${_.kebabCase(
         this.gig.address
       )}.png`;
-    }
+    },
   },
   methods: {
     formatGigDate: gigs.formatDate,
-    formatGigTime: gigs.formatTime
-  }
+    formatGigTime: gigs.formatTime,
+  },
 };
 </script>
 
