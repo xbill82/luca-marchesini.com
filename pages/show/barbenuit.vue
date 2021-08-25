@@ -54,10 +54,6 @@
       ><br />
     </template>
     <template slot="wall-of-logos">
-      <div class="mb-2">
-        <img src="/logo-mpl.png" alt="" height="100" />
-      </div>
-
       <em
         >Ce spectacle a bénéficié d'une résidence de création à Saint Julien du
         Verdon par l'association
