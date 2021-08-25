@@ -124,6 +124,23 @@
               </div>
             </b-col>
             <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
+              <router-link to="/show/barbenuit">
+                <b-img src="/show-barbenuit.jpg" rounded="circle"> </b-img>
+              </router-link>
+              <div class="Shows-itemContent">
+                <h2>Barbenuit</h2>
+                <b-badge variant="info">Tout public 11+</b-badge>
+                <p>
+                  Sa barbe était tellement noire qu’elle faisait peur! Un jour,
+                  Barbenuit a connu une jeune fille. - Aïe! Elle pique plus
+                  qu’une rose ta grosse barbe!
+                </p>
+                <b-button to="/show/barbenuit" variant="primary"
+                  >En savoir plus »</b-button
+                >
+              </div>
+            </b-col>
+            <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
               <router-link to="/show/europe">
                 <b-img src="/show-europe.jpg" rounded="circle"> </b-img>
               </router-link>
