@@ -13,6 +13,19 @@
           <h1 class="claim-txt">
             <span class="icon-quote-left pull-left"></span>
             <em
+              >super soirée animée par Luca. Le public composé d'enfants et d'adultes s'est laissé emporter dans l'univers des sorcières. Beaucoup d'interactivité.
+Que de plaisir!!! Merci à toi.
+              </em
+            >
+          </h1>
+          <h3 class="claim-author">Patricia Richaud</h3>
+          <p class="claim-organization">Conseil Municipal, Ville de Piolenc (84)</p>
+          <hr />
+        </div>
+        <div class="claim">
+          <h1 class="claim-txt">
+            <span class="icon-quote-left pull-left"></span>
+            <em
               >Une chaise, des sorcières, lutins et des portes qui grincent
               comme un refrain... et surtout un conteur qui nous embarque dans
               ses histoires, une parenthèse très appréciée des petits comme des
