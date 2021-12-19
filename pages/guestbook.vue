@@ -135,6 +135,12 @@ Que de plaisir!!! Merci à toi.
   </div>
 </template>
 
+<script>
+export default {
+  name: "GuestBook"
+}
+</script>
+
 <style lang="scss" scoped>
 header {
   width: 100%;

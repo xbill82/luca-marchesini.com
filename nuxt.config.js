@@ -26,13 +26,13 @@ module.exports = {
   */
   loading: { color: "#3B8070" },
   css: ["@/assets/belta-regular.css", "@assets/custom-awesome.css"],
+  styleResources: {
+    scss: "./assets/variables.scss"
+  },
   /*
   ** Build configuration
   */
   build: {
-    styleResources: {
-      scss: "./assets/variables.scss"
-    },
     /*
     ** Run ESLint on save
     */
@@ -61,6 +61,7 @@ module.exports = {
     }
   },
   modules: [
+    '@nuxtjs/style-resources',
     "bootstrap-vue/nuxt",
     [
       "@nuxtjs/google-analytics",

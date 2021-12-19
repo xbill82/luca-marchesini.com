@@ -84,11 +84,10 @@
 
 <script>
 import Show from "~/components/Show.vue";
-import TeaserVideo from "~/components/TeaserVideo.vue";
 
 export default {
   name: "LartderaterletrainPage",
-  components: { Show, TeaserVideo },
+  components: { Show },
 };
 </script>
 

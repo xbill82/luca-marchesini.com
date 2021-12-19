@@ -186,7 +186,7 @@ import GigList from "~/components/GigList.vue";
 import TeaserVideo from "~/components/TeaserVideo.vue";
 
 export default {
-  name: "Home",
+  name: "HomePage",
   components: { GigList, TeaserVideo },
   data() {
     return {

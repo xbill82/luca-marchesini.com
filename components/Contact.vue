@@ -8,6 +8,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: "ContactSection"
+}
+</script>
+
 <style scoped>
 .Contact {
   margin-bottom: 30px;

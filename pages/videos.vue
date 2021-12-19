@@ -33,7 +33,7 @@
 import TeaserVideo from "~/components/TeaserVideo.vue";
 
 export default {
-  name: "Videos",
+  name: "VideosPage",
   components: { TeaserVideo },
 };
 </script>
