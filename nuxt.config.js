@@ -71,6 +71,14 @@ module.exports = {
       }
     ]
   ],
+  bootstrapVue: {
+    components: [
+      'BRow', 'BCol', 'BButton', 'BTable', 'BBadge', 'BImg',
+      'BNav', 'BNavbarToggle', 'BCollapse', 'BNavbarBrand',
+      'BNavItem', 'BNavbarNav', 'BNavbar', 'BIcon', 'BIconEnvelope',
+      'BIconPhone', 'BIconChatRightQuote'
+    ],
+  },
   generate: {
     routes: gigs.map(gig => `/gig/${gig.id}`)
   }

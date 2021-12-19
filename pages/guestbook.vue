@@ -11,7 +11,7 @@
       <section class="claims">
         <div class="claim">
           <h1 class="claim-txt">
-            <span class="icon-quote-left pull-left"></span>
+            <b-icon-chat-right-quote class="pull-left" />
             <em
               >super soirée animée par Luca. Le public composé d'enfants et d'adultes s'est laissé emporter dans l'univers des sorcières. Beaucoup d'interactivité.
 Que de plaisir!!! Merci à toi.
@@ -24,7 +24,7 @@ Que de plaisir!!! Merci à toi.
         </div>
         <div class="claim">
           <h1 class="claim-txt">
-            <span class="icon-quote-left pull-left"></span>
+            <b-icon-chat-right-quote class="pull-left" />
             <em
               >Une chaise, des sorcières, lutins et des portes qui grincent
               comme un refrain... et surtout un conteur qui nous embarque dans
@@ -38,7 +38,7 @@ Que de plaisir!!! Merci à toi.
         </div>
         <div class="claim">
           <h1 class="claim-txt">
-            <span class="icon-quote-left pull-left"></span>
+            <b-icon-chat-right-quote class="pull-left" />
             <em
               >J'ai vu un conteur super chouette samedi, il est de Montpellier,
               super feeling avec les mômes, pêchu, belle présence, subtil, tout
@@ -52,7 +52,7 @@ Que de plaisir!!! Merci à toi.
         </div>
         <div class="claim">
           <h1 class="claim-txt">
-            <span class="icon-quote-left pull-left"></span>
+            <b-icon-chat-right-quote class="pull-left" />
             <em
               >Nous sommes vraiment très très contents de l'intervention de
               Luca! Et nous le remercions une fois de plus pour sa bonne humeur
@@ -65,8 +65,8 @@ Que de plaisir!!! Merci à toi.
         </div>
         <div class="claim">
           <h1 class="claim-txt">
-            <span class="icon-quote-left pull-left"></span
-            ><em
+            <b-icon-chat-right-quote class="pull-left" />
+            <em
               >La tournée a été très appréciée et je suis sûre qu'elle aura des
               retombées positives pour vous.</em
             >
@@ -79,8 +79,8 @@ Que de plaisir!!! Merci à toi.
         </div>
         <div class="claim">
           <h1 class="claim-txt">
-            <span class="icon-quote-left pull-left"></span
-            ><em
+            <b-icon-chat-right-quote class="pull-left" />
+            <em
               >Luca nous a transportés dans son voyage. Il y a eu beaucoup de
               rires et aussi beaucoup d’interactions! Il a su s’adapter au
               public, à savoir des adultes handicapés mentaux. Il a été très
@@ -94,7 +94,7 @@ Que de plaisir!!! Merci à toi.
         </div>
         <div class="claim">
           <h1 class="claim-txt">
-            <span class="icon-quote-left pull-left"></span>
+            <b-icon-chat-right-quote class="pull-left" />
             <em
               >Sous une grande église, sur un petit banc, il conte. Il conte les
               sorcières, les humains, les folies, les rêves, les lutins, les
@@ -115,7 +115,7 @@ Que de plaisir!!! Merci à toi.
         </div>
         <div class="claim">
           <h1 class="claim-txt">
-            <span class="icon-quote-left pull-left"></span>
+            <b-icon-chat-right-quote class="pull-left" />
             <em
               >Très jolie balade de contes de sorcières et d'ogres ponctuées
               d'intonations, bruitages ainsi que d'expressions en langue
