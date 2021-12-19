@@ -24,13 +24,11 @@
 </template>
 
 <script>
-import Contact from "~/components/Contact.vue";
 import SignupForm from "~/components/MailingListSignupForm.vue";
 
 export default {
   name: "ContactPage",
   components: {
-    Contact,
     SignupForm
   }
 };

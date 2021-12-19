@@ -19,7 +19,7 @@ import * as gigs from "../data/gigs.api";
 import GigList from "~/components/GigList.vue";
 
 export default {
-  name: "Agenda",
+  name: "AgendaPage",
   components: { GigList },
   data() {
     return {

@@ -64,7 +64,7 @@
           </div>
         </div>
         <div v-if="gig.showName" class="GigPage-goToShow">
-          <b-button variant="primary" :to="`show/${gig.showName}`"
+          <b-button variant="primary" :to="`/show/${gig.showName}`"
             >Accéder à la fiche du spectacle</b-button
           >
         </div>

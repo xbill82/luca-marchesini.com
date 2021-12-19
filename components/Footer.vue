@@ -26,7 +26,7 @@
 import Contact from "~/components/Contact.vue";
 
 export default {
-  name: "Footer",
+  name: "FooterSection",
   components: {
     Contact
   }
