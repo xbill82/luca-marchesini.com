@@ -1,6 +1,7 @@
 const gigs = require("./data/gigs.json");
 
 module.exports = {
+  target: 'static',
   /*
   ** Headers of the page
   */
