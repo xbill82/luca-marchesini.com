@@ -10,9 +10,9 @@
       <b-row>
         <b-col md="4">
           <div class="ContactData">
-            <a href="mailto:contact@luca-marchesini.com"><span class="icon-envelope"></span>&nbsp;contact@luca-marchesini.com</a>
+            <a href="mailto:contact@luca-marchesini.com"><b-icon-envelope />&nbsp;contact@luca-marchesini.com</a>
             <br>
-            <a href="tel:+33633596151"><span class="icon-phone"></span>&nbsp;+33 (0) 6 33 59 61 51</a>
+            <a href="tel:+33633596151"><b-icon-phone />&nbsp;+33 (0) 6 33 59 61 51</a>
           </div>
         </b-col>
         <b-col md="8">
