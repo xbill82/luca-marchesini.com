@@ -17,6 +17,14 @@
           video-credits="Désirée Snackey"
         ></teaser-video>
         <teaser-video
+          youtube-id="yrVHRF-MZ7A"
+          video-credits="Ariel Fernández Verba"
+        ></teaser-video>
+        <teaser-video
+          youtube-id="SqMRFWZwTE4"
+          video-credits="Ariel Fernández Verba"
+        ></teaser-video>
+        <teaser-video
           youtube-id="taLPgu72eic"
           video-credits="Marion Chataing"
         ></teaser-video>
