@@ -59,12 +59,12 @@
       </dl>
     </template>
     <template slot="btn-dl-file">
-      <b-btn
+      <b-button
         class="mb-3"
         to="/docs/dossier-lartderaterletrain.pdf"
         variant="primary"
         target="_blank"
-        >Télécharger le Dossier</b-btn
+        >Télécharger le Dossier</b-button
       ><br />
     </template>
     <template slot="wall-of-logos">

@@ -58,12 +58,12 @@
       <b-btn to="/docs/dossier-sorcieres.pdf" variant="primary" target="_blank"
         >Télécharger le Dossier</b-btn
       ><br />
-      <b-btn
+      <b-button
         class="mt-1"
         to="/docs/tech-sorcieres.pdf"
         variant="primary"
         target="_blank"
-        >Télécharger la fiche technique</b-btn
+        >Télécharger la fiche technique</b-button
       >
     </template>
     <template slot="claim-txt">
