@@ -24,11 +24,10 @@
       que les indécis basculent vers le destin qui est le leur.
     </template>
     <template slot="intro-video">
-      🎥 <em>Une vidéo de ce spectacle sera bientôt en ligne.</em>
-      <!-- <teaser-video
-        youtube-id="YWcMT4do2v8"
+      <teaser-video
+        youtube-id="rup0HfF1TRA"
         video-credits="Désirée Snackey"
-      ></teaser-video> -->
+      ></teaser-video>
     </template>
     <template slot="description">
       L’Art de Rater le Train est un voyage inspiré des aventures que j’ai vécu
@@ -42,6 +41,13 @@
       avec le problème du choix, car « choisir, c’est renoncer » (dixit Kamel
       Guennoun), qui m’a changé et fait grandir. Cette époque de ma vie a été un
       voyage initiatique.
+      <div class="my-3">
+      🎥 <em>L'Art de Rater le Train est un spectacle adaptable. Ci-dessous, vous trouverez un aperçu de sa version café-théâtre (pour salles non équipées) et en langue espagnole. N'hésitez pas à activer les sous-titres français, si besoin.</em>
+      </div>
+      <teaser-video
+        youtube-id="yrVHRF-MZ7A"
+        video-credits="Ariel F. Verba"
+      ></teaser-video>
     </template>
     <template slot="info-age">Public adulte à partir de 13 ans</template>
     <template slot="info-duration">Approximativement 1h15</template>
@@ -51,11 +57,7 @@
         <dt>Ecrit par</dt>
         <dd>Luca Marchesini, Danilo Facelli</dd>
         <dt>Œil extérieur</dt>
-        <dd>Miguel Rojo, Patricio Nusshold</dd>
-        <dt>Musiques de</dt>
-        <dd>Mártires del Compás, Jorge Drexler, The Clash</dd>
-        <dt>Poèmes de</dt>
-        <dd>Danilo Facelli, Àngel Taliàn</dd>
+        <dd>Marien Guillé, Miguel Rojo, Patricio Nusshold</dd>
       </dl>
     </template>
     <template slot="btn-dl-file">
@@ -84,10 +86,11 @@
 
 <script>
 import Show from "~/components/Show.vue";
+import TeaserVideo from "~/components/TeaserVideo.vue";
 
 export default {
   name: "LartderaterletrainPage",
-  components: { Show },
+  components: { Show, TeaserVideo },
 };
 </script>
 
