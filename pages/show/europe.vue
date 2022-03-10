@@ -19,7 +19,12 @@
     <template slot="info-age">jeune public de 4 à 8 ans.</template>
     <template slot="info-duration">approximativement 40 minutes (ça peut varier en fonction du niveau d'attention du public).</template>
     <template slot="btn-dl-file">
-      <b-button to="/docs/tech-europe.pdf" variant="primary" target="_blank"><span class="glyphicon glyphicon-file"></span> Télécharger la Fiche Technique</b-button>
+      <b-button to="/docs/dossier-europe.pdf" variant="primary" target="_blank">
+        <span class="glyphicon glyphicon-file"></span> Télécharger le dossier
+      </b-button>
+      <b-button to="/docs/tech-europe.pdf" variant="primary" target="_blank">
+        <span class="glyphicon glyphicon-file"></span> Télécharger la Fiche Technique
+      </b-button>
     </template>
   </show>
 </template>
