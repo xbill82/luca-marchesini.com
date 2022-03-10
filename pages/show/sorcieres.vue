@@ -39,6 +39,15 @@
         youtube-id="taLPgu72eic"
         video-credits="Marion Chataing"
       ></teaser-video>
+
+      <h2 class="mt-3">Interview à Radio Bartas (48)</h2>
+      <p>Lors de la représentation de La Danse des Sorcières à Florac, dans
+        le cadre du Festival Contes et Rencontres (organisé par la Fédération
+        des Foyers Ruraux de Lozère), j'ai eu le plaisir de répondre aux
+        questions de l'envoyée de Radio Bartas (<a target="_blank" href="https://www.radiobartas.net">
+        www.radiobartas.net</a>): quelle surprise quand j'ai découvert que je
+        n'étais pas le seul à avoir parlé au micro!</p>
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1229748856&color=%23ba8650&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-890380521-764004077" title="lucaleconteur" target="_blank" style="color: #cccccc; text-decoration: none;">lucaleconteur</a> · <a href="https://soundcloud.com/user-890380521-764004077/la-danse-des-sorcieres-interview-radio-bartas" title="La Danse Des Sorcières - Interview Radio Bartas" target="_blank" style="color: #cccccc; text-decoration: none;">La Danse Des Sorcières - Interview Radio Bartas</a></div>
     </template>
     <template slot="info-age">public familial à partir de 5 ans.</template>
     <template slot="info-duration"
@@ -55,8 +64,8 @@
       </dl>
     </template>
     <template slot="btn-dl-file">
-      <b-btn to="/docs/dossier-sorcieres.pdf" variant="primary" target="_blank"
-        >Télécharger le Dossier</b-btn
+      <b-button to="/docs/dossier-sorcieres.pdf" variant="primary" target="_blank"
+        >Télécharger le Dossier</b-button
       ><br />
       <b-button
         class="mt-1"
