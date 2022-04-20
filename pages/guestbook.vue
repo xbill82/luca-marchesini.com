@@ -13,6 +13,19 @@
           <h1 class="claim-txt">
             <b-icon-chat-right-quote class="pull-left" />
             <em
+              >Merci, Luca, pour le souffle de fraîcheur, pour avoir mis le feu, pour ta spontanéité et ta
+              générosité... Continue à nous transporter encore dans tes univers! Au plaisir de t'écouter encore.
+              </em
+            >
+          </h1>
+          <h3 class="claim-author">Isabelle Noyer</h3>
+          <p class="claim-organization">Festival Contes et Rencontres en Lozère</p>
+          <hr />
+        </div>
+        <div class="claim">
+          <h1 class="claim-txt">
+            <b-icon-chat-right-quote class="pull-left" />
+            <em
               >super soirée animée par Luca. Le public composé d'enfants et d'adultes s'est laissé emporter dans l'univers des sorcières. Beaucoup d'interactivité.
 Que de plaisir!!! Merci à toi.
               </em

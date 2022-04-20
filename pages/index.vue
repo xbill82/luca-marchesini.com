@@ -42,13 +42,11 @@
 
             <div class="Claim">
               <div class="Claim-txt">
-                "J'ai vu un conteur super chouette samedi, il est de
-                Montpellier, super feeling avec les mômes, pêchu, belle
-                présence, subtil, tout public, super spectacle convenant à toute
-                la famille: Luca Marchesini"
+                "Merci, Luca, pour le souffle de fraîcheur, pour avoir mis le feu, pour ta spontanéité et ta
+                générosité... Continue à nous transporter encore dans tes univers! Au plaisir de t'écouter encore."
               </div>
-              <p class="Claim-author">Isabelle Bach</p>
-              <p class="Claim-organization">Compagnie Mungo</p>
+              <p class="Claim-author">Isabelle Noyer</p>
+              <p class="Claim-organization">Festival Contes et Rencontres en Lozère</p>
               <div class="text-right">
                 <b-button variant="primary" to="/guestbook"
                   >Voir le livre d'or</b-button
