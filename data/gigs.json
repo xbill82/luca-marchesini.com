@@ -12,12 +12,12 @@
     "showName": "lartderaterletrain"
   },
   {
-    "mapUrl": "https://www.google.com/maps/place/Plage+du+Grand+Travers/@43.5662278,4.0086242,12.99z/data=!4m5!3m4!1s0x12b6bd37e98b3ecf:0x75814251c285b24a!8m2!3d43.5574015!4d4.0494637",
-    "address": "Plage du Grand Travers, La Grande Motte",
+    "mapUrl": "https://www.google.com/maps/place/Poste+De+Secours+Avranche/@43.5480009,3.9906977,597m/data=!3m1!1e3!4m5!3m4!1s0x12b6bc9f46dad245:0xbaa1978e32967839!8m2!3d43.5480011!4d3.9921543",
+    "address": "Plage de Carnon Est (poste de secours, face à la rue de la plage)",
     "date": "2022-07-20",
     "time": "21:00:00",
     "id": "152",
-    "location": "Plage du Petit Travers, La Grande Motte",
+    "location": "Plage de Carnon Est",
     "parentEvent": "Festival Contes en Litt'Orale",
     "parentEventUrl": "https://www.facebook.com/ConteEnLittOrale/",
     "title": "La Danse des Sorcières",
