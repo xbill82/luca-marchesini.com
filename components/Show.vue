@@ -48,6 +48,8 @@
           </b-col>
         </b-row>
         <slot name="wall-of-logos"></slot>
+        <hr />
+        <slot name="pro-space"></slot>
       </section>
     </div>
   </div>

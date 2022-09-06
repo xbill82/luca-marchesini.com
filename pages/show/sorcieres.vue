@@ -23,14 +23,7 @@
       ></teaser-video>
     </template>
     <template slot="description"
-      >La Danse des Sorcières est un spectacle familial où l’on va titiller
-      l’imaginaire mystérieux qui vit autour des êtres surnaturels hostiles:
-      sorcières, ogres, géants méchants ou stupides, lutins malicieux, etc… Les
-      histoires, situées autour des superstitions italiennes, produisent une
-      ambiance inquiétante mais également beaucoup de suspense et d’humour. Dans
-      ces contes souvent facétieux, la ruse du héros le sauve in-extrémis du
-      danger. Ce spectacle est destiné au jeune public à partir de 5 ans et
-      s’adapte à tous les créneaux d’âge. <br /><br />
+      >La Danse des Sorcières est un spectacle familial qui va titiller l’imaginaire mystérieux autour des êtres surnaturels hostiles: sorcières, ogres, géants méchants ou stupides, lutins malicieux, etc… Les histoires, inspirées des superstitions italiennes, produisent une ambiance inquiétante mais également beaucoup d’humour. Dans ces contes souvent facétieux, la ruse du héros le sauve in-extrémis du danger. Ce spectacle est destiné au jeune public à partir de 5 ans et s’adapte à tous les créneaux d’âge. <br /><br />
       Ce spectacle peut être joué avec ou sans plan de feux. Voici un extrait de
       sa version "tout-terrain".
       <br /><br />
@@ -98,6 +91,18 @@
         >Ce spectacle a bénéficié d'une résidence de création au Théâtre Gérard
         Philippe (Montpellier) en octobre 2019.</em
       >
+    </template>
+    <template slot="pro-space">
+      <h1>Espace pro</h1>
+      <p>
+        Si vous êtes professionnel·le et vous organisez ce spectacle quelque part,
+        vous trouverez ci-dessous le matériel dont vous avez besoin pour votre communication.
+        <ul>
+          <li><a href="/photos-sorcieres.zip">Visuels</a></li>
+          <li><a href="/docs/synopsis-sorcieres.pdf">Synopsis et textes de présentation</a></li>
+        </ul>
+      </p>
+
     </template>
   </show>
 </template>
