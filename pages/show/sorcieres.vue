@@ -59,13 +59,6 @@
     <template slot="btn-dl-file">
       <b-button to="/docs/dossier-sorcieres.pdf" variant="primary" target="_blank"
         >Télécharger le Dossier</b-button
-      ><br />
-      <b-button
-        class="mt-1"
-        to="/docs/tech-sorcieres.pdf"
-        variant="primary"
-        target="_blank"
-        >Télécharger la fiche technique</b-button
       >
     </template>
     <template slot="claim-txt">
@@ -95,12 +88,13 @@
     <template slot="pro-space">
       <h1>Espace pro</h1>
       <p>
-        Si vous êtes professionnel·le et vous organisez ce spectacle quelque part,
+        Si vous êtes professionnel·le et vous organisez ce spectacle dans votre salle,
         vous trouverez ci-dessous le matériel dont vous avez besoin pour votre communication.
         <ul>
           <li><a href="/photos-sorcieres.zip">Visuels</a></li>
           <li><a href="/docs/synopsis-sorcieres.pdf">Synopsis et textes de présentation</a></li>
           <li><a href="/docs/affiche-sorcieres.pdf">Modèle d'affiche</a></li>
+          <li><a href="/docs/tech-sorcieres.pdf">Fiche technique</a></li>
         </ul>
       </p>
 
