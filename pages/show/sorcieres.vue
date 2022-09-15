@@ -94,7 +94,7 @@
           <li><a href="/photos-sorcieres.zip">Visuels</a></li>
           <li><a href="/docs/synopsis-sorcieres.pdf">Synopsis et textes de présentation</a></li>
           <li><a href="/docs/affiche-sorcieres.pdf">Modèle d'affiche</a></li>
-          <li><a href="/docs/tech-sorcieres.pdf">Fiche technique</a></li>
+          <li><a href="/docs/tech-sorcieres.pdf">Fiche technique et plan de feux</a></li>
         </ul>
       </p>
 

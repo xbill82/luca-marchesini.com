@@ -1,5 +1,8 @@
 {
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
-    "vetur.format.defaultFormatter.html": "prettier"
+    "vetur.format.defaultFormatter.html": "prettier",
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "master"
+    ]
 }
