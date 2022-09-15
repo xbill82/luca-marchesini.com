@@ -16,6 +16,8 @@
     "time": "16:00:00",
     "id": "162",
     "location": "Pavillon Blanc, Colomiers (31)",
+    "parentEvent": "Pavillon Blanc Henri Molina",
+    "parentEventUrl": "https://www.pavillonblanc-colomiers.fr/le-programme/les-evenements/439-la-danse-des-sorcieres",
     "title": "La Danse des Sorcières",
     "showName": "sorcieres"
   },
