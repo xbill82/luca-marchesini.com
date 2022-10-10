@@ -46,7 +46,8 @@ export default {
 }
 
 .Presentation p {
-  font-style: italic;
+  font-family: Courier;
+  color: #444;
   font-size: 100%
 }
 </style>
