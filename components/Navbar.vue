@@ -13,6 +13,7 @@
         <b-nav-item href="/videos">Videos</b-nav-item>
         <b-nav-item href="/guestbook">Livre d'Or</b-nav-item>
         <b-nav-item href="/contact">Contact</b-nav-item>
+        <b-nav-item href="/pro-space">Espace pro</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
