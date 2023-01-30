@@ -105,6 +105,22 @@
               </div>
             </b-col>
             <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
+              <router-link to="/show/risottoexperience">
+                <b-img src="/show-risottoexperience.jpg" rounded="circle"> </b-img>
+              </router-link>
+              <div class="Shows-itemContent">
+                <h2>La Risotto Experience</h2>
+                <b-badge variant="warning">Tout public 10+</b-badge>
+                <p>
+                  On fait un risotto ensemble, on le mange et on écoute des histoires.
+                  C'est beau, ça nourrit le ventre... et l'esprit!
+                </p>
+                <b-button to="/show/risottoexperience" variant="primary"
+                  >En savoir plus »</b-button
+                >
+              </div>
+            </b-col>
+            <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
               <router-link to="/show/otello">
                 <b-img src="/show-otello.jpg" rounded="circle"> </b-img>
               </router-link>
@@ -154,7 +170,7 @@
                 >
               </div>
             </b-col>
-            <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
+            <!-- <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
               <router-link to="/show/lucavidesonsac">
                 <b-img src="/show-lucavidesonsac.jpg" rounded="circle"> </b-img>
               </router-link>
@@ -169,7 +185,7 @@
                   >En savoir plus »</b-button
                 >
               </div>
-            </b-col>
+            </b-col> -->
           </b-row>
         </div>
       </section>
