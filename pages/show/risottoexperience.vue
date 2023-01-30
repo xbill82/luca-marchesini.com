@@ -20,10 +20,15 @@
       abritent les histoires les plus mystérieuses.
     </template>
     <template slot="intro-video">
-      <!-- <teaser-video
-        youtube-id="YWcMT4do2v8"
-        video-credits="Désirée Snackey"
-      ></teaser-video> -->
+      <div class="gallery">
+        <div
+          v-for="(img, idx) in images"
+          :key="idx"
+          @click="() => showImage(idx)"
+        >
+          <b-img fluid :src="img" class="Image my-1" />
+        </div>
+      </div>
     </template>
     <template slot="description">
       La Risotto Experience se passe en trois temps. D'abord un atelier cuisine, dans lequel on va cuisiner un délicieux
@@ -65,12 +70,12 @@
       ><br />
     </template>
     <template slot="wall-of-logos">
-      <!-- <div class="mb-2">
-        <img src="/logo-mpl.png" alt="" height="100" />
-      </div> -->
+      <div class="mb-2">
+        <img src="/logo-lozere.png" alt="" height="100" />
+      </div>
 
       <em
-        >Ce spectacle a bénéficié d'un partenariat avec Contes et Rencontres en Lozère en février 2023.</em
+        >Ce spectacle a bénéficié d'un partenariat avec Contes et Rencontres en Lozère (organisé par la fédération des Foyers Ruraux de Lozère) en février 2023.</em
       >
     </template>
   </show>
@@ -79,12 +84,22 @@
 <script>
 import LogoRisotto from '~/components/LogoRisotto.vue'
 import Show from '~/components/Show.vue'
+
 export default {
   name: 'RisottoExperience',
   components: {
     LogoRisotto,
-    Show
-  }
+    Show,
+  },
+  computed: {
+    images() {
+      return [
+        'https://res.cloudinary.com/luca-le-conteur/image/upload/v1675077744/risottoexperience/IMG_8813.jpg',
+        'https://res.cloudinary.com/luca-le-conteur/image/upload/v1675077929/risottoexperience/IMG_8815.jpg',
+        'https://res.cloudinary.com/luca-le-conteur/image/upload/v1675077955/risottoexperience/IMG_8844.jpg'
+      ]
+    }
+  },
 }
 </script>
 
@@ -102,5 +117,9 @@ export default {
   width: 50%;
   max-height: 390px;
   min-width: 256px;
+}
+
+.Image {
+  border-radius: 10px;
 }
 </style>
