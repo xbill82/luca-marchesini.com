@@ -64,7 +64,7 @@
       </div>
 
       <em
-        >Ce spectacle bénéficiera d'une résidence de création au Théâtre Gérard
+        >Ce spectacle a bénéficié d'une résidence de création au Théâtre Gérard
         Philippe (Montpellier) en mai 2022.</em
       >
     </template>
