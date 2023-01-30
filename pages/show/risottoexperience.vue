@@ -15,7 +15,7 @@
     <template slot="intro-lead">
       “La Risotto Experience” est un spectacle qui unit conte et nourriture.
       Il nait d’une envie d’explorer les liens qui unissent ces deux univers et de construire des nouveaux ponts entre
-      les deux. Le Risotto étant un plat qui s’adapte bien aux saisons froides, il se marrie bien avec les histoires,
+      les deux. Le Risotto étant un plat qui s’adapte bien aux saisons froides, il se marie bien avec les histoires,
       les contes merveilleux. De plus, le roi des Risotti est celui aux cèpes, qui poussent en secret dans les bois qui
       abritent les histoires les plus mystérieuses.
     </template>
@@ -37,11 +37,11 @@
       <br />
       Quand c'est prêt on s'asseoit à table, on accueille (car d'autres personnes peuvent nous rejoindre) et on savoure.
       <br />
-      Après mangé, on écoute les histoires que je sortirai de ma besace, que la soirée avec son ambiance et sa chaleur m'aura
-      soufflé dans l'oreille. Ça parlera d'ingrédients, d'Italie, de merveilleux et qui sait quoi encore...
+      Après manger, on écoute les histoires que je sortirai de ma besace, que la soirée avec son ambiance et sa chaleur m'aura
+      soufflé dans l'oreille. Ça parlera d'ingrédients, d'Italie, de merveilleux et qui sait de quoi encore...
       <br /><br />
       <em
-        >La Risotto Experience est un spectacle en cours de création. Il a bénéficié du partenariat avec le
+        >La Risotto Experience a été créé en partenariat avec le
         festival Contes et Rencontres en Lozère 2023.</em
       >
     </template>
@@ -75,7 +75,7 @@
       </div>
 
       <em
-        >Ce spectacle a bénéficié d'un partenariat avec Contes et Rencontres en Lozère (organisé par la fédération des Foyers Ruraux de Lozère) en février 2023.</em
+        >Ce spectacle a été créé en partenariat avec le festival Contes et Rencontres en Lozère (organisé par la fédération des Foyers Ruraux de Lozère).</em
       >
     </template>
   </show>
@@ -94,9 +94,7 @@ export default {
   computed: {
     images() {
       return [
-        'https://res.cloudinary.com/luca-le-conteur/image/upload/v1675077744/risottoexperience/IMG_8813.jpg',
-        'https://res.cloudinary.com/luca-le-conteur/image/upload/v1675077929/risottoexperience/IMG_8815.jpg',
-        'https://res.cloudinary.com/luca-le-conteur/image/upload/v1675077955/risottoexperience/IMG_8844.jpg'
+        'https://res.cloudinary.com/luca-le-conteur/image/upload/v1675077744/risottoexperience/IMG_8813.jpg'
       ]
     }
   },
