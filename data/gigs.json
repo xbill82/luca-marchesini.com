@@ -10,6 +10,16 @@
     "showName": "risottoexperience"
   },
   {
+    "mapUrl": "https://www.google.com/maps/place/M%C3%A9diath%C3%A8que+Jules+Verne/@43.5763639,3.821564,17z/data=!3m1!4b1!4m6!3m5!1s0x12b6adfe2d2c8ab9:0xf23d334c50bb81ce!8m2!3d43.5763639!4d3.8237527!16s%2Fg%2F11b6d7dl3h",
+    "address": "21 Rue Auguste Renoir, 34430 Saint-Jean-de-Védas",
+    "date": "2023-04-26",
+    "time": "16:00:00",
+    "id": "180",
+    "location": "Médiathèque Jules Verne (St. Jean de Védas, 34)",
+    "title": "Le Voyage en Europe",
+    "showName": "europe"
+  },
+  {
     "mapUrl": "https://www.google.com/maps/place/68130+Altkirch,+France/@47.6206161,7.2269484,14z/data=!3m1!4b1!4m6!3m5!1s0x47918e0eea3e039b:0x40a5fb99a3940e0!8m2!3d47.620391!4d7.243036!16zL20vMDc1c21m",
     "address": "Altkirch",
     "date": "2023-04-22",
