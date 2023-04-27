@@ -53,16 +53,6 @@
         >Télécharger le Dossier</b-button
       ><br />
     </template>
-    <template slot="wall-of-logos">
-      <em
-        >Ce spectacle a bénéficié d'une résidence de création à Saint Julien du
-        Verdon par l'association
-        <a href="http://www.artetculturefabridepeiresc.com"
-          >Art et Culture Fabri de Peiresc</a
-        >
-        de mars à mai 2018.</em
-      >
-    </template>
   </show>
 </template>
 
