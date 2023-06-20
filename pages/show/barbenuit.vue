@@ -35,8 +35,8 @@
       leur quotidien.
       <br /><br />
     </template>
-    <template slot="info-age">Public adulte à partir de 11 ans</template>
-    <template slot="info-duration">Approximativement 1h15</template>
+    <template slot="info-age">Tout public à partir de 8 ans</template>
+    <template slot="info-duration">Approximativement 1h</template>
     <template slot="info-more">
       <h1>Crédits</h1>
       <dl>
