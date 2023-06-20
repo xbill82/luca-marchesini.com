@@ -143,7 +143,7 @@
               </router-link>
               <div class="Shows-itemContent">
                 <h2>Barbenuit</h2>
-                <b-badge variant="info">Tout public 11+</b-badge>
+                <b-badge variant="info">Tout public 8+</b-badge>
                 <p>
                   Sa barbe était tellement noire qu’elle faisait peur! Un jour,
                   Barbenuit a connu une jeune fille. - Aïe! Elle pique plus
