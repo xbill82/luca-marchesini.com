@@ -28,11 +28,15 @@
       </p>
 
       <img class="Visual" src="/visuals/luca-marchesini-2.jpg" alt="" />
-      <p>Credit: <a href="https://peru.ultra-book.com/">Perrine Boyer</a></p>
+      <p>Credit <a href="https://peru.ultra-book.com/">Perrine Boyer</a></p>
       <img class="Visual" src="/visuals/luca-marchesini-7.jpg" alt="">
-      <p>Credit <a href="">Katia Fersing</a></p>
+      <p>Credit Katia Fersing</p>
       <img class="Visual" src="/visuals/luca-marchesini-5.png" alt="">
       <p>Credit <a href="http://desireesnackey.com/">Desirée Snackey</a></p>
+      <img class="Visual" src="/visuals/luca-marchesini-8.png" alt="">
+      <p>Credit Alessandro Carretti</p>
+      <img class="Visual" src="/visuals/luca-marchesini-9.png" alt="">
+      <p>Credit Jade Moussut</p>
     </section>
   </div>
 </template>
