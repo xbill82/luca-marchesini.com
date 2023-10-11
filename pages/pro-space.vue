@@ -33,9 +33,9 @@
       <p>Credit Katia Fersing</p>
       <img class="Visual" src="/visuals/luca-marchesini-5.png" alt="">
       <p>Credit <a href="http://desireesnackey.com/">Desirée Snackey</a></p>
-      <img class="Visual" src="/visuals/luca-marchesini-8.png" alt="">
+      <img class="Visual" src="/visuals/luca-marchesini-8.jpg" alt="">
       <p>Credit Alessandro Carretti</p>
-      <img class="Visual" src="/visuals/luca-marchesini-9.png" alt="">
+      <img class="Visual" src="/visuals/luca-marchesini-9.jpg" alt="">
       <p>Credit Jade Moussut</p>
     </section>
   </div>
