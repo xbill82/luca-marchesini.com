@@ -77,6 +77,8 @@
 </template>
 
 <script>
+import TeaserVideo from "~/components/TeaserVideo.vue";
+
 import LogoRisotto from '~/components/LogoRisotto.vue'
 import Show from '~/components/Show.vue'
 
@@ -85,6 +87,7 @@ export default {
   components: {
     LogoRisotto,
     Show,
+    TeaserVideo
   },
   computed: {
     images() {
