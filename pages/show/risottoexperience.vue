@@ -20,15 +20,10 @@
       abritent les histoires les plus mystérieuses.
     </template>
     <template slot="intro-video">
-      <div class="gallery">
-        <div
-          v-for="(img, idx) in images"
-          :key="idx"
-          @click="() => showImage(idx)"
-        >
-          <b-img fluid :src="img" class="Image my-1" />
-        </div>
-      </div>
+      <teaser-video
+        youtube-id="XBcqtmQyZcA"
+        credits="KWZ TV"
+      />
     </template>
     <template slot="description">
       La Risotto Experience se passe en trois temps. D'abord un atelier cuisine, dans lequel on va cuisiner un délicieux
