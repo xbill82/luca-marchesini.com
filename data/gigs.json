@@ -3,7 +3,7 @@
     "mapUrl": "https://www.google.com/maps/place/22520+Fraga,+Huesca,+Spain/@41.5220548,0.3306552,15z/data=!3m1!4b1!4m6!3m5!1s0x12a73ed495f21e8b:0xe88beeb0f028f554!8m2!3d41.5234803!4d0.3404344!16s%2Fg%2F11cn5pn7h3?entry=ttu",
     "address": "Fraga",
     "date": "2024-02-13",
-    "time": "16:30:00",
+    "time": "09:30:00",
     "id": "210",
     "location": "Fraga",
     "title": "Luca Vide son Sac!",
@@ -15,7 +15,7 @@
     "mapUrl": "https://www.google.com/maps/place/22520+Fraga,+Huesca,+Spain/@41.5220548,0.3306552,15z/data=!3m1!4b1!4m6!3m5!1s0x12a73ed495f21e8b:0xe88beeb0f028f554!8m2!3d41.5234803!4d0.3404344!16s%2Fg%2F11cn5pn7h3?entry=ttu",
     "address": "Fraga",
     "date": "2024-02-12",
-    "time": "16:30:00",
+    "time": "09:30:00",
     "id": "209",
     "location": "Fraga",
     "title": "Luca Vide son Sac!",
@@ -25,19 +25,19 @@
   },
   {
     "mapUrl": "https://www.google.com/maps/place/Audincourt/@47.4777777,6.7021311,12z/data=!3m1!4b1!4m6!3m5!1s0x479210ab68811033:0xce46d31c03e7ecaf!8m2!3d47.481724!4d6.840615!16s%2Fm%2F03mgbts?entry=ttu",
-    "address": "Audincourt",
+    "address": "Centre Peter Pan – Audincourt",
     "date": "2024-02-08",
-    "time": "16:30:00",
+    "time": "17:00:00",
     "id": "207",
-    "location": "Audincourt",
+    "location": "Centre Peter Pan – Audincourt",
     "title": "Le Voyage en Europe",
     "showName": "europe"
   },
   {
     "mapUrl": "https://www.google.com/maps/place/Audincourt/@47.4777777,6.7021311,12z/data=!3m1!4b1!4m6!3m5!1s0x479210ab68811033:0xce46d31c03e7ecaf!8m2!3d47.481724!4d6.840615!16s%2Fm%2F03mgbts?entry=ttu",
-    "address": "Audincourt",
+    "address": "Résidence du parc, 20 rue René Girardot – Audincourt",
     "date": "2024-02-07",
-    "time": "14:30:00",
+    "time": "15:00:00",
     "id": "206",
     "location": "Audincourt",
     "title": "La Danse des Sorcieres",
@@ -95,8 +95,8 @@
     "id": "201",
     "location": "Teatro Moderno, Guadalajara",
     "parentEvent": "Los viernes de los Cuentos",
-    "title": "El Aquelarre de las Brujas",
-    "showName": "sorcieres"
+    "title": "El Increíble Arte de Volver a Perder el Tren (Parte 1)",
+    "showName": "lartderaterletrain"
   },
   {
     "mapUrl": "https://www.google.com/maps/place/Saint-S%C3%A9ri%C3%A8s/@43.7320933,4.1033804,16.79z/data=!4m6!3m5!1s0x12b4205e20646685:0x4078821166abd20!8m2!3d43.731142!4d4.10891!16s%2Fm%2F03nv8pr?entry=ttu",
