@@ -9,15 +9,16 @@
       <nuxt-link :to="`/gig/${data.item.id}`">{{ data.item.title }}</nuxt-link>
     </template>
     <template #cell(Lieu)="data">
-      <nuxt-link :to="`/gig/${data.item.id}`">{{
-        data.item.location
-      }}</nuxt-link>
+      <b-link :to="`/gig/${data.item.id}`">{{
+        resolveLocation(data.item)
+      }}</b-link>
     </template>
   </b-table>
 </template>
 
 <script>
-import * as gigs from "../data/gigs.api";
+import * as helpers from "../helpers";
+import { getGeographicalInformation } from "../helpers";
 
 export default {
   name: "GigList",
@@ -33,8 +34,16 @@ export default {
     };
   },
   methods: {
-    formatGigDate: gigs.formatDate,
-  },
+    formatGigDate: helpers.formatDate,
+    resolveLocation(gig) {
+      if (!gig) return
+      let location = gig.legacyLocation
+      if (gig.parentEvent || gig.venue) {
+        location = `${gig.parentEvent ? gig.parentEvent : gig.venue} (${getGeographicalInformation(gig)})`;
+      }
+      return location
+    }
+  }
 };
 </script>
 

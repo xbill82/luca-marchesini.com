@@ -29,21 +29,29 @@
             </div>
           </div>
         </div>
-        <div v-if="gig.time" class="GigPage-element">
+        <div v-if="gig.date" class="GigPage-element">
           <i class="icon-clock"></i>
           <div class="GigPage-element--content">
             <div class="GigPage-element--key">Heure</div>
-            <div>{{ formatGigTime(gig.time) }}</div>
+            <div>{{ formatGigTime(gig.date) }}</div>
           </div>
         </div>
         <div class="GigPage-element">
           <i class="icon-location"></i>
           <div class="GigPage-element--content">
             <div class="GigPage-element--key">Lieu</div>
-            <div>{{ gig.location }}</div>
-            <div class="GigPage-element--address" v-if="gig.address">
-              <a :href="gig.mapUrl" target="_blank">{{ gig.address }}</a>
-            </div>
+            <template v-if="gig.venue || gig.address || gig.city">
+              <div v-if="gig.venue">
+                <a :href="gig.mapUrl" target="_blank">{{ gig.venue }}</a>
+              </div>
+              <div class="GigPage-element--address" v-if="gig.address">
+                <a :href="gig.mapUrl" target="_blank">{{ gig.address }}</a>
+              </div>
+              <div class="GigPage-element--address" v-if="gig.city">
+                <a :href="gig.mapUrl" target="_blank">{{ getGeographicalInformation(gig) }}</a>
+              </div>
+            </template>
+            <div v-else-if="gig.legacyLocation">{{ gig.legacyLocation }}</div>
           </div>
         </div>
         <div v-if="gig.parentEvent" class="GigPage-element">
@@ -74,29 +82,35 @@
 </template>
 
 <script>
-import * as gigs from "../../data/gigs.api";
-import _ from "lodash";
+import * as helpers from '../../helpers'
+import backend from "../../data/backend.notion";
 
 export default {
   name: "GigPage",
-  data() {
-    return {
-      gig: gigs.byId(this.$route.params.id),
-    };
-  },
-  computed: {
-    mapFile() {
-      if (!this.gig.address) {
-        return "";
-      }
-      return `https://res.cloudinary.com/luca-le-conteur/image/upload/v1538139097/${_.kebabCase(
-        this.gig.address
-      )}.png`;
-    },
+  async asyncData({ params, error, payload }) {
+    if (error) {
+      console.error(error)
+    }
+    if (payload) {
+      return { gig: payload };
+    }
+    try {
+      console.dir(params)
+      return { gig: await backend.fetchGigByUniqueId(parseInt(params.id)) };
+    } catch (fetchError) {
+      console.error(fetchError)
+      return { gig: {
+        title: "Gig not found",
+        date: "1970-01-01",
+        location: "Unknown",
+        address: "Unknown",
+      }}
+    }
   },
   methods: {
-    formatGigDate: gigs.formatDate,
-    formatGigTime: gigs.formatTime,
+    formatGigDate: helpers.formatDate,
+    formatGigTime: helpers.formatTime,
+    getGeographicalInformation: helpers.getGeographicalInformation,
   },
 };
 </script>
