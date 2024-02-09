@@ -194,8 +194,8 @@
 </template>
 
 <script>
-import moment from "moment";
 import * as gigs from "../data/gigs.api";
+import backend from '../data/backend.notion'
 import GigList from "~/components/GigList.vue";
 import TeaserVideo from "~/components/TeaserVideo.vue";
 
@@ -204,8 +204,19 @@ export default {
   components: { GigList, TeaserVideo },
   data() {
     return {
-      gigs: gigs.some(5),
+      gigs: [],
     };
+  },
+  async fetch() {
+    try {
+      const eventsById = await backend.fetchAllEvents();
+      const showsById = await backend.fetchAllShows();
+      const gigBatch = await backend.fetchBatchGigs(showsById, eventsById, undefined, 5, [{ property: 'When', direction: 'descending'}])
+      console.dir(gigBatch)
+      this.gigs = Object.values(gigBatch.results)
+    } catch (error) {
+      console.error(error)
+    }
   },
   methods: {
     formatGigDate: gigs.formatDate,

@@ -75,24 +75,36 @@
 
 <script>
 import * as gigs from "../../data/gigs.api";
-import _ from "lodash";
+import backend from "../../data/backend.notion";
+import get from "lodash/get";
 
 export default {
   name: "GigPage",
-  data() {
-    return {
-      gig: gigs.byId(this.$route.params.id),
-    };
+  async asyncData({ params, error, payload }) {
+    if (error) {
+      console.error(error)
+    }
+    if (payload) {
+      return { gig: payload };
+    }
+    try {
+      console.dir(params)
+      return { gig: await backend.fetchGigByUniqueId(parseInt(params.id)) };
+    } catch (fetchError) {
+      console.error(fetchError)
+      return { gig: {
+        title: "Gig not found",
+        date: "1970-01-01",
+        location: "Unknown",
+        address: "Unknown",
+      }}
+    }
   },
   computed: {
-    mapFile() {
-      if (!this.gig.address) {
-        return "";
-      }
-      return `https://res.cloudinary.com/luca-le-conteur/image/upload/v1538139097/${_.kebabCase(
-        this.gig.address
-      )}.png`;
-    },
+    // title() {
+    //   return get(this.gig, 'show.title', 'Merveilleux spectacle de Luca')
+    // },
+    // showName() { return get(this.gig, 'show.name', null) }
   },
   methods: {
     formatGigDate: gigs.formatDate,

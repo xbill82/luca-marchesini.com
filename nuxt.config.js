@@ -1,4 +1,4 @@
-const gigs = require("./data/gigs.json");
+const backend = require("./data/backend.notion");
 
 module.exports = {
   target: 'static',
@@ -63,13 +63,22 @@ module.exports = {
   ],
   bootstrapVue: {
     components: [
-      'BRow', 'BCol', 'BButton', 'BTable', 'BBadge', 'BImg',
+      'BAlert', 'BRow', 'BCol', 'BButton', 'BTable', 'BBadge', 'BImg',
       'BNav', 'BNavbarToggle', 'BCollapse', 'BNavbarBrand',
       'BNavItem', 'BNavbarNav', 'BNavbar', 'BIcon', 'BIconEnvelope',
-      'BIconPhone', 'BIconChatRightQuote'
+      'BIconPhone', 'BIconChatRightQuote', 'BSpinner'
     ],
   },
   generate: {
-    routes: gigs.map(gig => `/gig/${gig.id}`)
+    async routes() {
+      const eventsById = await backend.fetchAllEvents();
+      const showsById = await backend.fetchAllShows();
+      const gigsById = await backend.fetchAllGigs(showsById, eventsById)
+
+      return [
+        // ...Object.values(showsById).map(show => ({ route: `/show/${show.id}`, payload: show })),
+        ...Object.values(gigsById).map(gig => ({ route: `/gig/${gig.id}`, payload: gig }))
+      ]
+    } 
   }
 };

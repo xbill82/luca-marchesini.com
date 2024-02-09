@@ -7,15 +7,22 @@
         class="img-fluid">
     </header>
     <div class="container">
-      <gig-list
-        :gigs="gigs">
-      </gig-list>
+      <div v-if="loading" class="text-center">
+        <b-spinner />
+      </div>
+      <div v-else>
+        <b-alert v-if="error" variant="warning">{{ error }}</b-alert>
+        <gig-list
+          v-else
+          :gigs="gigs">
+        </gig-list>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import * as gigs from "../data/gigs.api";
+import backend from "../data/backend.notion";
 import GigList from "~/components/GigList.vue";
 
 export default {
@@ -23,8 +30,22 @@ export default {
   components: { GigList },
   data() {
     return {
-      gigs: gigs.all
+      error: null,
+      loading: true,
+      gigs: []
     };
+  },
+  async fetch() {
+    try {
+      const eventsById = await backend.fetchAllEvents();
+      const showsById = await backend.fetchAllShows();
+      const gigsById = await backend.fetchAllGigs(showsById, eventsById)
+      this.gigs = Object.values(gigsById)
+    } catch (error) {
+      console.error(error)
+      this.error = "Une erreur s'est produite pendant le chargement des dates"
+    }
+    this.loading = false
   }
 };
 </script>
