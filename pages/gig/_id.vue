@@ -29,11 +29,11 @@
             </div>
           </div>
         </div>
-        <div v-if="gig.time" class="GigPage-element">
+        <div v-if="gig.date" class="GigPage-element">
           <i class="icon-clock"></i>
           <div class="GigPage-element--content">
             <div class="GigPage-element--key">Heure</div>
-            <div>{{ formatGigTime(gig.time) }}</div>
+            <div>{{ formatGigTime(gig.date) }}</div>
           </div>
         </div>
         <div class="GigPage-element">
@@ -74,9 +74,8 @@
 </template>
 
 <script>
-import * as gigs from "../../data/gigs.api";
+import * as helpers from '../../helpers'
 import backend from "../../data/backend.notion";
-import get from "lodash/get";
 
 export default {
   name: "GigPage",
@@ -100,15 +99,9 @@ export default {
       }}
     }
   },
-  computed: {
-    // title() {
-    //   return get(this.gig, 'show.title', 'Merveilleux spectacle de Luca')
-    // },
-    // showName() { return get(this.gig, 'show.name', null) }
-  },
   methods: {
-    formatGigDate: gigs.formatDate,
-    formatGigTime: gigs.formatTime,
+    formatGigDate: helpers.formatDate,
+    formatGigTime: helpers.formatTime,
   },
 };
 </script>

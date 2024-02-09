@@ -66,7 +66,7 @@ module.exports = {
       'BAlert', 'BRow', 'BCol', 'BButton', 'BTable', 'BBadge', 'BImg',
       'BNav', 'BNavbarToggle', 'BCollapse', 'BNavbarBrand',
       'BNavItem', 'BNavbarNav', 'BNavbar', 'BIcon', 'BIconEnvelope',
-      'BIconPhone', 'BIconChatRightQuote', 'BSpinner'
+      'BIconPhone', 'BIconChatRightQuote', 'BSpinner', 'BLink'
     ],
   },
   generate: {

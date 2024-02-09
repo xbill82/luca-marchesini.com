@@ -58,7 +58,13 @@
       </section>
       <section class="Calendar">
         <h1>Les prochaines dates</h1>
-        <gig-list :gigs="gigs"> </gig-list>
+        <div v-if="$fetchState.pending" class="text-center">
+          <b-spinner />
+        </div>
+        <div v-else>
+          <b-alert variant="warning" v-if="fetchError">{{ fetchError }}</b-alert>
+          <gig-list v-else :gigs="gigs"> </gig-list>
+        </div>
         <div>
           <b-button variant="primary" to="/agenda"
             >Voir toutes les dates</b-button
@@ -204,18 +210,21 @@ export default {
   components: { GigList, TeaserVideo },
   data() {
     return {
+      fetchError: null,
       gigs: [],
+      eventsById: {},
+      showsById: {},
     };
   },
   async fetch() {
     try {
-      const eventsById = await backend.fetchAllEvents();
-      const showsById = await backend.fetchAllShows();
-      const gigBatch = await backend.fetchBatchGigs(showsById, eventsById, undefined, 5, [{ property: 'When', direction: 'descending'}])
-      console.dir(gigBatch)
+      this.eventsById = await backend.fetchAllEvents();
+      this.showsById = await backend.fetchAllShows();
+      const gigBatch = await backend.fetchBatchGigs(this.showsById, this.eventsById, undefined, 5, [{ property: 'When', direction: 'descending'}])
       this.gigs = Object.values(gigBatch.results)
     } catch (error) {
       console.error(error)
+      this.fetchError = "Une erreur s'est produite pendant le chargement des données relatives aux spectacles"
     }
   },
   methods: {

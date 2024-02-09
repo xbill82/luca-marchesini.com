@@ -9,15 +9,15 @@
       <nuxt-link :to="`/gig/${data.item.id}`">{{ data.item.title }}</nuxt-link>
     </template>
     <template #cell(Lieu)="data">
-      <nuxt-link :to="`/gig/${data.item.id}`">{{
+      <b-link :to="`/gig/${data.item.id}`">{{
         data.item.location
-      }}</nuxt-link>
+      }}</b-link>
     </template>
   </b-table>
 </template>
 
 <script>
-import * as gigs from "../data/gigs.api";
+import * as helpers from "../helpers";
 
 export default {
   name: "GigList",
@@ -33,7 +33,7 @@ export default {
     };
   },
   methods: {
-    formatGigDate: gigs.formatDate,
+    formatGigDate: helpers.formatDate,
   },
 };
 </script>
