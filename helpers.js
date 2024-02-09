@@ -1,11 +1,11 @@
 import moment from "moment";
 
 export const formatDate = date =>
-  moment(date, "YYYY-MM-DD")
+  moment(date)
     .locale("fr")
     .format("D MMMM YYYY");
 
-export const formatTime = time => moment(time, "HH:mm:ss").format("HH:mm");
+export const formatTime = time => moment(time).format("HH:mm");
 
 export const getGeographicalInformation = (gig) => {
   if (!gig.country || gig.country !== 'FR') {
