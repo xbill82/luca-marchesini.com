@@ -139,7 +139,17 @@ const fetchBatchGigs = async (showsById, eventsById, start_cursor = undefined, p
     database_id: gigsDBId,
     start_cursor,
     page_size,
-    sorts
+    sorts,
+    filter: {
+      and: [
+        {
+          property: 'Status',
+          status: {
+            equals: 'published'
+          }
+        }
+      ]
+    }
   }))
 
   const gigsById = {}

@@ -11,7 +11,7 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "add-gig": "./luca-cli/bin/run gig:add --gigFile ./data/gigs.json"
+    "test": "jest"
   },
   "dependencies": {
     "@notionhq/client": "^2.2.14",
