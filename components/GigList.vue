@@ -37,27 +37,21 @@ export default {
     resolveLocation(gig) {
       if (!gig) return
       let location = gig.legacyLocation
-      if (gig.parentEvent) {
-        location = gig.parentEvent;
-
-        if (!gig.country || gig.country !== 'FR') {
-          location += ' (' + gig.country + ')';
-        } else if (gig.city) {
-          location += ` (${gig.city}, ${gig.region})`
-        }
-      } else if (gig.venue) {
-        location = gig.venue;
-
-        if (gig.country !== 'FR') {
-          location += ` (${gig.city}, ${gig.country})`
-        } else if (gig.city) {
-          location += ` (${gig.city}, ${gig.region})`
-        }
+      if (gig.parentEvent || gig.venue) {
+        location = `${gig.parentEvent ? gig.parentEvent : gig.venue} (${getGeographicalInformation(gig)})`;
       }
       return location
     }
   }
 };
+
+function getGeographicalInformation(gig) {
+  if (!gig.country || gig.country !== 'FR') {
+    return `${gig.city}, ${gig.country}`;
+  } else if (gig.city) {
+    return `${gig.city}, ${gig.region}`
+  }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -120,9 +120,9 @@ const gigDTO = (gig) => ({
   parentEventUrl: lodash.get(gig, 'event.url')
 })
 
-const fetchAllGigs = async (showsById, eventsById, gigsById = {}, start_cursor = undefined) => {
+const fetchAllGigs = async (showsById, eventsById, gigsById = {}, start_cursor = undefined, sorts = undefined) => {
   if (start_cursor !== null) {
-    const response = await fetchBatchGigs(showsById, eventsById, start_cursor)
+    const response = await fetchBatchGigs(showsById, eventsById, start_cursor, 50, sorts)
 
     gigsById = {
       ...gigsById,

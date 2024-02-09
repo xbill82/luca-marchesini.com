@@ -39,7 +39,7 @@ export default {
     try {
       const eventsById = await backend.fetchAllEvents();
       const showsById = await backend.fetchAllShows();
-      const gigsById = await backend.fetchAllGigs(showsById, eventsById)
+      const gigsById = await backend.fetchAllGigs(showsById, eventsById, {}, undefined, [{ property: 'When', direction: 'descending'}])
       this.gigs = Object.values(gigsById)
     } catch (error) {
       console.error(error)
