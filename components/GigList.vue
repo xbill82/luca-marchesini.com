@@ -10,7 +10,7 @@
     </template>
     <template #cell(Lieu)="data">
       <b-link :to="`/gig/${data.item.id}`">{{
-        data.item.location
+        resolveLocation(data.item)
       }}</b-link>
     </template>
   </b-table>
@@ -34,7 +34,29 @@ export default {
   },
   methods: {
     formatGigDate: helpers.formatDate,
-  },
+    resolveLocation(gig) {
+      if (!gig) return
+      let location = gig.legacyLocation
+      if (gig.parentEvent) {
+        location = gig.parentEvent;
+
+        if (!gig.country || gig.country !== 'FR') {
+          location += ' (' + gig.country + ')';
+        } else if (gig.city) {
+          location += ` (${gig.city}, ${gig.region})`
+        }
+      } else if (gig.venue) {
+        location = gig.venue;
+
+        if (gig.country !== 'FR') {
+          location += ` (${gig.city}, ${gig.country})`
+        } else if (gig.city) {
+          location += ` (${gig.city}, ${gig.region})`
+        }
+      }
+      return location
+    }
+  }
 };
 </script>
 

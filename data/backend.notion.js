@@ -106,7 +106,11 @@ const resolveShow = async (showId, showsById) => {
 
 const gigDTO = (gig) => ({
   id: lodash.get(gig, 'properties.ID.unique_id.number', 'UNKNOWN'),
-  location: lodash.get(gig, 'properties.LegacyLocation.rich_text[0].plain_text', ''),
+  legacyLocation: lodash.get(gig, 'properties.LegacyLocation.rich_text[0].plain_text', ''),
+  venue: lodash.get(gig, 'properties.Venue.rich_text[0].plain_text', ''),
+  city: lodash.get(gig, 'properties.City.rich_text[0].plain_text', ''),
+  region: lodash.get(gig, 'properties.Region.rich_text[0].plain_text', ''),
+  country: lodash.get(gig, 'properties.Country.select.name', ''),
   address: lodash.get(gig, 'properties.Address.rich_text[0].plain_text', ''),
   mapUrl: lodash.get(gig, 'properties.MapURL.url', ''),
   date: lodash.get(gig, 'properties.When.date.start', ''),
