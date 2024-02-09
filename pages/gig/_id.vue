@@ -40,10 +40,18 @@
           <i class="icon-location"></i>
           <div class="GigPage-element--content">
             <div class="GigPage-element--key">Lieu</div>
-            <div>{{ gig.location }}</div>
-            <div class="GigPage-element--address" v-if="gig.address">
-              <a :href="gig.mapUrl" target="_blank">{{ gig.address }}</a>
-            </div>
+            <template v-if="gig.venue || gig.address || gig.city">
+              <div v-if="gig.venue">
+                <a :href="gig.mapUrl" target="_blank">{{ gig.venue }}</a>
+              </div>
+              <div class="GigPage-element--address" v-if="gig.address">
+                <a :href="gig.mapUrl" target="_blank">{{ gig.address }}</a>
+              </div>
+              <div class="GigPage-element--address" v-if="gig.city">
+                <a :href="gig.mapUrl" target="_blank">{{ getGeographicalInformation(gig) }}</a>
+              </div>
+            </template>
+            <div v-else-if="gig.legacyLocation">{{ gig.legacyLocation }}</div>
           </div>
         </div>
         <div v-if="gig.parentEvent" class="GigPage-element">
@@ -102,6 +110,7 @@ export default {
   methods: {
     formatGigDate: helpers.formatDate,
     formatGigTime: helpers.formatTime,
+    getGeographicalInformation: helpers.getGeographicalInformation,
   },
 };
 </script>

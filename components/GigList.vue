@@ -18,6 +18,7 @@
 
 <script>
 import * as helpers from "../helpers";
+import { getGeographicalInformation } from "../helpers";
 
 export default {
   name: "GigList",
@@ -44,14 +45,6 @@ export default {
     }
   }
 };
-
-function getGeographicalInformation(gig) {
-  if (!gig.country || gig.country !== 'FR') {
-    return `${gig.city}, ${gig.country}`;
-  } else if (gig.city) {
-    return `${gig.city}, ${gig.region}`
-  }
-}
 </script>
 
 <style lang="scss" scoped>
