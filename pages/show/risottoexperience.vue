@@ -21,6 +21,12 @@
     </template>
     <template slot="intro-video">
       <teaser-video
+        youtube-id="Cy8I4DlsQyc"
+        credits="Ariel F. Verba"
+      />
+    </template>
+    <template slot="intro-video">
+      <teaser-video
         youtube-id="XBcqtmQyZcA"
         credits="KWZ TV"
       />
@@ -43,8 +49,8 @@
     <template slot="info-age">Tout public à partir de 10 ans</template>
     <template slot="info-duration">
       <ul>
-        <li>Atelier: 1h30 approx.</li>
-        <li>Repas: le temps qu'il faut</li>
+        <li>Atelier: 2h30 approx.</li>
+        <li>Repas: 1h approx.</li>
         <li>Contes: 1h approx.</li>
       </ul>
     </template>
@@ -62,6 +68,12 @@
         variant="primary"
         target="_blank"
         >Télécharger le Dossier</b-button
+      ><b-button
+        class="mb-3"
+        to="/docs/tech-risottoexperience.pdf"
+        variant="primary"
+        target="_blank"
+        >Télécharger le Guide Technique</b-button
       ><br />
     </template>
     <template slot="wall-of-logos">
