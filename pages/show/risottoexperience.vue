@@ -67,13 +67,15 @@
         variant="primary"
         target="_blank"
         >Télécharger le Dossier</b-button
-      ><b-button
-        class="mb-3 ml-3"
+      >
+      <br />
+      <b-button
+        class="mb-3"
         to="/docs/tech-risottoexperience.pdf"
         variant="primary"
         target="_blank"
         >Télécharger le Guide Technique</b-button
-      ><br />
+      >
     </template>
     <template slot="wall-of-logos">
       <div class="mb-2">
