@@ -24,8 +24,7 @@
         youtube-id="Cy8I4DlsQyc"
         credits="Ariel F. Verba"
       />
-    </template>
-    <template slot="intro-video">
+    <br/>
       <teaser-video
         youtube-id="XBcqtmQyZcA"
         credits="KWZ TV"
@@ -69,7 +68,7 @@
         target="_blank"
         >Télécharger le Dossier</b-button
       ><b-button
-        class="mb-3"
+        class="mb-3 ml-3"
         to="/docs/tech-risottoexperience.pdf"
         variant="primary"
         target="_blank"
