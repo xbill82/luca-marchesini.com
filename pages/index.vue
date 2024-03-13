@@ -78,7 +78,7 @@
         <div class="Shows-item">
           <b-row>
             <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
-              <router-link to="/show/sorcieres">
+              <router-link :to="localePath({name: 'show-sorcieres'})">
                 <b-img src="/show-sorcieres.jpg" rounded="circle"> </b-img>
               </router-link>
               <div class="Shows-itemContent">
@@ -88,7 +88,7 @@
                   Il ne faut jamais dire que les sorcières n’existent pas, car
                   ça les dérangerait. Ou alors il faut être bien rusé...
                 </p>
-                <b-button to="/show/sorcieres" variant="primary"
+                <b-button :to="localePath({name: 'show-sorcieres'})" variant="primary"
                   >En savoir plus »</b-button
                 >
               </div>

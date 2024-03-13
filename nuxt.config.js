@@ -59,6 +59,10 @@ module.exports = {
       {
         id: "UA-56607741-1"
       }
+    ],
+    [
+      '@nuxtjs/i18n',
+      { /* module options */ }
     ]
   ],
   bootstrapVue: {
@@ -68,6 +72,32 @@ module.exports = {
       'BNavItem', 'BNavbarNav', 'BNavbar', 'BIcon', 'BIconEnvelope',
       'BIconPhone', 'BIconChatRightQuote', 'BSpinner', 'BLink'
     ],
+  },
+  i18n: {
+    locales: [
+      { code: 'it', file: 'it.js' }, 
+      { code: 'fr', file: 'fr.js' },
+      { code: 'es', file: 'es.js' }
+    ],
+    defaultLocale: 'fr',
+    strategy: 'prefix',
+    lazy: true,
+    langDir: '~/locales/',
+    rootRediderect: '/fr/',
+    vueI18n: {
+      fallbackLocale: 'fr',
+      messages: {
+        fr: {
+          welcome: 'Bienvenue'
+        },
+        it: {
+          welcome: 'Benvenuto'
+        },
+        es: {
+          welcome: 'Bienvenido'
+        }
+      }
+    }
   },
   generate: {
     async routes() {

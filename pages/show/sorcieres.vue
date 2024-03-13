@@ -109,5 +109,12 @@ import TeaserVideo from "~/components/TeaserVideo.vue";
 export default {
   name: "SorcieresPage",
   components: { Show, TeaserVideo },
+  nuxtI18n: {
+    paths: {
+      it: '/show/streghe',
+      fr: '/show/sorcieres', 
+      es: '/show/brujas' 
+    }
+  }
 };
 </script>

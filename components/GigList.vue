@@ -1,15 +1,15 @@
 <template>
   <b-table class="GigList" :items="gigs" :fields="fields">
     <template #cell(Date)="data">
-      <nuxt-link :to="`/gig/${data.item.id}`">
+      <nuxt-link :to="localePath({name: 'gig-id', params: {id: data.item.id}})">
         {{ formatGigDate(data.item.date) }}
       </nuxt-link>
     </template>
     <template #cell(Spectacle)="data">
-      <nuxt-link :to="`/gig/${data.item.id}`">{{ data.item.title }}</nuxt-link>
+      <nuxt-link :to="localePath({name: 'gig-id', params: {id: data.item.id}})">{{ data.item.title }}</nuxt-link>
     </template>
     <template #cell(Lieu)="data">
-      <b-link :to="`/gig/${data.item.id}`">{{
+      <b-link :to="localePath({name: 'gig-id', params: {id: data.item.id}})">{{
         resolveLocation(data.item)
       }}</b-link>
     </template>
