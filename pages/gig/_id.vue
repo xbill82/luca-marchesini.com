@@ -1,11 +1,8 @@
 <template>
   <div class="GigPage">
     <header>
-      <a :href="`/show/${gig.showName}`">
-        <div
-          class="GigPage-map"
-          :style="`background: url('/headers/header-${gig.showName}.jpg')`"
-        ></div>
+      <a v-if="gig.showName" :href="`/show/${gig.showName}`">
+        <div class="GigPage-map" :style="`background: url('/headers/header-${gig.showName}.jpg')`"></div>
       </a>
       <div class="Header-jumbofon">
         <b-row>
@@ -60,7 +57,7 @@
             <div class="GigPage-element--key">Cadre</div>
             <a v-if="gig.parentEventUrl" :href="gig.parentEventUrl">{{
               gig.parentEvent
-            }}</a>
+              }}</a>
             <div v-else>{{ gig.parentEvent }}</div>
           </div>
         </div>
@@ -72,9 +69,7 @@
           </div>
         </div>
         <div v-if="gig.showName" class="GigPage-goToShow">
-          <b-button variant="primary" :to="`/show/${gig.showName}`"
-            >Accéder à la fiche du spectacle</b-button
-          >
+          <b-button variant="primary" :to="`/show/${gig.showName}`">Accéder à la fiche du spectacle</b-button>
         </div>
       </section>
     </div>
@@ -99,12 +94,14 @@ export default {
       return { gig: await backend.fetchGigByUniqueId(parseInt(params.id)) };
     } catch (fetchError) {
       console.error(fetchError)
-      return { gig: {
-        title: "Gig not found",
-        date: "1970-01-01",
-        location: "Unknown",
-        address: "Unknown",
-      }}
+      return {
+        gig: {
+          title: "Gig not found",
+          date: "1970-01-01",
+          location: "Unknown",
+          address: "Unknown",
+        }
+      }
     }
   },
   methods: {
@@ -121,11 +118,9 @@ header {
   max-height: 300px;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.65) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.65) 100%);
 }
 
 .GigPage-map {
@@ -181,4 +176,3 @@ header {
   margin-top: 40px;
 }
 </style>
-

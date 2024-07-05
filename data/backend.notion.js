@@ -12,7 +12,7 @@ const eventsDBId = 'd31bd8f35e47405bb43bc657cdf67211'
 const showsDBId = 'ca3d9449a5b14e11a41d4b051085e8b8'
 
 const eventDTO = (event) => ({
-  id: event.id, 
+  id: event.id,
   name: lodash.get(event, 'properties.Name.title[0].plain_text', ''),
   url: lodash.get(event, 'properties.URL.url', ''),
 })
@@ -96,7 +96,7 @@ const resolveShow = async (showId, showsById) => {
   if (!showId) {
     return null
   }
-  
+
   if (showsById) {
     return showsById[showId]
   }
@@ -114,7 +114,7 @@ const gigDTO = (gig) => ({
   address: lodash.get(gig, 'properties.Address.rich_text[0].plain_text', ''),
   mapUrl: lodash.get(gig, 'properties.MapURL.url', ''),
   date: lodash.get(gig, 'properties.When.date.start', ''),
-  title: lodash.get(gig, 'show.title', null),
+  title: lodash.get(gig, 'show.title', lodash.get(gig, 'properties.CustomTitle.rich_text[0].plain_text', '')),
   showName: lodash.get(gig, 'show.name', null),
   parentEvent: lodash.get(gig, 'event.name', null),
   parentEventUrl: lodash.get(gig, 'event.url')
@@ -157,7 +157,7 @@ const fetchBatchGigs = async (showsById, eventsById, start_cursor = undefined, p
   }))
 
   const gigsById = {}
-  for(let gig of response.results) {
+  for (let gig of response.results) {
     const enrichedGig = {
       ...gig,
       show: await resolveShow(lodash.get(gig, 'properties.Show.relation[0].id', null), showsById),
