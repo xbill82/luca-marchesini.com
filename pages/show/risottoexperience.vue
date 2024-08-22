@@ -22,7 +22,7 @@
     <template slot="intro-video">
       <teaser-video
         youtube-id="Cy8I4DlsQyc"
-        credits="Ariel F. Verba"
+        video-credits="Ariel F. Verba"
       />
     <br/>
       <teaser-video

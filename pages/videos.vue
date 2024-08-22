@@ -18,8 +18,8 @@
         ></teaser-video>
         <teaser-video
           youtube-id="Cy8I4DlsQyc"
-          credits="Ariel F. Verba"
-        />
+          video-credits="Ariel Fernández Verba"
+        ></teaser-video>
         <teaser-video
           youtube-id="yrVHRF-MZ7A"
           video-credits="Ariel Fernández Verba"
