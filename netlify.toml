@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/qr/001-ia"
+  to = "/invisible-ATRIUM"
+  status = 301
+  force = true
