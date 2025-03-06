@@ -17,7 +17,8 @@
 
       <div class="dates">
         <div class="date-card">
-          <h2>27 Mars 2024</h2>
+          <h2>27 Mars 2025, 19h30</h2>
+          <p>Bibliothèque Universitaire ATRIUM, route de Mende, Montpellier</p>
           <a
             href="https://yp.events/e3b5a994-d249-4811-bc9d-b019af486ad2/LInvisible----spectacle-de-contes-parfumes"
             class="booking-button"
@@ -28,7 +29,8 @@
         </div>
 
         <div class="date-card">
-          <h2>28 Mars 2024</h2>
+          <h2>28 Mars 2025, 19h30</h2>
+          <p>Bibliothèque Universitaire ATRIUM, route de Mende, Montpellier</p>
           <a
             href="https://yp.events/23bcc209-5192-43dd-80cf-21a8f438b0c0/LInvisible----spectacle-de-contes-parfumes"
             class="booking-button"
