@@ -13,9 +13,33 @@
           spectacle unique de contes parfumés. Deux dates sont disponibles pour
           cette expérience sensorielle.
         </p>
+        <ul>
+          <li>Durée: 1h</li>
+          <li>Public à partir de 11 ans</li>
+          <li>Prix : gratuit - Réservation obligatoire</li>
+          <li>
+            <a
+              href="https://www.google.com/maps/place/Atrium+Library/@43.6307815,3.8670897,16z/data=!3m1!4b1!4m6!3m5!1s0x12b6af217be1ff51:0x7b8bbbb1864d3c4d!8m2!3d43.6307815!4d3.8696646!16s%2Fg%2F1ptzbh1tm?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              >L'ATRIUM sur Google Maps</a
+            >
+          </li>
+        </ul>
       </div>
 
       <div class="dates">
+        <div class="date-card">
+          <h2>24 Mars 2025, 19h30 - Répétition générale</h2>
+          <p>Bibliothèque Universitaire ATRIUM, route de Mende, Montpellier</p>
+          <a
+            href="https://yp.events/f10c74f9-da20-481b-9d16-f678b04fb296/LInvisible----spectacle-de-contes-parfumes"
+            class="booking-button"
+            target="_blank"
+          >
+            Réserver
+          </a>
+        </div>
+
         <div class="date-card">
           <h2>27 Mars 2025, 19h30</h2>
           <p>Bibliothèque Universitaire ATRIUM, route de Mende, Montpellier</p>
@@ -81,6 +105,11 @@ h1 {
   margin-bottom: 3rem;
   font-size: 1.2rem;
   line-height: 1.6;
+}
+
+.description ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .dates {
