@@ -94,3 +94,9 @@
 .icon-tags:before {
   content: "\e813";
 } /* '' */
+.icon-instagram:before {
+  content: "\f16d";
+} /* '' */
+.icon-facebook:before {
+  content: "\f09a";
+} /* '' */

@@ -4,16 +4,13 @@
       <img
         sizes="100vw"
         class="img-fluid"
-        src="https://res.cloudinary.com/luca-le-conteur/image/upload/w_auto:100:1280/v1538139917/header-contact.png">
+        src="https://res.cloudinary.com/luca-le-conteur/image/upload/w_auto:100:1280/v1538139917/header-contact.png"
+      />
     </header>
     <div class="container">
       <b-row>
         <b-col md="4">
-          <div class="ContactData">
-            <a href="mailto:contact@luca-marchesini.com"><b-icon-envelope />&nbsp;contact@luca-marchesini.com</a>
-            <br>
-            <a href="tel:+33633596151"><b-icon-phone />&nbsp;+33 (0) 6 33 59 61 51</a>
-          </div>
+          <contact></contact>
         </b-col>
         <b-col md="8">
           <signup-form></signup-form>
@@ -25,12 +22,14 @@
 
 <script>
 import SignupForm from "~/components/MailingListSignupForm.vue";
+import Contact from "~/components/Contact.vue";
 
 export default {
   name: "ContactPage",
   components: {
-    SignupForm
-  }
+    SignupForm,
+    Contact,
+  },
 };
 </script>
 
@@ -43,5 +42,3 @@ header {
   margin: 30px 0;
 }
 </style>
-
-

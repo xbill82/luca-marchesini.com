@@ -33,6 +33,17 @@
                 >Voir toutes les videos</b-button
               >
             </div>
+            <br />
+            <a
+              href="https://www.instagram.com/luca.storyteller/"
+              target="_blank"
+              ><instagram-logo class="SocialLogo"></instagram-logo
+            ></a>
+            <a
+              href="https://www.facebook.com/profile.php?id=690781684"
+              target="_blank"
+              ><facebook-logo class="SocialLogo"></facebook-logo
+            ></a>
           </b-col>
           <b-col md="7" offset-md="1" xs="12">
             <teaser-video
@@ -42,11 +53,15 @@
 
             <div class="Claim">
               <div class="Claim-txt">
-                "Merci, Luca, pour le souffle de fraîcheur, pour avoir mis le feu, pour ta spontanéité et ta
-                générosité... Continue à nous transporter encore dans tes univers! Au plaisir de t'écouter encore."
+                "Merci, Luca, pour le souffle de fraîcheur, pour avoir mis le
+                feu, pour ta spontanéité et ta générosité... Continue à nous
+                transporter encore dans tes univers! Au plaisir de t'écouter
+                encore."
               </div>
               <p class="Claim-author">Isabelle Noyer</p>
-              <p class="Claim-organization">Festival Contes et Rencontres en Lozère</p>
+              <p class="Claim-organization">
+                Festival Contes et Rencontres en Lozère
+              </p>
               <div class="text-right">
                 <b-button variant="primary" to="/guestbook"
                   >Voir le livre d'or</b-button
@@ -62,7 +77,9 @@
           <b-spinner />
         </div>
         <div v-else>
-          <b-alert variant="warning" v-if="fetchError">{{ fetchError }}</b-alert>
+          <b-alert variant="warning" v-if="fetchError">{{
+            fetchError
+          }}</b-alert>
           <gig-list v-else :gigs="gigs"> </gig-list>
         </div>
         <div>
@@ -112,14 +129,15 @@
             </b-col>
             <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
               <router-link to="/show/risottoexperience">
-                <b-img src="/show-risottoexperience.jpg" rounded="circle"> </b-img>
+                <b-img src="/show-risottoexperience.jpg" rounded="circle">
+                </b-img>
               </router-link>
               <div class="Shows-itemContent">
                 <h2>La Risotto Experience</h2>
                 <b-badge variant="warning">Tout public 10+</b-badge>
                 <p>
-                  On fait un risotto ensemble, on le mange et on écoute des histoires.
-                  C'est beau, ça nourrit le ventre... et l'esprit!
+                  On fait un risotto ensemble, on le mange et on écoute des
+                  histoires. C'est beau, ça nourrit le ventre... et l'esprit!
                 </p>
                 <b-button to="/show/risottoexperience" variant="primary"
                   >En savoir plus »</b-button
@@ -201,13 +219,15 @@
 
 <script>
 import * as gigs from "../data/gigs.api";
-import backend from '../data/backend.notion'
+import backend from "../data/backend.notion";
 import GigList from "~/components/GigList.vue";
 import TeaserVideo from "~/components/TeaserVideo.vue";
+import InstagramLogo from "~/components/InstagramLogo.vue";
+import FacebookLogo from "~/components/FacebookLogo.vue";
 
 export default {
   name: "HomePage",
-  components: { GigList, TeaserVideo },
+  components: { GigList, TeaserVideo, InstagramLogo, FacebookLogo },
   data() {
     return {
       fetchError: null,
@@ -220,11 +240,18 @@ export default {
     try {
       this.eventsById = await backend.fetchAllEvents();
       this.showsById = await backend.fetchAllShows();
-      const gigBatch = await backend.fetchBatchGigs(this.showsById, this.eventsById, undefined, 5, [{ property: 'When', direction: 'descending'}])
-      this.gigs = Object.values(gigBatch.results)
+      const gigBatch = await backend.fetchBatchGigs(
+        this.showsById,
+        this.eventsById,
+        undefined,
+        5,
+        [{ property: "When", direction: "descending" }]
+      );
+      this.gigs = Object.values(gigBatch.results);
     } catch (error) {
-      console.error(error)
-      this.fetchError = "Une erreur s'est produite pendant le chargement des données relatives aux spectacles"
+      console.error(error);
+      this.fetchError =
+        "Une erreur s'est produite pendant le chargement des données relatives aux spectacles";
     }
   },
   methods: {
@@ -291,5 +318,9 @@ export default {
 .Shows-itemContent {
   margin-top: 15px;
 }
-</style>
 
+.SocialLogo {
+  width: 40px;
+  height: 40px;
+}
+</style>
