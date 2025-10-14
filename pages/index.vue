@@ -42,11 +42,15 @@
 
             <div class="Claim">
               <div class="Claim-txt">
-                "Merci, Luca, pour le souffle de fraîcheur, pour avoir mis le feu, pour ta spontanéité et ta
-                générosité... Continue à nous transporter encore dans tes univers! Au plaisir de t'écouter encore."
+                "Merci, Luca, pour le souffle de fraîcheur, pour avoir mis le
+                feu, pour ta spontanéité et ta générosité... Continue à nous
+                transporter encore dans tes univers! Au plaisir de t'écouter
+                encore."
               </div>
               <p class="Claim-author">Isabelle Noyer</p>
-              <p class="Claim-organization">Festival Contes et Rencontres en Lozère</p>
+              <p class="Claim-organization">
+                Festival Contes et Rencontres en Lozère
+              </p>
               <div class="text-right">
                 <b-button variant="primary" to="/guestbook"
                   >Voir le livre d'or</b-button
@@ -62,7 +66,9 @@
           <b-spinner />
         </div>
         <div v-else>
-          <b-alert variant="warning" v-if="fetchError">{{ fetchError }}</b-alert>
+          <b-alert variant="warning" v-if="fetchError">{{
+            fetchError
+          }}</b-alert>
           <gig-list v-else :gigs="gigs"> </gig-list>
         </div>
         <div>
@@ -94,6 +100,60 @@
               </div>
             </b-col>
             <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
+              <router-link to="/show/invisible">
+                <b-img
+                  src="https://res.cloudinary.com/luca-le-conteur/image/upload/v1760427828/affiche-invisible-square.jpg"
+                  rounded="circle"
+                  class="mw-100"
+                >
+                </b-img>
+              </router-link>
+              <div class="Shows-itemContent">
+                <h2>L'Invisible</h2>
+                <b-badge variant="info">Adulte 13+</b-badge>
+                <p>
+                  Contes & Parfum. Pendant les histoires, des parfums sont
+                  diffusés pour réveiller votre inconscient.
+                </p>
+                <b-button to="/show/invisible" variant="primary"
+                  >En savoir plus »</b-button
+                >
+              </div>
+            </b-col>
+            <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
+              <router-link to="/show/risottoexperience">
+                <b-img src="/show-risottoexperience.jpg" rounded="circle">
+                </b-img>
+              </router-link>
+              <div class="Shows-itemContent">
+                <h2>La Risotto Experience</h2>
+                <b-badge variant="warning">Tout public 10+</b-badge>
+                <p>
+                  On fait un risotto ensemble, on le mange et on écoute des
+                  histoires. C'est beau, ça nourrit le ventre... et l'esprit!
+                </p>
+                <b-button to="/show/risottoexperience" variant="primary"
+                  >En savoir plus »</b-button
+                >
+              </div>
+            </b-col>
+            <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
+              <router-link to="/show/europe">
+                <b-img src="/show-europe.jpg" rounded="circle"> </b-img>
+              </router-link>
+              <div class="Shows-itemContent">
+                <h2>Le Voyage en Europe</h2>
+                <b-badge variant="success">Jeune public 4-8 ans</b-badge>
+                <p>
+                  Chaque pays un un personnage, chaque personnage un conte. Tu
+                  veux monter?
+                </p>
+                <b-button to="/show/europe" variant="primary"
+                  >En savoir plus »</b-button
+                >
+              </div>
+            </b-col>
+            <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
               <router-link to="/show/lartderaterletrain">
                 <b-img src="/show-lartderaterletrain.jpg" rounded="circle">
                 </b-img>
@@ -106,22 +166,6 @@
                   force invisible...
                 </p>
                 <b-button to="/show/lartderaterletrain" variant="primary"
-                  >En savoir plus »</b-button
-                >
-              </div>
-            </b-col>
-            <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
-              <router-link to="/show/risottoexperience">
-                <b-img src="/show-risottoexperience.jpg" rounded="circle"> </b-img>
-              </router-link>
-              <div class="Shows-itemContent">
-                <h2>La Risotto Experience</h2>
-                <b-badge variant="warning">Tout public 10+</b-badge>
-                <p>
-                  On fait un risotto ensemble, on le mange et on écoute des histoires.
-                  C'est beau, ça nourrit le ventre... et l'esprit!
-                </p>
-                <b-button to="/show/risottoexperience" variant="primary"
                   >En savoir plus »</b-button
                 >
               </div>
@@ -143,7 +187,7 @@
                 >
               </div>
             </b-col>
-            <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
+            <!-- <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
               <router-link to="/show/barbenuit">
                 <b-img src="/show-barbenuit.jpg" rounded="circle"> </b-img>
               </router-link>
@@ -159,23 +203,8 @@
                   >En savoir plus »</b-button
                 >
               </div>
-            </b-col>
-            <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
-              <router-link to="/show/europe">
-                <b-img src="/show-europe.jpg" rounded="circle"> </b-img>
-              </router-link>
-              <div class="Shows-itemContent">
-                <h2>Le Voyage en Europe</h2>
-                <b-badge variant="success">Jeune public 4-8 ans</b-badge>
-                <p>
-                  Chaque pays un un personnage, chaque personnage un conte. Tu
-                  veux monter?
-                </p>
-                <b-button to="/show/europe" variant="primary"
-                  >En savoir plus »</b-button
-                >
-              </div>
-            </b-col>
+            </b-col> -->
+
             <!-- <b-col lg="4" md="4" sm="5" xs="10" class="mb-3">
               <router-link to="/show/lucavidesonsac">
                 <b-img src="/show-lucavidesonsac.jpg" rounded="circle"> </b-img>
@@ -201,7 +230,7 @@
 
 <script>
 import * as gigs from "../data/gigs.api";
-import backend from '../data/backend.notion'
+import backend from "../data/backend.notion";
 import GigList from "~/components/GigList.vue";
 import TeaserVideo from "~/components/TeaserVideo.vue";
 
@@ -220,11 +249,18 @@ export default {
     try {
       this.eventsById = await backend.fetchAllEvents();
       this.showsById = await backend.fetchAllShows();
-      const gigBatch = await backend.fetchBatchGigs(this.showsById, this.eventsById, undefined, 5, [{ property: 'When', direction: 'descending'}])
-      this.gigs = Object.values(gigBatch.results)
+      const gigBatch = await backend.fetchBatchGigs(
+        this.showsById,
+        this.eventsById,
+        undefined,
+        5,
+        [{ property: "When", direction: "descending" }]
+      );
+      this.gigs = Object.values(gigBatch.results);
     } catch (error) {
-      console.error(error)
-      this.fetchError = "Une erreur s'est produite pendant le chargement des données relatives aux spectacles"
+      console.error(error);
+      this.fetchError =
+        "Une erreur s'est produite pendant le chargement des données relatives aux spectacles";
     }
   },
   methods: {
@@ -292,4 +328,3 @@ export default {
   margin-top: 15px;
 }
 </style>
-

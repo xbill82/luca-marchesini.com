@@ -25,6 +25,11 @@
       issus de traditions orales variées, mais aussi des nouvelles
       contemporaines. Pendant les histoires, des diﬀuseurs émanent subtilement
       les parfums créés spécialement pour chaque conte, rencontrant le public.
+      <img
+        class="mw-100"
+        src="https://res.cloudinary.com/luca-le-conteur/image/upload/v1760426337/diffuseur_yx0r7s.png"
+        alt="Pendant chaque histoire, un parfum spécialement conçu est diffusé dans la salle"
+      />
     </template>
     <template slot="info-age">Tout public à partir de 11 ans</template>
     <template slot="info-duration">Approximativement 1h</template>
@@ -46,7 +51,7 @@
     <template slot="btn-dl-file">
       <b-button
         class="mb-3"
-        to="/docs/presenatation-invisible.pdf"
+        to="/docs/presentation-invisible.pdf"
         variant="primary"
         target="_blank"
         ><span class="glyphicon glyphicon-file"></span> Télécharger la
