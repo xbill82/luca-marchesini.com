@@ -36,14 +36,16 @@ export default {
   methods: {
     formatGigDate: helpers.formatDate,
     resolveLocation(gig) {
-      if (!gig) return
-      let location = gig.legacyLocation
+      if (!gig) return;
+      let location = gig.legacyLocation || getGeographicalInformation(gig);
       if (gig.parentEvent || gig.venue) {
-        location = `${gig.parentEvent ? gig.parentEvent : gig.venue} (${getGeographicalInformation(gig)})`;
+        location = `${
+          gig.parentEvent ? gig.parentEvent : gig.venue
+        } (${getGeographicalInformation(gig)})`;
       }
-      return location
-    }
-  }
+      return location;
+    },
+  },
 };
 </script>
 
