@@ -151,6 +151,12 @@ const fetchBatchGigs = async (showsById, eventsById, start_cursor = undefined, p
           status: {
             equals: 'published'
           }
+        },
+        {
+          property: 'Type',
+          select: {
+            equals: 'Storytelling'
+          }
         }
       ]
     }
