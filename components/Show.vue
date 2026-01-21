@@ -62,6 +62,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@use "sass:color";
 header {
   box-shadow: 0 0 20px 0 #656565;
   margin-bottom: 30px;
@@ -90,13 +91,13 @@ header {
 }
 
 .Claim-author {
-  color: darken($color_grey, 10%);
+  color: color.adjust($color_grey, $lightness: -10%);
   margin: 0;
   font-size: 1em;
 }
 
 .Claim-organization {
   font-size: 0.8em;
-  color: darken($color_grey, 10%);
+  color: color.adjust($color_grey, $lightness: -10%);
 }
 </style>
