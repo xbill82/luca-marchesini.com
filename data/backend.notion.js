@@ -155,7 +155,7 @@ const fetchBatchGigs = async (showsById, eventsById, start_cursor = undefined, p
         {
           property: 'Type',
           select: {
-            equals: 'Storytelling'
+            does_not_equal: 'DJ'
           }
         }
       ]
