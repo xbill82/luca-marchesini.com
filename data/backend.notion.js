@@ -130,7 +130,7 @@ const fetchAllGigs = async (showsById, eventsById, gigsById = {}, start_cursor =
     }
 
     if (response.has_more) {
-      return fetchAllGigs(showsById, eventsById, gigsById, response.next_cursor)
+      return fetchAllGigs(showsById, eventsById, gigsById, response.next_cursor, sorts)
     }
   }
 

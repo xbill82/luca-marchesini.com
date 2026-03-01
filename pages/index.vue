@@ -254,7 +254,7 @@ export default {
         this.eventsById,
         undefined,
         5,
-        [{ property: "When", direction: "descending" }]
+        [{ property: "When", direction: "descending" }],
       );
       this.gigs = Object.values(gigBatch.results);
     } catch (error) {
